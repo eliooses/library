@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='utf-8'?>
+<package xmlns="http://www.idpf.org/2007/opf" unique-identifier="uuid_id">
+    <metadata xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:opf="http://www.idpf.org/2007/opf">
+        <dc:identifier opf:scheme="calibre" id="calibre_id">18</dc:identifier>
+        <dc:identifier opf:scheme="uuid" id="uuid_id">2f82dc59-aa6c-4065-8343-f29685676e73</dc:identifier>
+        <dc:title>The Ethics of Liberty</dc:title>
+        <dc:creator opf:file-as="Murray N. Rothbard" opf:role="aut">Murray N. Rothbard</dc:creator>
+        <dc:contributor opf:file-as="calibre" opf:role="bkp">calibre (0.8.60) [http://calibre-ebook.com]</dc:contributor>
+        <dc:date>1998-08-16T07:00:00+00:00</dc:date>
+        <dc:description>eBook, 336 pages</dc:description>
+        <dc:publisher>New York University Press</dc:publisher>
+        <dc:identifier opf:scheme="ISBN">9781610162449</dc:identifier>
+        <dc:language>eng</dc:language>
+        <meta content="{&quot;Murray N. Rothbard&quot;: &quot;&quot;}" name="calibre:author_link_map"/>
+        <meta content="2012-08-16T19:49:40+00:00" name="calibre:timestamp"/>
+        <meta content="Ethics of Liberty, The" name="calibre:title_sort"/>
+    </metadata>
+    <guide>
+        <reference href="Ethics of Liberty, The - Murray N. Rothbard.jpg" type="cover" title="Cover"/>
+    </guide>
+</package>

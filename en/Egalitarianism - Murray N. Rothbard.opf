@@ -1,0 +1,20 @@
+<?xml version='1.0' encoding='utf-8'?>
+<package xmlns="http://www.idpf.org/2007/opf" unique-identifier="uuid_id">
+    <metadata xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:opf="http://www.idpf.org/2007/opf">
+        <dc:identifier opf:scheme="calibre" id="calibre_id">25</dc:identifier>
+        <dc:identifier opf:scheme="uuid" id="uuid_id">1aad1720-ca40-423c-972f-151a6518b6ea</dc:identifier>
+        <dc:title>Egalitarianism</dc:title>
+        <dc:creator opf:file-as="Rothbard, Murray N." opf:role="aut">Murray N. Rothbard</dc:creator>
+        <dc:contributor opf:file-as="calibre" opf:role="bkp">calibre (0.8.60) [http://calibre-ebook.com]</dc:contributor>
+        <dc:date>2012-08-17T19:36:42+00:00</dc:date>
+        <dc:publisher>The Ludwig von Mises Institute</dc:publisher>
+        <dc:identifier opf:scheme="0-945466-23-4">0-945466-23-4</dc:identifier>
+        <dc:language>eng</dc:language>
+        <meta content="{&quot;Murray N. Rothbard&quot;: &quot;&quot;}" name="calibre:author_link_map"/>
+        <meta content="2012-08-17T19:36:42+00:00" name="calibre:timestamp"/>
+        <meta content="Egalitarianism" name="calibre:title_sort"/>
+    </metadata>
+    <guide>
+        <reference href="Egalitarianism - Murray N. Rothbard.jpg" type="cover" title="Cover"/>
+    </guide>
+</package>

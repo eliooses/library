@@ -1,0 +1,20 @@
+<?xml version='1.0' encoding='utf-8'?>
+<package xmlns="http://www.idpf.org/2007/opf" unique-identifier="uuid_id">
+    <metadata xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:opf="http://www.idpf.org/2007/opf">
+        <dc:identifier opf:scheme="calibre" id="calibre_id">29</dc:identifier>
+        <dc:identifier opf:scheme="uuid" id="uuid_id">269ee2f6-157e-42f2-aa47-6004723b037b</dc:identifier>
+        <dc:title>Against Intellectual Property</dc:title>
+        <dc:creator opf:file-as="Kinsella, N Stephan" opf:role="aut">N. Stephan Kinsella</dc:creator>
+        <dc:contributor opf:file-as="calibre" opf:role="bkp">calibre (0.8.60) [http://calibre-ebook.com]</dc:contributor>
+        <dc:date>2010-10-07T07:00:00+00:00</dc:date>
+        <dc:description>&lt;p class="description"&gt;eBook, 71 pages&lt;/p&gt;</dc:description>
+        <dc:publisher>Ludwig von Mises Institute</dc:publisher>
+        <dc:language>eng</dc:language>
+        <meta content="{&quot;N. Stephan Kinsella&quot;: &quot;&quot;}" name="calibre:author_link_map"/>
+        <meta content="2012-10-08T03:25:52+00:00" name="calibre:timestamp"/>
+        <meta content="Against Intellectual Property" name="calibre:title_sort"/>
+    </metadata>
+    <guide>
+        <reference href="Against Intellectual Property - N. Stephan Kinsella.jpg" type="cover" title="Cover"/>
+    </guide>
+</package>

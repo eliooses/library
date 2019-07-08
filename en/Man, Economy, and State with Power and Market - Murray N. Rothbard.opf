@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='utf-8'?>
+<package xmlns="http://www.idpf.org/2007/opf" unique-identifier="uuid_id">
+    <metadata xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:opf="http://www.idpf.org/2007/opf">
+        <dc:identifier opf:scheme="calibre" id="calibre_id">26</dc:identifier>
+        <dc:identifier opf:scheme="uuid" id="uuid_id">d18d76a2-89ac-4928-920b-238f8d7d79b7</dc:identifier>
+        <dc:title>Man, Economy, and State with Power and Market</dc:title>
+        <dc:creator opf:file-as="Rothbard, Murray N." opf:role="aut">Murray N. Rothbard</dc:creator>
+        <dc:contributor opf:file-as="calibre" opf:role="bkp">calibre (0.8.60) [http://calibre-ebook.com]</dc:contributor>
+        <dc:date>2012-08-17T19:36:44+00:00</dc:date>
+        <dc:publisher>Ludwig von Mises Institute, Auburn, Alabama</dc:publisher>
+        <dc:language>eng</dc:language>
+        <meta content="{&quot;Murray N. Rothbard&quot;: &quot;&quot;}" name="calibre:author_link_map"/>
+        <meta content="2012-08-17T19:36:44+00:00" name="calibre:timestamp"/>
+        <meta content="Man, Economy, and State with Power and Market" name="calibre:title_sort"/>
+    </metadata>
+    <guide>
+        <reference href="Man, Economy, and State with Power and Market - Murray N. Rothbard.jpg" type="cover" title="Cover"/>
+    </guide>
+</package>

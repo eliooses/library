@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='utf-8'?>
+<package xmlns="http://www.idpf.org/2007/opf" unique-identifier="uuid_id">
+    <metadata xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:opf="http://www.idpf.org/2007/opf">
+        <dc:identifier opf:scheme="calibre" id="calibre_id">16881</dc:identifier>
+        <dc:identifier opf:scheme="uuid" id="uuid_id">95528d3e-a9cf-4f54-a1f3-eae27220ea91</dc:identifier>
+        <dc:title>The Problem of Political Authority: An Examination of the Right to Coerce and the Duty to Obey</dc:title>
+        <dc:creator opf:file-as="Huemer, Michael" opf:role="aut">Michael Huemer</dc:creator>
+        <dc:contributor opf:file-as="calibre" opf:role="bkp">calibre (0.9.12) [http://calibre-ebook.com]</dc:contributor>
+        <dc:date>2012-10-29T04:00:00+00:00</dc:date>
+        <dc:publisher>Palgrave Macmillan</dc:publisher>
+        <dc:identifier opf:scheme="MOBI-ASIN">B00AINH80O</dc:identifier>
+        <dc:language>eng</dc:language>
+        <meta content="{&quot;Michael Huemer&quot;: &quot;&quot;}" name="calibre:author_link_map"/>
+        <meta content="2013-01-11T23:52:54+00:00" name="calibre:timestamp"/>
+        <meta content="Problem of Political Authority: An Examination of the Right to Coerce and the Duty to Obey, The" name="calibre:title_sort"/>
+        <meta name="calibre:user_metadata:#formats" content="{&quot;is_category&quot;: false, &quot;#extra#&quot;: null, &quot;kind&quot;: &quot;field&quot;, &quot;is_custom&quot;: true, &quot;is_csp&quot;: false, &quot;colnum&quot;: 1, &quot;column&quot;: &quot;value&quot;, &quot;rec_index&quot;: 22, &quot;search_terms&quot;: [&quot;#formats&quot;], &quot;link_column&quot;: &quot;value&quot;, &quot;is_multiple2&quot;: {}, &quot;is_multiple&quot;: null, &quot;datatype&quot;: &quot;composite&quot;, &quot;#value#&quot;: &quot;EPUB, MOBI&quot;, &quot;category_sort&quot;: &quot;value&quot;, &quot;table&quot;: &quot;custom_column_1&quot;, &quot;is_editable&quot;: true, &quot;label&quot;: &quot;formats&quot;, &quot;display&quot;: {&quot;composite_template&quot;: &quot;{formats}&quot;, &quot;contains_html&quot;: false, &quot;make_category&quot;: false, &quot;use_decorations&quot;: 0, &quot;composite_sort&quot;: &quot;text&quot;}, &quot;name&quot;: &quot;Formats&quot;}"/>
+    </metadata>
+    <guide>
+        <reference href="cover.jpg" type="cover" title="Cover"/>
+    </guide>
+</package>

@@ -1,0 +1,20 @@
+<?xml version='1.0' encoding='utf-8'?>
+<package xmlns="http://www.idpf.org/2007/opf" unique-identifier="uuid_id">
+    <metadata xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:opf="http://www.idpf.org/2007/opf">
+        <dc:identifier opf:scheme="calibre" id="calibre_id">23</dc:identifier>
+        <dc:identifier opf:scheme="uuid" id="uuid_id">1bdc5cc9-cdcb-4162-b848-2236e986a01d</dc:identifier>
+        <dc:title>Conceived in Liberty</dc:title>
+        <dc:creator opf:file-as="Rothbard, Murray N." opf:role="aut">Murray N. Rothbard</dc:creator>
+        <dc:contributor opf:file-as="calibre" opf:role="bkp">calibre (0.8.60) [http://calibre-ebook.com]</dc:contributor>
+        <dc:date>2011-08-17T07:00:00+00:00</dc:date>
+        <dc:description>What! Another American history book? The reader may be pardoned for wondering about the point of another addition to the seemingly inexhaustible flow of books and texts on American history. One problem, as pointed out in the bibliographical essay at the end of this volume, is that the survey studies of American history have squeezed out the actual stuff of history, the narrative facts of the important events of the past. With the true data of history squeezed out, what we have left are compressed summaries and the historian’s interpretations and judgments of the data. There is nothing wrong with the historian’s having such judgments; indeed, without them, history would be a meaningless and giant almanac listing dates and events with no causal links. But, without the narrative facts, the reader is deprived of the data from which he can himself judge the historian’s interpretations and evolve interpretations of his own. A major point of this and succeeding volumes is to put back the historical narrative into American history.</dc:description>
+        <dc:publisher>Ludwig von Mises Institute</dc:publisher>
+        <dc:language>eng</dc:language>
+        <meta content="{&quot;Murray N. Rothbard&quot;: &quot;&quot;}" name="calibre:author_link_map"/>
+        <meta content="2012-08-17T19:36:39+00:00" name="calibre:timestamp"/>
+        <meta content="Conceived in Liberty" name="calibre:title_sort"/>
+    </metadata>
+    <guide>
+        <reference href="Conceived in Liberty - Murray N. Rothbard.jpg" type="cover" title="Cover"/>
+    </guide>
+</package>

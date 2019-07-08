@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='utf-8'?>
+<package xmlns="http://www.idpf.org/2007/opf" unique-identifier="uuid_id">
+    <metadata xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:opf="http://www.idpf.org/2007/opf">
+        <dc:identifier opf:scheme="calibre" id="calibre_id">20</dc:identifier>
+        <dc:identifier opf:scheme="uuid" id="uuid_id">d3babd2e-c646-4a1c-8813-7157d1d4ea75</dc:identifier>
+        <dc:title>Man, Economy, and Liberty</dc:title>
+        <dc:creator opf:file-as="Block, Walter and Rockwell, Llewellyn H., Jr." opf:role="aut">Walter Block</dc:creator>
+        <dc:creator opf:file-as="Block, Walter and Rockwell, Llewellyn H., Jr." opf:role="aut">Llewellyn H. Rockwell, Jr.</dc:creator>
+        <dc:contributor opf:file-as="calibre" opf:role="bkp">calibre (0.8.60) [http://calibre-ebook.com]</dc:contributor>
+        <dc:date>1988-08-17T07:00:00+00:00</dc:date>
+        <dc:description>eBook, 450 pages</dc:description>
+        <dc:publisher>Ludwig von Mises Institute</dc:publisher>
+        <dc:identifier opf:scheme="ISBN">978-1-93355-014-5</dc:identifier>
+        <dc:language>eng</dc:language>
+        <meta content="{&quot;Llewellyn H. Rockwell, Jr.&quot;: &quot;&quot;, &quot;Walter Block&quot;: &quot;&quot;}" name="calibre:author_link_map"/>
+        <meta content="2012-08-17T19:36:34+00:00" name="calibre:timestamp"/>
+        <meta content="Man, Economy, and Liberty" name="calibre:title_sort"/>
+    </metadata>
+    <guide>
+        <reference href="Man, Economy, and Liberty - Walter Block &amp; Llewellyn H. Rockwell, Jr_.jpg" type="cover" title="Cover"/>
+    </guide>
+</package>

@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='utf-8'?>
+<package xmlns="http://www.idpf.org/2007/opf" unique-identifier="uuid_id">
+    <metadata xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:opf="http://www.idpf.org/2007/opf">
+        <dc:identifier opf:scheme="calibre" id="calibre_id">21</dc:identifier>
+        <dc:identifier opf:scheme="uuid" id="uuid_id">94a1027b-2b7b-4b71-a0e5-2970faca6eca</dc:identifier>
+        <dc:title>Left, Right, &amp; the Prospects for Liberty</dc:title>
+        <dc:creator opf:file-as="Murray N. Rothbard" opf:role="aut">Murray N. Rothbard</dc:creator>
+        <dc:contributor opf:file-as="calibre" opf:role="bkp">calibre (0.8.60) [http://calibre-ebook.com]</dc:contributor>
+        <dc:date>2010-08-17T07:00:00+00:00</dc:date>
+        <dc:description>eBook, 58 pages</dc:description>
+        <dc:publisher>Ludwig von Mises Institute</dc:publisher>
+        <dc:identifier opf:scheme="ISBN">978-1-93355-078-7</dc:identifier>
+        <dc:language>eng</dc:language>
+        <meta content="{&quot;Murray N. Rothbard&quot;: &quot;&quot;}" name="calibre:author_link_map"/>
+        <meta content="2012-08-17T19:36:35+00:00" name="calibre:timestamp"/>
+        <meta content="Left, Right, &amp; the Prospects for Liberty" name="calibre:title_sort"/>
+    </metadata>
+    <guide>
+        <reference href="Left, Right, &amp; the Prospects for Liberty - Murray N. Rothbard.jpg" type="cover" title="Cover"/>
+    </guide>
+</package>

@@ -1,0 +1,20 @@
+<?xml version='1.0' encoding='utf-8'?>
+<package xmlns="http://www.idpf.org/2007/opf" unique-identifier="uuid_id">
+    <metadata xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:opf="http://www.idpf.org/2007/opf">
+        <dc:identifier opf:scheme="calibre" id="calibre_id">17</dc:identifier>
+        <dc:identifier opf:scheme="uuid" id="uuid_id">bd08e541-765f-4a27-bf36-3ed00633eb76</dc:identifier>
+        <dc:title>For A New Liberty</dc:title>
+        <dc:creator opf:file-as="Rothbard, Murray N." opf:role="aut">Murray N. Rothbard</dc:creator>
+        <dc:contributor opf:file-as="calibre" opf:role="bkp">calibre (0.8.60) [http://calibre-ebook.com]</dc:contributor>
+        <dc:date>2012-08-16T19:47:05+00:00</dc:date>
+        <dc:publisher>Ludwig von Mises Institue</dc:publisher>
+        <dc:identifier opf:scheme="978-0-945466-47-5">978-0-945466-47-5</dc:identifier>
+        <dc:language>eng</dc:language>
+        <meta content="{&quot;Murray N. Rothbard&quot;: &quot;&quot;}" name="calibre:author_link_map"/>
+        <meta content="2012-08-16T19:47:05+00:00" name="calibre:timestamp"/>
+        <meta content="For A New Liberty" name="calibre:title_sort"/>
+    </metadata>
+    <guide>
+        <reference href="For A New Liberty - Murray N. Rothbard.jpg" type="cover" title="Cover"/>
+    </guide>
+</package>

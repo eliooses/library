@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='utf-8'?>
+<package xmlns="http://www.idpf.org/2007/opf" unique-identifier="uuid_id">
+    <metadata xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:opf="http://www.idpf.org/2007/opf">
+        <dc:identifier opf:scheme="calibre" id="calibre_id">28</dc:identifier>
+        <dc:identifier opf:scheme="uuid" id="uuid_id">5908a9ee-f445-457c-bef4-36d20d257411</dc:identifier>
+        <dc:title>Property, Freedom &amp; Society</dc:title>
+        <dc:creator opf:file-as="Hans-Hermann Hoppe" opf:role="aut">Hans-Hermann Hoppe</dc:creator>
+        <dc:contributor opf:file-as="calibre" opf:role="bkp">calibre (0.8.60) [http://calibre-ebook.com]</dc:contributor>
+        <dc:date>2009-10-07T07:00:00+00:00</dc:date>
+        <dc:description>&lt;p class="description"&gt;426 Pages&lt;/p&gt;</dc:description>
+        <dc:publisher>Ludwig von Mises Institute</dc:publisher>
+        <dc:identifier opf:scheme="ISBN">978-1-93355-052-7</dc:identifier>
+        <dc:language>eng</dc:language>
+        <meta content="{&quot;Hans-Hermann Hoppe&quot;: &quot;&quot;}" name="calibre:author_link_map"/>
+        <meta content="2012-10-08T02:48:14+00:00" name="calibre:timestamp"/>
+        <meta content="Property, Freedom &amp; Society" name="calibre:title_sort"/>
+    </metadata>
+    <guide>
+        <reference href="Property, Freedom &amp; Society - Hans-Hermann Hoppe.jpg" type="cover" title="Cover"/>
+    </guide>
+</package>
