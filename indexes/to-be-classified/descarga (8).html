@@ -1,0 +1,949 @@
+	<!DOCTYPE html>
+
+	<html lang="en-US" prefix="og: http://ogp.me/ns#" class="no-js">
+
+	<head>
+
+		<meta charset="UTF-8"><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports:{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o||n)},o,o.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({1:[function(e,n,t){function r(){}function o(e,n,t){return function(){return i(e,[c.now()].concat(u(arguments)),n?null:this,t),n?void 0:this}}var i=e("handle"),a=e(3),u=e(4),f=e("ee").get("tracer"),c=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,n){s[n]=o(d+n,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,o="function"==typeof n;return i(l+"tracer",[c.now(),e,t],r),function(){if(f.emit((o?"":"no-")+"fn-start",[c.now(),r,o],t),o)try{return n.apply(this,arguments)}catch(e){throw f.emit("fn-err",[arguments,this,e],t),e}finally{f.emit("fn-end",[c.now()],t)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=o(l+n)}),newrelic.noticeError=function(e,n){"string"==typeof e&&(e=new Error(e)),i("err",[e,c.now(),!1,n])}},{}],2:[function(e,n,t){function r(e,n){if(!o)return!1;if(e!==o)return!1;if(!n)return!0;if(!i)return!1;for(var t=i.split("."),r=n.split("."),a=0;a<r.length;a++)if(r[a]!==t[a])return!1;return!0}var o=null,i=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var u=navigator.userAgent,f=u.match(a);f&&u.indexOf("Chrome")===-1&&u.indexOf("Chromium")===-1&&(o="Safari",i=f[1])}n.exports={agent:o,version:i,match:r}},{}],3:[function(e,n,t){function r(e,n){var t=[],r="",i=0;for(r in e)o.call(e,r)&&(t[i]=n(r,e[r]),i+=1);return t}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],4:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,o=t-n||0,i=Array(o<0?0:o);++r<o;)i[r]=e[n+r];return i}n.exports=r},{}],5:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function o(e){function n(e){return e&&e instanceof r?e:e?f(e,u,i):i()}function t(t,r,o,i){if(!d.aborted||i){e&&e(t,r,o);for(var a=n(o),u=v(t),f=u.length,c=0;c<f;c++)u[c].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(e,n){h[e]=v(e).concat(n)}function m(e,n){var t=h[e];if(t)for(var r=0;r<t.length;r++)t[r]===n&&t.splice(r,1)}function v(e){return h[e]||[]}function g(e){return p[e]=p[e]||o(t)}function w(e,n){c(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var h={},y={},b={on:l,addEventListener:l,removeEventListener:m,emit:t,get:g,listeners:v,context:n,buffer:w,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",f=e("gos"),c=e(3),s={},p={},d=n.exports=o();d.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(o.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){o.buffer([e],r),o.emit(e,n,t)}var o=e("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!E++){var e=x.info=NREUM.info,n=l.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();c(y,function(n,t){e[n]||(e[n]=t)}),f("mark",["onload",a()+x.offset],null,"api");var t=l.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function o(){"complete"===l.readyState&&i()}function i(){f("mark",["domContent",a()+x.offset],null,"api")}function a(){return O.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-x.offset}var u=(new Date).getTime(),f=e("handle"),c=e(3),s=e("ee"),p=e(2),d=window,l=d.document,m="addEventListener",v="attachEvent",g=d.XMLHttpRequest,w=g&&g.prototype;NREUM.o={ST:setTimeout,SI:d.setImmediate,CT:clearTimeout,XHR:g,REQ:d.Request,EV:d.Event,PR:d.Promise,MO:d.MutationObserver};var h=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1123.min.js"},b=g&&w&&w[m]&&!/CriOS/.test(navigator.userAgent),x=n.exports={offset:u,now:a,origin:h,features:{},xhrWrappable:b,userAgent:p};e(1),l[m]?(l[m]("DOMContentLoaded",i,!1),d[m]("load",r,!1)):(l[v]("onreadystatechange",o),d[v]("onload",r)),f("mark",["firstbyte",u],null,"api");var E=0,O=e(5)},{}]},{},["loader"]);</script>
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<link rel="profile" href="http://gmpg.org/xfn/11">
+
+		<script>(function(html){html.className = html.className.replace(/\bno-js\b/,'js')})(document.documentElement);</script>
+<title>James E. Meade - Prize Lecture: The Meaning of Internal Balance - NobelPrize.org</title>
+
+<!-- This site is optimized with the Yoast SEO Premium plugin v7.9.1 - https://yoast.com/wordpress/plugins/seo/ -->
+<meta property="og:locale" content="en_US" />
+<meta property="og:type" content="object" />
+<meta property="og:site_name" content="NobelPrize.org" />
+<meta name="twitter:card" content="summary_large_image" />
+<!-- / Yoast SEO Premium plugin. -->
+
+<link rel='dns-prefetch' href='//www.nobelprize.org' />
+<link rel='stylesheet' id='nobel-css'  href='https://www.nobelprize.org/wp-content/themes/nobelprize/dist/css/style.0.2.4.min.css?ver=0.2.4' type='text/css' media='all' />
+<script type='text/javascript' src='https://www.nobelprize.org/wp-includes/js/jquery/jquery.js?ver=1.12.4'></script>
+<script type='text/javascript' src='https://www.nobelprize.org/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.4.1'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var fallback = {"path":"https:\/\/www.nobelprize.org\/wp-content\/themes\/nobelprize\/assets\/js\/frontend\/lib\/respimg\/ls.respimg.min.js"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://www.nobelprize.org/wp-content/themes/nobelprize/assets/js/frontend/lib/loadjs.js?ver=0.2.4'></script>
+<meta name="tec-api-version" content="v1"><meta name="tec-api-origin" content="https://www.nobelprize.org"><link rel="https://theeventscalendar.com/" href="https://www.nobelprize.org/wp-json/tribe/events/v1/" /><link type="text/plain" rel="author" href="https://www.nobelprize.org/wp-content/themes/nobelprize/humans.txt" />		<script>
+		window.VIDEOJS_NO_BASE_THEME = true;
+		window.VIDEOJS_NO_DYNAMIC_STYLE = true;
+		</script>
+				<!-- Google Tag Manager -->
+		<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+		new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+		j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+		'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+		})(window,document,'script','dataLayer','GTM-WDHZ8W5');</script>
+		<!-- End Google Tag Manager -->
+		
+		<!-- //start Title specific social meta tags -->
+		<meta name="twitter:title" content="The Sveriges Riksbank Prize in Economic Sciences in Memory of Alfred Nobel 1977"><!-- Twitter -->
+		<meta itemprop="name" content="The Sveriges Riksbank Prize in Economic Sciences in Memory of Alfred Nobel 1977" /><!-- Google+ -->
+		<meta property="og:title" content="The Sveriges Riksbank Prize in Economic Sciences in Memory of Alfred Nobel 1977" /><!-- OG -->
+		<!-- //end Title specific social meta tags -->
+
+		
+		<!-- //start Description specific social meta tags -->
+		<meta name="twitter:description" content="The Sveriges Riksbank Prize in Economic Sciences in Memory of Alfred Nobel 1977 was awarded jointly to Bertil Ohlin and James E. Meade &quot;for their pathbreaking contribution to the theory of international trade and international capital movements&quot;."><!-- Twitter -->
+		<meta itemprop="description" content="The Sveriges Riksbank Prize in Economic Sciences in Memory of Alfred Nobel 1977 was awarded jointly to Bertil Ohlin and James E. Meade &quot;for their pathbreaking contribution to the theory of international trade and international capital movements&quot;." /><!-- Google+ -->
+		<meta property="og:description" content="The Sveriges Riksbank Prize in Economic Sciences in Memory of Alfred Nobel 1977 was awarded jointly to Bertil Ohlin and James E. Meade &quot;for their pathbreaking contribution to the theory of international trade and international capital movements&quot;." /><!-- OG -->
+		<!-- //end Description specific social meta tags -->
+
+		
+		<!-- //start Image specific social meta tags -->
+		<meta name="twitter:card" content="summary_large_image" />
+		<meta name="twitter:image" content="https://www.nobelprize.org/images/meade-13289-landscape-medium.jpg" /><!-- Twitter -->
+		<meta itemprop="image" content="https://www.nobelprize.org/images/meade-13289-landscape-medium.jpg" /><!-- Google+ -->
+
+					<meta property="og:image" content="https://www.nobelprize.org/images/meade-13289-landscape-medium.jpg" /><!-- OG -->
+				<!-- //end Image specific social meta tags -->
+
+				<meta property="og:url" content="https://www.nobelprize.org/prizes/economic-sciences/1977/meade/lecture/" /><!-- OG -->
+		<link rel="icon" href="https://www.nobelprize.org/uploads/2018/08/Nobel-favicon-50x50.png" sizes="32x32" />
+<link rel="icon" href="https://www.nobelprize.org/uploads/2018/08/Nobel-favicon-232x232.png" sizes="192x192" />
+<link rel="apple-touch-icon-precomposed" href="https://www.nobelprize.org/uploads/2018/08/Nobel-favicon-188x188.png" />
+<meta name="msapplication-TileImage" content="https://www.nobelprize.org/uploads/2018/08/Nobel-favicon.png" />
+
+	</head>
+
+	<body class="tribe-no-js laureate-content-type laureate-content-type-lecture">
+
+				<!-- Google Tag Manager (noscript) -->
+		<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WDHZ8W5"
+		height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+		<!-- End Google Tag Manager (noscript) -->
+		
+		<!--[if lte IE 9]>
+			<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+		<![endif]-->
+
+		<a class="skip-link screen-reader-text" href="#content">
+			Skip to content		</a>
+
+		<header class="site-header" role="banner" itemscope="itemscope" itemtype="http://schema.org/WPHeader">
+
+			<div class="site-banner" itemscope itemtype="http://schema.org/Organization">
+
+				<div class="mobile-search">
+
+					<a href="#" id="search-mobile-trigger-js">
+						<svg width="20px" height="20px" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" role="img" aria-labelledby="search-mobile-title search-mobile-description">
+	<title id="search-mobile-title">Close the search form</title>
+	<desc id="search-mobile-description">A button that allows you to close the search form if needed</desc>
+	<g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+		<g transform="translate(-1132.000000, -18.000000)">
+			<g id="mobile-search-icon" transform="translate(1132.000000, 18.000000)">
+				<rect fill="#2A2A2A" transform="translate(16.000000, 16.000000) rotate(-45.000000) translate(-16.000000, -16.000000) " x="15" y="12" width="2" height="8"></rect>
+				<circle stroke="#2A2A2A" stroke-width="2" cx="8" cy="8" r="7"></circle>
+			</g>
+		</g>
+	</g>
+</svg>
+					</a>
+
+					<!-- Note: Exists only to close the mobile navigation when JS is disabled -->
+					<noscript>
+						<a id="mobile-close-js" class="toggle-close" href="#">
+							<span>Close Mobile Menu</span>
+						</a>
+					</noscript>
+
+				</div>
+
+				<div class="site-banner-logo" itemscope itemtype="http://schema.org/Organization">
+					<h1 class="site-logo" itemprop="logo">
+						<a itemprop="url" href="https://www.nobelprize.org" name="top">
+							<svg width="109px" height="86px" viewBox="0 0 109 86" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" role="img" aria-labelledby="logo-title logo-description">
+							    <title id="logo-title">The Nobel Prize</title>
+							    <desc id="logo-description">The Nobel Prize Logo</desc>
+							    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+							        <g transform="translate(-586.000000, -21.000000)" fill="#BB8A35">
+							            <g id="The_Nobel_Prize_logotype" transform="translate(586.000000, 21.000000)">
+							                <path d="M16.6528099,62.0089676 L8.30051408,62.0089676 L8.30051408,85.946038 L11.4498099,85.946038 L11.4498099,74.5243901 L16.6528099,74.5243901 C20.8286549,74.5243901 23.7381197,72.0285732 23.7381197,68.2669817 C23.7381197,64.5053901 20.8286549,62.0089676 16.6528099,62.0089676 Z M16.6528099,71.6524746 L11.4498099,71.6524746 L11.4498099,64.8814887 L16.6528099,64.8814887 C19.0141761,64.8814887 20.5549085,66.0788268 20.5549085,68.2669817 C20.5549085,70.4551366 19.0141761,71.6524746 16.6528099,71.6524746 Z M42.3589366,85.946038 L46.1586831,85.946038 L37.4302887,74.4904746 C41.1270775,74.1482915 43.6253169,71.7548268 43.6253169,68.2669817 C43.6253169,64.5053901 40.7158521,62.0089676 36.540007,62.0089676 L28.1883169,62.0089676 L28.1883169,85.946038 L31.3376127,85.946038 L31.3376127,74.5243901 L33.7674155,74.5243901 L42.3589366,85.946038 Z M31.3376127,64.8814887 L36.540007,64.8814887 C38.9019789,64.8814887 40.4421056,66.0788268 40.4421056,68.2669817 C40.4421056,70.4551366 38.9019789,71.6524746 36.540007,71.6524746 L31.3376127,71.6524746 L31.3376127,64.8814887 Z M50.539838,85.946038 L53.6891338,85.946038 L53.6891338,62.0089676 L50.539838,62.0089676 L50.539838,85.946038 Z M58.6177817,85.946038 L76.930331,85.946038 L76.930331,83.0735169 L62.5883169,83.0735169 L76.5542324,64.3339958 L76.5542324,62.0089676 L59.9532042,62.0089676 L59.9532042,64.8814887 L72.4807394,64.8814887 L58.6177817,83.4496155 L58.6177817,85.946038 Z M85.0082746,83.0735169 L85.0082746,74.5243901 L95.1066127,74.5243901 L95.1066127,71.6524746 L85.0082746,71.6524746 L85.0082746,64.8814887 L95.8594155,64.8814887 L95.8594155,62.0089676 L81.8595845,62.0089676 L81.8595845,85.946038 L96.0302042,85.946038 L96.0302042,83.0735169 L85.0082746,83.0735169 Z" id="Prize"></path>
+							                <path d="M16.4987366,31.0045141 L16.4987366,49.059669 L2.46438451,31.0045141 L6.05633803e-05,31.0045141 L6.05633803e-05,54.9415845 L3.08091972,54.9415845 L3.08091972,36.4073732 L17.3884127,54.9415845 L19.5795958,54.9415845 L19.5795958,31.0045141 L16.4987366,31.0045141 Z M36.5567225,55.4545563 C43.4367225,55.4545563 49.0848634,49.8809085 49.0848634,42.9730493 C49.0848634,36.0651901 43.4367225,30.4915423 36.5567225,30.4915423 C29.6767225,30.4915423 24.0291873,36.0651901 24.0291873,42.9730493 C24.0291873,49.8809085 29.6767225,55.4545563 36.5567225,55.4545563 Z M36.5567225,52.445162 C31.4566803,52.445162 27.2463141,48.2051197 27.2463141,42.9730493 C27.2463141,37.7409789 31.4566803,33.5009366 36.5567225,33.5009366 C41.6573704,33.5009366 45.867131,37.7409789 45.867131,42.9730493 C45.867131,48.2051197 41.6573704,52.445162 36.5567225,52.445162 Z M65.069962,41.8447535 C67.0891451,40.8872465 68.2870887,39.0745845 68.2870887,36.7495563 C68.2870887,33.192669 65.5490183,31.0045141 61.1333423,31.0045141 L53.5344549,31.0045141 L53.5344549,54.9415845 L61.8861451,54.9415845 C66.3363423,54.9415845 69.3826803,52.0351479 69.3826803,47.7951056 C69.3826803,44.9219789 67.7056803,42.8016549 65.069962,41.8447535 Z M61.0649056,33.8085986 C63.3923563,33.8085986 65.1383986,34.8684577 65.1383986,37.0911338 C65.1383986,39.3138099 63.2900042,40.6819366 61.0649056,40.6819366 L56.6837507,40.6819366 L56.6837507,33.8085986 L61.0649056,33.8085986 Z M61.7153563,52.1381056 L56.6837507,52.1381056 L56.6837507,43.4860211 L61.7153563,43.4860211 C64.1457648,43.4860211 66.2333845,45.1272887 66.2333845,47.8290211 C66.2333845,50.5301479 64.1457648,52.1381056 61.7153563,52.1381056 Z M77.4945394,52.0690634 L77.4945394,43.5199366 L87.5922718,43.5199366 L87.5922718,40.6474155 L77.4945394,40.6474155 L77.4945394,33.8770352 L88.3456803,33.8770352 L88.3456803,31.0045141 L74.3458493,31.0045141 L74.3458493,54.9415845 L88.516469,54.9415845 L88.516469,52.0690634 L77.4945394,52.0690634 Z M97.4846944,52.0690634 L97.4846944,31.0045141 L94.3353986,31.0045141 L94.3353986,54.9415845 L108.335835,54.9415845 L108.335835,52.0690634 L97.4846944,52.0690634 Z" id="Nobel"></path>
+							                <path d="M66.8837141,0.000121126761 L66.8837141,23.9371915 L81.0549394,23.9371915 L81.0549394,21.0646704 L70.0330099,21.0646704 L70.0330099,12.5161493 L80.1307423,12.5161493 L80.1307423,9.64302254 L70.0330099,9.64302254 L70.0330099,2.87264225 L80.8841507,2.87264225 L80.8841507,0.000121126761 L66.8837141,0.000121126761 Z M58.2582775,0.000121126761 L58.2582775,9.64302254 L45.0457704,9.64302254 L45.0457704,0.000121126761 L41.8964746,0.000121126761 L41.8964746,23.9371915 L45.0457704,23.9371915 L45.0457704,12.5161493 L58.2582775,12.5161493 L58.2582775,23.9371915 L61.4075732,23.9371915 L61.4075732,0.000121126761 L58.2582775,0.000121126761 Z M21.2219535,0.000121126761 L21.2219535,2.87264225 L27.9311648,2.87264225 L27.9311648,23.9371915 L31.0804606,23.9371915 L31.0804606,2.87264225 L37.7890662,2.87264225 L37.7890662,0.000121126761 L21.2219535,0.000121126761 Z" id="The"></path>
+							            </g>
+							        </g>
+							    </g>
+							</svg>
+						</a>
+					</h1>
+				</div>
+
+				<div class="mobile-nav">
+
+					<a id="mobile-nav-js" href="#main-navigation-js" class="toggle">
+						<span>
+							Toggle Mobile Menu						</span>
+					</a>
+
+				</div>
+
+			</div>
+
+			<nav id="main-navigation-js" class="site-main-navigation container" role="navigation" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement"
+			aria-label="Main menu" aria-expanded="false">
+
+				<ul id="menu-header_top" class="main-menu" role="menu"><li id="menu-item-28259" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-28259" role="menuitem"><a href="/prizes/">Nobel Prizes &amp; Laureates</a>
+<ul class="sub-menu" role="menu" aria-hidden="true">
+	<li id="menu-item-48853" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-48853" role="menuitem"><a href="/prizes/physics/">Physics Prize</a></li>
+	<li id="menu-item-48854" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-48854" role="menuitem"><a href="/prizes/chemistry/">Chemistry Prize</a></li>
+	<li id="menu-item-48855" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-48855" role="menuitem"><a href="/prizes/medicine/">Medicine Prize</a></li>
+	<li id="menu-item-48856" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-48856" role="menuitem"><a href="/prizes/literature/">Literature Prize</a></li>
+	<li id="menu-item-48857" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-48857" role="menuitem"><a href="/prizes/peace/">Peace Prize</a></li>
+	<li id="menu-item-48858" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-48858" role="menuitem"><a href="/prizes/economics/">Prize in Economic Sciences</a></li>
+	<li id="menu-item-54140" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-54140" role="menuitem"><a href="https://www.nobelprize.org/prizes/facts/nobel-prize-facts/">Quick facts</a></li>
+</ul>
+</li>
+<li id="menu-item-28260" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-28260" role="menuitem"><a href="/nomination/">Nomination</a>
+<ul class="sub-menu" role="menu" aria-hidden="true">
+	<li id="menu-item-43405" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-43405" role="menuitem"><a href="https://www.nobelprize.org/nomination/nomination-and-selection-of-physics-laureates/">Physics Prize</a></li>
+	<li id="menu-item-43408" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-43408" role="menuitem"><a href="https://www.nobelprize.org/nomination/nomination-and-selection-of-chemistry-laureates/">Chemistry Prize</a></li>
+	<li id="menu-item-43407" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-43407" role="menuitem"><a href="https://www.nobelprize.org/nomination/nomination-and-selection-of-medicine-laureates/">Medicine Prize</a></li>
+	<li id="menu-item-43409" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-43409" role="menuitem"><a href="https://www.nobelprize.org/nomination/nomination-and-selection-of-literature-laureates/">Literature Prize</a></li>
+	<li id="menu-item-43406" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-43406" role="menuitem"><a href="https://www.nobelprize.org/nomination/nomination-and-selection-of-peace-prize-laureates/">Peace Prize</a></li>
+	<li id="menu-item-43410" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-43410" role="menuitem"><a href="https://www.nobelprize.org/nomination/nomination-and-selection-of-laureates-in-economic-sciences/">Prize in Economic Sciences</a></li>
+	<li id="menu-item-49690" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-49690" role="menuitem"><a href="https://www.nobelprize.org/nomination/redirector/?redir=archive/">Nomination Archive</a></li>
+</ul>
+</li>
+<li id="menu-item-28261" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-28261" role="menuitem"><a href="/alfred-nobel/">Alfred Nobel</a>
+<ul class="sub-menu" role="menu" aria-hidden="true">
+	<li id="menu-item-43411" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-43411" role="menuitem"><a href="https://www.nobelprize.org/alfred-nobel/biographical-information/">Alfred Nobel&rsquo;s life</a></li>
+	<li id="menu-item-43412" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-43412" role="menuitem"><a href="https://www.nobelprize.org/alfred-nobel/alfred-nobels-will/">Alfred Nobel&rsquo;s will</a></li>
+</ul>
+</li>
+<li id="menu-item-28262" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-28262" role="menuitem"><a href="/news-and-insights/">News &amp; insights</a></li>
+<li id="menu-item-28263" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-28263" role="menuitem"><a href="/events/">Events</a>
+<ul class="sub-menu" role="menu" aria-hidden="true">
+	<li id="menu-item-43676" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-43676" role="menuitem"><a href="https://www.nobelprize.org/public-events/">Public events</a>
+	<ul class="sub-menu" role="menu" aria-hidden="true">
+		<li id="menu-item-50085" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-50085" role="menuitem"><a href="https://www.nobelprize.org/nobel-week-dialogue/">Nobel Week Dialogue</a></li>
+		<li id="menu-item-50086" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-50086" role="menuitem"><a href="https://www.nobelprize.org/nobel-prize-dialogue/">Nobel Prize Dialogue</a></li>
+		<li id="menu-item-50087" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-50087" role="menuitem"><a href="https://www.nobelprize.org/nobel-prize-series/">Nobel Prize Series</a></li>
+		<li id="menu-item-50088" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-50088" role="menuitem"><a href="https://www.nobelprize.org/nobel-prize-inspiration-initiative/">Nobel Prize Inspiration Initiative</a></li>
+	</ul>
+</li>
+	<li id="menu-item-43675" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-43675" role="menuitem"><a href="https://www.nobelprize.org/nobel-prize-award-ceremonies/">Nobel Prize award ceremonies</a></li>
+</ul>
+</li>
+<li id="menu-item-28264" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-28264" role="menuitem"><a href="/education-network/">Education network</a>
+<ul class="sub-menu" role="menu" aria-hidden="true">
+	<li id="menu-item-39722" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-39722" role="menuitem"><a href="https://www.nobelprize.org/education-network-nobel-prize-lessons/">Nobel Prize Lessons</a></li>
+	<li id="menu-item-39718" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-39718" role="menuitem"><a href="https://www.nobelprize.org/education-network-nobel-prize-teacher-summit/">Nobel Prize Teacher Summit</a></li>
+</ul>
+</li>
+		<li role="menuitem" class="searchform">
+			<a href="javascript:void(0);" id="search-trigger-js">
+				
+<svg width="20px" height="20px" viewbox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" role="img" aria-labelledby="desktop-search-title desktop-search-description">
+	<title id="desktop-search-title">Close the search form</title>
+	<desc id="desktop-search-description">A button that allows you to close the search form if needed</desc>
+	<g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+		<g transform="translate(-1132.000000, -18.000000)">
+			<g transform="translate(1132.000000, 18.000000)">
+				<rect fill="#2A2A2A" transform="translate(16.000000, 16.000000) rotate(-45.000000) translate(-16.000000, -16.000000) " x="15" y="12" width="2" height="8"></rect>
+				<circle stroke="#2A2A2A" stroke-width="2" cx="8" cy="8" r="7"></circle>
+			</g>
+		</g>
+	</g>
+</svg>
+			</a>
+		</li>
+		</ul>
+
+			</nav>
+
+				<div class="header-search-form" aria-hidden="true">
+					<div class="container">
+						
+<form class="searchform -header" method="GET"
+	action="/search/"
+	>
+
+	<label for="search-form-input-header" class="screen-reader-text">
+		Header Search	</label>
+
+	<input type="text" class="input" name="s" id="search-form-input-header" placeholder="Enter your search here"
+	value=""
+	>
+
+	<button type="submit">
+		<svg width="20px" height="20px" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" role="img" aria-labelledby="submit-search-title-header submit-search-description-header">
+			<title id="submit-search-title-header">Submit a search term</title>
+			<desc id="submit-search-description-header">Allows users to submit a search term</desc>
+			<g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+				<g transform="translate(-1132.000000, -18.000000)">
+					<g transform="translate(1132.000000, 18.000000)">
+						<rect fill="#2A2A2A" transform="translate(16.000000, 16.000000) rotate(-45.000000) translate(-16.000000, -16.000000) "
+						x="15" y="12" width="2" height="8"></rect>
+						<circle stroke="#2A2A2A" stroke-width="2" cx="8" cy="8" r="7"></circle>
+					</g>
+				</g>
+			</g>
+		</svg>
+	</button>
+
+	</form>
+					</div>
+				</div>
+			</div>
+
+		</header>
+
+
+			
+				<div class="sticky-navigation">
+
+				
+<section class="sub-navigation" aria-haspopup="true">
+
+<div class="container">
+
+	<button id="dropdown-js" class="button">
+		<span>
+			James E. Meade		</span>
+
+		<span>
+			<span id="dropdown-js-more">More</span>
+			<svg aria-hidden="true" focusable="false" role="img" xmlns="http://www.w3.org/2000/svg" width="16" height="28" viewBox="0 0 16 28">
+				<path d="M16 11c0 .266-.109.516-.297.703l-7 7C8.516 18.89 8.265 19 8 19s-.516-.109-.703-.297l-7-7C.11 11.516 0 11.265 0 11c0-.547.453-1 1-1h14c.547 0 1 .453 1 1z"/>
+			</svg>
+		</span>
+	</button>
+
+	<section id="dropdown-menu-js" class="sub-navigation-dropdown" aria-hidden="true">
+		<nav class="sub-navigation-wrapper">
+							
+				
+					<ul role="menu" class="sub-navigation-menu">
+						
+								<li role="menuitem">
+
+									<a href="https://www.nobelprize.org/prizes/economic-sciences/1977/meade/facts/"
+										title="James E. Meade - Facts">
+										Facts									</a>
+								</li>
+
+						
+								<li role="menuitem">
+
+									<a href="https://www.nobelprize.org/prizes/economic-sciences/1977/meade/biographical/"
+										title="James E. Meade - Biographical">
+										Biographical									</a>
+								</li>
+
+						
+					</ul>
+
+			
+					<ul role="menu" class="sub-navigation-menu">
+						
+								<li role="menuitem">
+
+									<a href="https://www.nobelprize.org/prizes/economic-sciences/1977/meade/lecture/"
+										title="James E. Meade - Prize Lecture">
+										Prize Lecture									</a>
+								</li>
+
+						
+								<li role="menuitem">
+
+									<a href="https://www.nobelprize.org/prizes/economic-sciences/1977/meade/speech/"
+										title="James E. Meade - Banquet speech">
+										Banquet speech									</a>
+								</li>
+
+						
+					</ul>
+
+					</nav>
+	</section>
+
+</div>
+
+</section>
+
+
+				</div>
+
+				
+
+		<main id="content" role="main" class="nobel-content">
+
+
+	<noscript id="noscript-list">
+
+	<h3>
+		Enhanced Page Navigation	</h3>
+
+	<ol>
+					<li>
+				<a href="https://www.nobelprize.org/prizes/economic-sciences/1977/meade/lecture/"
+					title="James E. Meade - Prize Lecture: The Meaning of Internal Balance"
+					data-related="0"
+					>
+					James E. Meade - Prize Lecture: The Meaning of Internal Balance				</a>
+			</li>
+					<li>
+				<a href="https://www.nobelprize.org/prizes/economic-sciences/1977/meade/facts/"
+					title="James E. Meade - Facts"
+					data-related="0"
+					>
+					James E. Meade - Facts				</a>
+			</li>
+					<li>
+				<a href="https://www.nobelprize.org/prizes/economic-sciences/1977/meade/biographical/"
+					title="James E. Meade - Biographical"
+					data-related="1"
+					>
+					James E. Meade - Biographical				</a>
+			</li>
+			</ol>
+</noscript>
+
+	<div id="pjax-well" class="container page-content-area">
+
+		<div class="pjax-container" >
+
+			<section class="page-section biographical">
+
+	
+<aside class="page-aside border-top">
+
+	<header class="header">
+		<h5 class="heading">
+			<a href="https://www.nobelprize.org/prizes/economic-sciences/1977/summary/">
+				The Sveriges Riksbank Prize in Economic Sciences in Memory of Alfred Nobel 1977			</a>
+		</h5>
+	</header>
+
+	<ul class="list-laureates">
+									<li class="list-laureate" itemscope itemtype="http://schema.org/Person">
+					<a href="https://www.nobelprize.org/prizes/economic-sciences/1977/ohlin/facts/" class=""
+						itemprop="url"  title="Bertil Ohlin">
+						<span itemprop="name">
+							Bertil Ohlin						</span>
+					</a>
+				</li>
+							<li class="list-laureate" itemscope itemtype="http://schema.org/Person">
+					<a href="https://www.nobelprize.org/prizes/economic-sciences/1977/meade/facts/" class=""
+						itemprop="url"  title="James E. Meade">
+						<span itemprop="name">
+							James E. Meade						</span>
+					</a>
+				</li>
+						</ul>
+
+	<footer class="footer">
+		
+<div class="share-this">
+	<h6 class="heading">
+		Share this	</h6>
+	<ul class="socialicons">
+		<li class="socialicon" data-social="facebook">
+			<a data-target="https://www.nobelprize.org/prizes/economic-sciences/1977/meade/lecture/"
+				href="https://www.facebook.com/sharer.php?u=https%3A%2F%2Fwww.nobelprize.org%2Fprizes%2Feconomic-sciences%2F1977%2Fmeade%2Flecture%2F&#038;t=James+E.+Meade+%E2%80%93+Prize+Lecture" target="_blank">
+
+				<svg width="32px" height="32px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" role="image" aria-labelledby="aside-facebook-title  aside-facebook-desc">
+					<title id="aside-facebook-title">Share on Facebook: James E. Meade &#8211; Prize Lecture</title>
+					<desc id="aside-facebook-desc">Share this content on Facebook</desc>
+					<g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+						<g transform="translate(0.000000, -28.000000)">
+							<g transform="translate(0.000000, 28.000000)">
+								<circle stroke="#DBD9D6" stroke-width="1" cx="16" cy="16" r="15.5"></circle>
+								<path d="M22.2273337,9 L9.7726663,9 C9.34589013,9 9,9.34588883 9,9.77266341 L9,22.2272841 C9,22.6540063 9.34589013,23 9.7726663,23 L16.4778676,23 L16.4778676,17.5784522 L14.653368,17.5784522 L14.653368,15.4655614 L16.4778676,15.4655614 L16.4778676,13.9073831 C16.4778676,12.0991514 17.5822611,11.1145169 19.195366,11.1145169 C19.9680847,11.1145169 20.6321686,11.1720077 20.8256761,11.1977107 L20.8256761,13.0874576 L19.7069099,13.0879822 C18.8296477,13.0879822 18.6597451,13.5048427 18.6597451,14.1165739 L18.6597451,15.4655614 L20.7520289,15.4655614 L20.4796286,17.5784522 L18.6597451,17.5784522 L18.6597451,23 L22.2273337,23 C22.6540574,23 23,22.6540063 23,22.2272841 L23,9.77266341 C23,9.34588883 22.6540574,9 22.2273337,9"
+									fill="#4266B2" fill-rule="evenodd"></path>
+							</g>
+						</g>
+					</g>
+				</svg>
+
+				<span class="screen-reader-text">
+					Facebook				</span>
+
+			</a>
+		</li>
+		<li class="socialicon" data-social="twitter">
+			<a data-target="https://www.nobelprize.org/prizes/economic-sciences/1977/meade/lecture/"
+				href="https://twitter.com/intent/tweet?text=James+E.+Meade+%E2%80%93+Prize+Lecture&#038;url=https%3A%2F%2Fwww.nobelprize.org%2Fprizes%2Feconomic-sciences%2F1977%2Fmeade%2Flecture%2F" target="_blank">
+
+				<svg width="32px" height="32px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" role="image" aria-labelledby="aside-twitter-title  aside-twitter-desc">
+					<title id="aside-twitter-title">Tweet: James E. Meade &#8211; Prize Lecture</title>
+					<desc id="aside-twitter-desc">Share this content on Twitter</desc>
+					<g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+						<g transform="translate(-40.000000, -28.000000)">
+							<g transform="translate(40.000000, 28.000000)">
+								<circle stroke="#DBD9D6" stroke-width="1" cx="16" cy="16" r="15.5"></circle>
+								<path d="M16.451625,13.4399657 L16.5181573,13.9860583 L15.9858984,13.9177967 C13.9899274,13.6447504 12.2600859,12.7573499 10.7963739,11.2555951 L10.0645179,10.5047177 L9.86492076,11.0508104 C9.46572656,12.2795188 9.73185602,13.5764888 10.5302444,14.4638894 C10.995971,14.9417204 10.8629062,15.009982 10.0645179,14.7369357 C9.79838839,14.6686741 9.59879129,14.6004125 9.53225893,14.6004125 C9.46572656,14.6686741 9.73185602,15.7608594 9.93145312,16.1021673 C10.1975826,16.7165215 10.7963739,17.2626142 11.3951652,17.6039221 L11.9274241,17.8769684 L11.3951652,17.8769684 C10.7963739,17.8769684 10.7963739,17.8769684 10.7963739,18.1500147 C11.0625033,18.9008921 11.8608917,19.6517695 12.7923449,20.061339 L13.4576685,20.3343853 L12.8588772,20.6756932 C11.9939565,21.2217858 10.995971,21.4948322 9.93145312,21.4948322 C9.46572656,21.4948322 9,21.5630937 9,21.5630937 C9,21.6313553 10.3306473,22.3139711 11.1290357,22.5870174 C13.4576685,23.3378948 16.1854955,23.0648485 18.2479988,21.7678785 C19.7117109,20.8804779 21.1754229,19.0374153 21.8407466,17.2626142 C22.2399408,16.306952 22.5726026,14.6686741 22.5726026,13.7812736 C22.5726026,13.2351809 22.639135,13.1669194 23.1713939,12.5525651 C23.5040558,12.2112572 23.8367176,11.7334262 23.9697823,11.6651646 C24.0363147,11.4603798 24.0363147,11.4603798 23.5040558,11.6651646 C22.5726026,12.0064725 22.4395379,11.9382109 22.9052645,11.4603798 C23.2379263,11.1190719 23.6371205,10.4364561 23.6371205,10.2316714 C23.6371205,10.1634098 23.5040558,10.2316714 23.3044587,10.3681946 C23.1048616,10.4364561 22.7056674,10.6412409 22.3730055,10.777764 L21.7742142,10.9825488 L21.37502,10.5729793 C21.1088906,10.3681946 20.643164,10.0951482 20.4435669,10.0951482 C19.8447756,9.95862508 19.0463872,9.95862508 18.5141283,10.1634098 C17.183481,10.5729793 16.3185602,11.9382109 16.451625,13.4399657 Z"
+									fill="#1DA1F2" fill-rule="nonzero"></path>
+							</g>
+						</g>
+					</g>
+				</svg>
+
+				<span class="screen-reader-text">
+					Twitter				</span>
+
+			</a>
+		</li>
+		<li class="socialicon" data-social="email">
+			<a data-target="https://www.nobelprize.org/prizes/economic-sciences/1977/meade/lecture/"
+				href="mailto:?subject=From+NobelPrize.org%3A+James+E.+Meade+%E2%80%93+Prize+Lecture&#038;body=https%3A%2F%2Fwww.nobelprize.org%2Fprizes%2Feconomic-sciences%2F1977%2Fmeade%2Flecture%2F" target="_blank">
+
+				<svg width="32px" height="32px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" role="image" aria-labelledby="aside-email-title  aside-email-desc">
+					<title id="aside-email-title">Share via Email: James E. Meade &#8211; Prize Lecture</title>
+					<desc id="aside-email-desc">Share this content via Email</desc>
+					<g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+						<g transform="translate(-80.000000, -28.000000)">
+							<g transform="translate(80.000000, 28.000000)">
+								<circle stroke="#DBD9D6" stroke-width="1" cx="16" cy="16" r="15.5"></circle>
+								<polygon fill="#DBD9D6" fill-rule="nonzero" points="22.1500528 11 9.85087585 11 16 17"></polygon>
+								<polygon fill="#DBD9D6" fill-rule="nonzero" points="16 19 8 11 8 21 24 21 24 11"></polygon>
+							</g>
+						</g>
+					</g>
+				</svg>
+
+				<span class="screen-reader-text">
+					Email this page				</span>
+
+			</a>
+		</li>
+
+	</ul>
+</div>
+	</footer>
+
+	
+
+</aside>
+
+	<article class="  page-content border-top entry-content">
+
+					<header class="section-header">
+				<h1>
+					James E. Meade				</h1>
+									<h2>
+						Prize Lecture					</h2>
+							</header>
+		
+		
+<p class="smalltext">Lecture to the memory of Alfred Nobel,   December 8, 1977</p>
+<h2>The Meaning of &#8220;Internal Balance&#8221;</h2>
+<p>I. It is a special privilege for me on this   occasion to have my name associated with that of Professor Bertil   Ohlin. By the younger generation of economists we are no doubt   both regarded as what in my country are now known as &#8216;senior   citizens&#8217;; but I am just that much younger than Professor Ohlin   to have regarded him as one of the already established figures   when I was first trying to understand international economics.   His great work on <i>International and Interregional Trade</i>   opened up new insights into the complex of relationships between   factor supplies, costs of movement of products and factors, price   relationships, and the actual international trade in products,   migration of persons, and flows of capital. Of the two volumes   which I later wrote on International Economic Policy &#8211; namely,   <i>The Balance of Payments</i> and <i>Trade and Welfare</i> &#8211; it   is in the latter that the influence of this work by Professor   Ohlin is most clearly marked.</p>
+<p>But Professor Ohlin also made an important   contribution to what now might be called the macro-economic   aspects of a country&#8217;s balance of payments. In 1929 in the   Economic Journal he engaged in a famous controversy with Keynes   on the problem of transferring payments from one country to   another across the foreign exchanges. In this he laid stress upon   the income-expenditure effects of the reduced spending power in   the paying country and of the increased spending power in the   recipient country. In doing so he made use of the usual   distinction between a country&#8217;s imports and exports; but in   addition he emphasised the importance of the less usual   distinction between a country&#8217;s domestic non-tradeable goods and   services and its tradeable, exportable and importable, goods. I   made some use of this latter distinction in my <i>Balance of   Payments</i>; but looking back I regret that I did not let it   play a much more central role in that book.</p>
+<p>II. Indeed I realise now, looking back with   the advantage of hindsight, that my two books were deficient in   many respects. From this rich field of deficiencies I have   selected one as the subject for today&#8217;s lecture, because it   raises an issue which in my opinion is at the present time   perhaps the most pressing of all for the maintenance of a decent   international economic order.</p>
+<p>The basic analysis in <i>The Balance of   Payments</i> was conducted in terms of static equilibrium models   rather than in terms of dynamic growing or disequilibrium models.   The use of this method of comparative statics was a result of   Keynes&#8217;s work.</p>
+<p>Keynes in <i>The General Theory</i> applied   Marshall&#8217;s short-period analysis to the whole macro-economic   system instead of to one single firm or industry. In this model   additions to capital stocks are taking place; but we deal with a   period of time over which the addition to the stock bears a   negligible ratio to the total existing stock. Variable factors,   and in particular labour, are applied to this stock with a rising   marginal cost until marginal cost is equal to selling price, &#8211; an   assumption which can be modified to accommodate micro-economic   theories about determinants of output and prices in conditions of   imperfect competition. The rest of the Keynesian analysis with   its consumption function, liquidity preference, and investment   function can be used to determine the short-period, static,   stable equilibrium levels of total national income, output,   employment, interest, and so on, in terms of such parameters as   the money wage rate, the supply of money, entrepreneur&#8217;s   expectations, rates of tax, levels of government expenditure, and   the foreign demand for the country&#8217;s exports. The model can then   be used to show how changes in these parameters would affect the   short-period equilibrium levels of the various macro-economic   variables. Keynes was not, I think, interested in the process of   change from one short-period equilibrium to another, though he   was very interested in the way in which expectations in a milieu   of uncertainty would affect the short-period equilibrium, in   particular through their effect upon investment. If my   interpretation is correct, he judged intuitively that the   short-period mechanisms of adjustment were in fact such that at   any one time the macro-elements of the system would not be far   different from their short-period equilibrium values; and he may   well have been correct in this judgement in the 1930&#8217;s.</p>
+<p><i>The Balance of Payments</i> was   essentially based on macro-economic models of this kind. What I   tried to elaborate was the international interplay between a   number of national economies of this Keynesian type. For this   purpose I discussed the different combinations of policy   variables which would serve to reconcile what I called &#8216;external   balance&#8217; with what I called &#8216;internal balance&#8217;. By &#8216;external   balance&#8217; was meant a balance in the country&#8217;s international   payments; and although this idea presents, and indeed at the time   was realised to present, considerable conceptual difficulties,   nevertheless I still instinctively feel that it is not a foolish   one. But can the same be said of the idea of &#8216;internal balance&#8217;?   Does it mean full employment or does it mean price stability?</p>
+<p>I don&#8217;t believe that I was quite so stupid   as not to realise that full employment and price stability are   two quite different things. But one treated them under the same   single umbrella of &#8216;internal balance&#8217; because of a belief or an   assumption that if one maintained a level of effective demand   which preserved full employment one would also find that the   money price level was reasonably stable. The reason for making   this tacit or open assumption was, of course, due to a tacit or   open assumption that the money wage rate was normally either   constant or at least very slugghish in its movements. In this   case with the Keynesian model the absolute level of money prices   would be rather higher or lower according as the level of   effective demand moved the economy to a higher or lower point on   the upward-sloping short-period marginal cost curve. But there   would be no reason to expect a rapidly rising or falling general   level of money prices in any given short-period equilibrium   position.</p>
+<p>This may have been a very sensible   assumption to make in the 1930&#8217;s. It is more doubtful whether it   was a sensible assumption to make in the immediate post-war years   when <i>The Balance of Payments</i> was being written. In any   case if I were now rewriting that book I would do the underlying   analysis not in terms of the reconciliation of the two objectives   of external balance and internal balance, but in terms of the   reconciliation of the three objectives of equilibrium in the   balance of payments, full employment, and price stability.</p>
+<p>Why did I not proceed in this way in the   first place?</p>
+<p>I was certainly aware of the danger that   trade union and other wage-fixing institutions might not permit   the maintenance of full employment without a money cost-price   inflation. But I suppose that writing immediately after the war I   adopted the basic model which was so useful before the war and   simply hoped that somehow or another it would be possible to   avoid full employment leading to a wage-price inflation. Having   done so I found that there remained quite enough important   international relationships to examine even on that simplifying   assumption. That is not perhaps a very strong defence of my   position, but I suspect that it is the truth of the matter.</p>
+<p>I am well aware that I could now adopt a   more sophisticated line of defence of my past behaviour. It is   quite possible to define as the natural level of employment, that   level which &#8211; given the existing relevant institutions affecting   wage-fixing arrangements &#8211; would lead to a demand for real wage   rates rising at a rate equal to the rate of increase of labour   productivity. One has only to add to this the assumption that one   starts from a position in which there is no general expectation   of future inflation or deflation of money prices to reach the   position in which the maintenance of this natural level of   employment is compatible with price stability. If this natural   level of employment is treated as &#8216;full employment&#8217; one has   succeeded in defining a situation of &#8216;internal balance&#8217; in which   &#8216;full employment&#8217; and &#8216;price stability&#8217; can be simultaneously   achieved</p>
+<p>One could then go on to discuss the many   institutions which affect this so-called full employment level.   Decent support of the living standards of those who are out of   work may mean that unemployed persons are legitimately rather   more choosey about taking the first alternative job which is   offered to them, quite apart from the existence of a limited   number of confirmed &#8216;sturdy beggars&#8217; who prefer living on social   benefits to an honest day&#8217;s work. The obligation to make   compulsory severance or redundancy payments when employees are   dismissed may make some employers less willing to expand their   labour force in conditions in which future developments are   uncertain. Monopolistic trade union action may put an extra   upward pressure on money wage demands which means that   unemployment must be maintained at a higher level in order to   exert an equivalent countervailing downward pressure. Some   statutory wage-fixing bodies in particular occupations may exert   a similar influence.</p>
+<p>It is not very helpful to squabble about   definitions. There is, however, a very real difference of   substance between those who do, and those who do not, consider   these wage-fixing institutional arrangements to cause very real   difficulties. Is it necessary to achieve some radical reform of   these institutions in order to make reasonable price stability   compatible with reasonably low levels of unemployment? Or is it a   fact that, if affairs could for a time be so conducted as to   remove the expectation of any marked future inflation of the   money cost of living, we would find that even with present   institutions the natural level of unemployment would not be at   all excessive? I myself would expect that in many countries   including the United Kingdom the recasting of wage-fixing   arrangements would still be found to be of crucial   importance.</p>
+<p>As far as the less important question of   definition is concerned, I prefer to think of &#8216;full employment&#8217;   and &#8216;price stability&#8217; as being two separate and often conflicting   objectives of macro-economic policies. Anyone who has this   preference can, of course, be legitimately challenged to define   what is meant by full employment. Perhaps I would be driven to   the extreme of defining full employment as that level of   employment at which the supply-demand conditions would not lead   to attempts to push up the real wage rate more rapidly than the   rate of increase in labour productivity if there were perfect   competition in the labour market &#8211; no monopsonistic employers, no   monopolistic trade unions, no social benefits to the unemployed,   no obligations on employers to make compulsory severance or   redundancy payments to dismissed workers, and so on, &#8211; though I   am not at all sure whether this extreme form of definition has   much meaning. However, in so far as full employment could be   defined somewhere along these lines, one would end up with price   stability and full employment as separate macro-economic   objectives in any real world situation with wage-fixing   arrangements as one of the instruments of policy. This is the way   in which I like to think of macro-economic problems.</p>
+<p>If one adopted this approach, how should   <i>The Balance of Payments</i> be recast? In the basic model we   would have the three targets of external balance, full   employment, and price stability. If one continued to think in   terms of matching to each &#8216;target&#8217; a relevant policy &#8216;weapon&#8217;,   one could divide the weapons into three main armouries: the first   containing the weapons which directly affect the level of money   demands (e.g. monetary and budgetary policies); the second   containing the weapons which directly affect the fixing of money   wage rates; and the third containing the weapons which directly   affect the foreign exchanges, such as the fixing of rates of   exchange, measures of exchange control, and commercial policy   measures designed directly to affect the total value of imports   and exports.</p>
+<p>My subsequent education in the rudiments of   the theory of control of dynamic systems suggested to me that   this was not the best way to have proceeded. One should not pair   each particular weapon off with a particular target as its   partner, using weapon A to hit target A, weapon B to hit target   B, and so on. Rather one should seek to discover what pattern of   combination of simultaneous use of all available weapons would   produce the most preferred pattern of combination of simultaneous   hits on all the desirable targets. With this way of looking at   things no particular weapon is concentrated on any particular   target; it is the joint effect of all the weapons on all the   targets which is relevant.</p>
+<p>There is no doubt that this is the way in   which a control engineer will look at the problem and that in a   technical sense it is the correct way to find the most preferred   pattern of hits on a number of targets simultaneously. For a   considerable period between the writing of <i>The Balance of   Payments</i> and the present time I was fully enamoured of this   method.</p>
+<p>But I am in the process of having second   thoughts and of asking myself whether the idea of trying to hit   each particular target by use of a particular weapon or clearly   defined single armoury of weapons is really to be ruled out. This   onset of second childhood is due to a consideration of the   political conditions in which economic policies must be operated.   It is most desirable in a modern democratic community that the   ordinary man or woman in the street should as far as possible   realise what is going on, with responsibilities for success or   failure in the different fields of endeavour being dispersed but   clearly defined and allocated. To treat the whole of   macro-economic control as a single subject for the mysterious art   of the control engineer is likely to appear at the best magical   and at the worst totally arbitrary and unacceptable to the   ordinary citizen. To put each clearly defined weapon or armoury   of weapons in the charge of one particular authority or set of   decision makers with the responsibility of hitting as nearly as   possible one well defined target is a much more intelligible   arrangement.</p>
+<p>Of course there are obvious disadvantages   in any such proposal. Thus the best way for authority A to use   weapon A to achieve objective A will undoubtedly be affected by   what authorities B and C are doing with weapons B and C. It   depends upon the structure of relationships within the economic   system how far these repercussions are of major importance.   Perhaps a mysterious dynamic model operated inconspicuously in   some back room by control experts for silent information of the   authorities concerned might be useful; and in any case in the   real world it would be desirable for the different authorities at   least to communicate their plans to each other so that, by what   one hopes would be a convergent process of mutual accommodation,   some account could be taken of their interaction. But in the   modern community there is, I think, merit in arrangements in   which each authority or set of decision makers has a clear   ultimate responsibility for success or failure in the attainment   of a clearly defined objective.</p>
+<p>III. There are six ways in which each of   three weapons can be separately aimed at each of three targets.   Some of these patterns make more sense than others. In this   lecture I can do no more than give a brief account of that   particular pattern which, as it seems to me at present, would   make the best sense if one takes into account both economic   effectiveness and also comprehensibility of responsibilities in a   free democratic society. With this pattern</p>
+<p>1) the instruments of demand management,   fiscal and monetary, would be used so to control total money   expenditures as to prevent excessive inflations or deflations of   total money incomes;</p>
+<p>   2) wage-fixing institutions would be modelled so as to restrain   upward movements of money wage rates in those particular sectors   where there were no shortages of manpower and to allow upward   movements where these were needed to attract or retain labour to   meet actual or expected manpower shortages, thus preserving full   employment with some moderate average rise in money wage rates in   conditions in which demand management policies were ensuring a   steadily growing money demand for labour as a whole; and</p>
+<p>   3) foreign exchange policies would be used to keep the balance of   payments in equilibrium.</p>
+<p>This pattern implies the use of the weapons   of demand management to restrain <i>monetary</i> inflation and of   wage-fixing to influence the <i>real</i> level of employment and   output. Many of my friends and colleagues who share my admiration   for Keynes will at this point part company from me. &#8216;Surely&#8217;,   they will say, &#8216;you have got it the wrong way round. Did not   Keynes suggest that the control of demand should be used to   influence the total amount of real output and employment which it   was profitable to maintain, while the money wage rate was left   simply to determine the absolute level of money prices and costs   at which this level of real activity would take place?&#8217; I agree   that this is in fact the way in which Keynes looked at things in   the late 1930&#8217;s when it could be assumed that the money wage rate   was in any case rather constant or sluggish in its movements.   What he would be saying today is anybody&#8217;s guess; and I do not   propose to take part in that guessing game except to say that he   would be appalled at the current rates of price inflation. It is   a complete misrepresentation of the views of a great and wise man   to suggest that in present conditions he would have been   concerned only with the maintenance of full employment and not at   all with the avoidance of money price and wage inflation.</p>
+<p>But, whatever Keynes&#8217; policy   recommendations would be in present circumstances, I would   maintain that the way in which I have distributed the weapons   among the targets is in no way incompatible with Keynes&#8217;   analysis. In the 1930&#8217;s Keynes argued rightly or wrongly, that   cutting money wage rates would have little effect in expanding   employment because its main effect would be simply to reduce the   absolute level of the relevant money prices, money costs, money   incomes, and money expenditures, leaving the levels of real   output and employment much unchanged. It is a totally different   matter, wholly consistent with that Keynesian analysis, to   suggest that the money wage rate might be used to influence the   level of employment in conditions in which the money demand was   being successfully managed in such a way as to prevent changes in   wage rates from causing any offsetting rise or fall in total   money incomes and expenditures. If one is going to aim particular   weapons at particular targets in the interests of democratic   understanding and responsibility, it is, in my opinion, most   appropriate that the Central Bank which creates money and the   Treasury which pours it out should be responsible for preventing   monetary inflations and deflations, while those who fix the wage   rates in various sectors of the economy should take   responsibility for the effect of their action on the resulting   levels of employment.</p>
+<p>Earlier I spoke of &#8216;price stability&#8217; as   being one of the components of &#8216;internal balance&#8217;. Yet in the   outline which I have just given of a possible distribution of   responsibilities no one is directly responsible for price   stability. To make price stability itself the objective of demand   management would be very dangerous. If there were an upward   pressure on prices because the prices of imports had risen or   because indirect taxes had been raised, the maintenance of price   stability would require an offsetting absolute reduction in   domestic money wage costs; and who knows what levels of   depression and unemployment it might be necessary consciously to   engineer in order to achieve such a result? This particular   danger might be avoided by choice of a price index for   stabilisation which excluded both indirect taxes and the price of   imports; but even so, the stabilisation of such a price index   would be very dangerous. If any remodelled wage-fixing   arrangements were not working perfectly, &#8211; and it would be   foolhardy to assume a perfect performance &#8211; a very moderate   excessive upward pressure on money wage rates and so on costs   might cause a very great reduction in output and employment if   there were no rise in selling prices so that the whole of the   impact of the increased money costs was taken on profit margins.   If, however, it was total money incomes which were stabilized, a   much more moderate decline in employment combined with a moderate   rise in prices would serve to maintain the uninflated total of   money incomes.</p>
+<p>The effectiveness of the pattern of   responsibilities which I have outlined rests upon the assumption   that there is a reasonably high elasticity of demand for labour   in terms of the real wage rate, since success is to be achieved   by setting a money wage rate relatively to money demand prices   which gives a full employment demand for labour by employers. I   have no doubt myself that in the longer-run the elasticity of   demand is great enough. But what of the short-run? What if in   every industry there is a stock of fixed capital in a form which   sets an absolute limit to the amount of labour which can be   usefully employed, while for some reason or another of past   history there is more labour seeking work than can be usefully   employed? There will be unemployment in every industry; and any   resulting reduction in money wage rates combined with the   maintenance of total money incomes would merely redistribute   income from wages to profits.</p>
+<p>I have explained the danger in its most   exagerated form; but it would remain a real one even in a much   moderated form. There should, of course, never be any question of   the wholesale immediate slashing of wage rates in every sector in   which there was any unemployment. Any such arrangement would, for   the reasons which I have outlined, be economically most   undesirable even if it were politically possible. What one has in   mind is simply that in a milieu in which total money incomes are   steadily rising at a moderate rate, money wage rates should be   rising rather more rapidly in some sectors and less rapidly or   not at all in other sectors according to the supplies of   available labour and the prospects of future demands for labour   in those sectors. There would be no requirement that any money   wage rates must be actually reduced.</p>
+<p>But putting more emphasis on supply-demand   conditions in the settlement of particular wage claims could only   work if there were general acceptance of the idea by the ordinary   citizen; and such acceptance would depend <i>inter alia</i> upon   a marked change of emphasis about policies for influencing the   redistribution of the national income. I have for long believed   that it is only if, somehow or another, the ordinary citizen can   be persuaded to put less emphasis on wage bargaining and more   emphasis on fiscal policies of taxation and social security for   influencing the personal distribution of income and wealth that   we have any hope of building the sort of free, efficient, and   humanely just society in which I would like to live. But that   raises a host of issues which I can not discuss today.</p>
+<p>There is, however, one feature of this   connection between the supply-demand criterion for fixing wage   rates and the attitude of the wage earner to his real standard of   living on which I do wish to comment. Suppose, for example   because of a rise in the world price of oil or of other imported   foodstuffs or raw materials, that the international terms of   trade turn against an industrialised country. This is equivalent   to a reduction in the productivity of labour and of other factors   employed in the country in question. If money wage rates are   pushed up as the prices of imported goods go up in order to   preserve the real purchasing power of wage incomes, money wage   costs are raised for the domestic producer without any automatic   rise in the selling price of the domestic components of their   outputs. Profit margins are squeezed. The demand for labour will   fall unless and until profit margins are restored by a   corresponding rise in the selling prices of domestic products.   But such a rise would in turn cause a further rise in the cost of   living, followed perhaps by a further offsetting rise in money   wage rates, with a further round of pressure on profit margins.   In fact workers are attempting to establish a real wage rate   which, because of the adverse effect of the terms of   international trade, is no longer compatible with full   employment. The resulting rounds of pressure on profit margins,   rises in domestic selling prices, further rises in money wage   rates, further pressure on profit margins, and so on, may result   in stagflation &#8211; a level of employment below full employment with   a continuing inflation of money prices.</p>
+<p>This story may in fact help to explain what   has happened recently in some industrialised countries. But my   purpose in telling it is merely to give a vivid illustration of   the fact that an effective combination of full employment with   the avoidance of inflation necessarily requires that wage-fixing   should take as its main criterion the supply-demand conditions in   the labour market without undue insistence on the attainment and   defence of any particular real wage income. The latter must be   the combined result of domestic productivity, the terms of   international trade, and tax and other measures taken to affect   the distribution of income between net-of-tax spendable wages and   other net-of-tax incomes.</p>
+<p>IV. So much for the specification of   targets and for the distribution of weapons among targets. What   about the detailed specification of the weapons themselves?</p>
+<p>If the velocity of circulation of money   were constant, a steady rate of growth in the total money demand   for goods and services could be achieved by a steady rate of   growth in the supply of money, and this in turn could be the task   of an independent Central Bank with the express responsibility   for ensuring a steady rate of growth of the money supply of, say,   5 per cent per annum. It is a most attractive and straight   forward solution; but, alas, I am still not persuaded to be an   out-and-out monetarist of this kind. It is difficult to define   precisely what is to be treated as money in a modern economy. At   the borderline of the definition substitutes for money can and do   readily increase and decrease in amount and within the borders of   the definition velocities of circulation can and do change   substantially. Can we not use monetary policy more directly for   the attainment of the objective of a steady rate of growth of,   say, 5 per cent per annum in total money incomes, and supplement   this monetary policy with some form of fiscal regulator in order   to achieve a more prompt and effective response? For this purpose   one would, of course, be well advised to call in aid the skills   of the control engineer in order to cope with the dynamic problem   of keeping the total national money income on its target part. Am   I to be regarded as a member of the lunatic fringe or as an   unconscious ally of authoritarian tyranny if I express this   remaining degree of belief in the possibilities of rational   social engineering?</p>
+<p>I find very attractive the idea that this   monetary control should be the responsibility of some body which   was not directly dependent upon the government for its day-to-day   decisions but which was charged by its constitution independently   to achieve this stable but moderate growth of money incomes. But   there is real difficulty in endowing any such independent body   with powers to use fiscal policy as well as monetary policy to   achieve its objective.</p>
+<p>Let me take an example. Suppose that   overseas producers of oil raise abruptly the price charged to an   importing country; and, to isolate the point which I want to   make, suppose further that the oil producers invest in the   importing country any excess funds which they receive from the   sale of an unchanged supply of oil, so that there is no immediate   need to cut imports or to expand exports in order to protect the   foreign exchanges. The abrupt price change will, however, tend to   cause a deflation of money incomes in the importing country whose   citizens will, out of any given income, spend less on home   produced goods in order to spend more on imported oil, the   receipts from which are saved by the oil producers. With the   scheme of responsibilities which I have outlined it is now the   duty of the demand managers to reflate the demand for goods and   services in the importing country in order to prevent a fall in   money incomes in that country.</p>
+<p>But there are at least two alternative   strategies for such reflation.</p>
+<p>In the first place, the taxation of the   citizens of the importing country might be reduced so that, while   they have to spend more on imported oil, they have just so much   more spendable income to maintain their demands for their own   products. In this case the government directly or indirectly   borrows funds saved by the oil producers to finance the larger   budget deficit due to the reduced tax payments by the domestic   consumers. No one&#8217;s standard of living is immediately   affected.</p>
+<p>But if this solution is adopted, the   importing country faces an ever-growing debt to the foreign oil   producers with no corresponding growth of domestic or foreign   capital to set against it. If this is considered undesirable, the   private citizens must not be relieved of tax; their current   consumption standards must be allowed to fall as a result of the   rise in the price of oil; and the reflation of domestic incomes   must be brought about by measures which stimulate expenditure on   extra real capital development at home, the finance of which will   mop up the savings of the oil producers. Such action will depend   upon monetary policies rather than, or at least as well as, upon   fiscal action.</p>
+<p>I have told this particular story simply to   make the point that the choice between fiscal action and monetary   action must often depend upon basic policy issues which should   certainly be the responsibility of the government rather than of   any independent monetary authority. Perhaps the best compromise   is an independent monetary authority charged so to manage the   money supply and the market rate of interest as to maintain the   growth of total money income on its 5-per-cent-per-annum target   part, after taking into account whatever fiscal policies the   government may adopt. One would hope, of course, that there would   be a suitable discussion of their plans and policies between the   government and the monetary authority; but the latter would be   given an ultimately independent duty and independent choice of   monetary policy for keeping total money incomes on their target   path.</p>
+<p>The difficulties involved in the   specification of the weapons of demand management are real   enough; but they fade into insignificance when they are compared   with the problems of remodelling wage-fixing arrangements in such   a way as to ensure a greater emphasis on supply-demand conditions   in each sector of the labour market.</p>
+<p>I can think of five broad lines of   approach.</p>
+<p>First, one can conceive of wage fixing in   each sector of the labour market by the edict of some government   authority. An efficient use of this method would be extremely   difficult in a modern economy with its innumerable different   forms and skills of labour in so many different and diverse   regions, occupations, and industries. It would, I think, in any   case ultimately involve a degree of governmental authoritarian   control which I personally would find very distasteful.</p>
+<p>Second, there is the corporate state   solution in which a monopoly of employer monopolies agrees with a   monopoly of labour monopolies on a central bargain for the   distribution between wages and profits in the various sectors of   the economy of the total national money income which the demand   managers are going to provide. I suspect that, in the United   Kingdom at any rate, any such bargain would be very difficult to   attain without leaving some important, but relatively powerless,   sectors out in the cold of unemployment or of very low wages. In   any case I ought to reveal my prejudice against being ruled by a   monopoly of uncontrolled private monopolists.</p>
+<p>Thirdly, the restoration of competitive   conditions in the labour market would in theory do the trick,   since the competitive search for jobs would restrain the wage   rate in any sector in which there was unemployed labour and the   competitive search for hands by competitive employers would raise   the wage rate in any sector in which manpower was scarce. There   is little doubt that in some cases trade unions have attained an   excessively privileged position and some reduction of their   monopoly powers might help towards a solution. But I do not   believe that any full solution is to be found along this   competitive road. On the employers&#8217; side it may be impossible to   ensure effective competition where economies of large scale   severely restrict the number of employers. On the employees&#8217; side   the whole of history suggests the powerful psychological need for   workers with common concerns to get together in the formation of   associations to represent their common interests. Moreover,   reliance on individual competition might well involve the   reduction, if not elimination, of support for workers who were   unemployed and of compulsory severance or redundancy payments to   workers whose jobs disappeared. But what one wants to find is   some effective, but compassionate and humane, method which   applies supply-demand criteria for the fixing of wage rates for   those in employment without inflicting needless hardship and   anxiety on those particular individuals who are inevitably   adversely affected by economic change.</p>
+<p>Fourth, there are those who see the   solution in the labour-managed economy in which workers hire   capital rather than capital hiring workers. In such circumstances   there would be no wage rate to fix. Workers would share among   themselves whatever income they could earn in their concerns   after payment of whatever fixed interest or rent was necessary to   hire their instruments of production. These ideas are very   attractive; but, alas, there is, I think, good reason to believe   that satisfactory outcome on these lines is possible only in   those sectors of the economy where small scale enterprises are   appropriate and where conditions make it fairly easy to set up   new competing co-operative concerns.</p>
+<p>Finally, there remains the possibility of   the replacement in wage bargaining of the untamed use of   monopolistic power through the threat of strikes, lockouts, and   similar industrial action by the acceptance of arbitral awards   made by trusted and impartial outside tribunals, &#8211; awards which   would, however, have to be heavily weighted by considerations of   the supply &#8211; demand conditions of each particular case, if they   were to achieve what I have suggested should be the basic   objective of wage-fixing arrangements.</p>
+<p>This is the civilised approach; but I am   under no illusion that it is an easy one. It relies upon a   widespread acceptance of the idea that some such approach is   necessary for everyone&#8217;s ultimate welfare and, in particular, as   I have already indicated, upon the belief that there are   alternative fiscal and similar policies to ensure social justice   in the ultimate distribution of income and wealth. But even if in   the course of time such a general acceptance could be achieved,   some form of sanction for its application in some particular   cases would almost certainly be needed. The punishment of   individuals as criminals for taking monopolistic action to   disturb a wage award does not hold out much hope of success. But   is it pure dreaming to conceive ultimately of a state of affairs   in which (1) in the case of any dispute about wages either party   to the dispute or the government itself could apply for an award   of the kind which I have indicated and (2) certain financial   privileges and legal immunities otherwise enjoyed by the parties   to a trade dispute would not be available in the case of   industrial action taken in defiance of such an award?</p>
+<p>Perhaps this is merely an optimist&#8217;s   utopian fantasy; but I can think of nothing better.</p>
+<p>V. So much for the attainment of price   stability and full employment through the instrumentalities of   demand management and wage-fixing. What about the attainment of   external balance through foreign exchange policies?</p>
+<p>In my view the appropriate division of   powers and obligations between national governments and   international institutions is that the national governments   should be responsible for national monetary, fiscal, and wage   policies which combine full employment with price stability and   that external balance should be maintained by foreign exchange   policies under the supervision of international institutions.</p>
+<p>Variations in the rate of exchange between   the national currencies combined with freedom of trade and   payments should in my view be the normal instrument of such   foreign exchange policies. But this is not to say that there will   never be occasion for the use of other instruments of foreign   exchange policy. Special control arrangements may be appropriate   where the removal of an international imbalance requires   wholesale industrial development or structural change, or where   abrupt changes in the international flow of capital funds require   special offsetting measures, or where differences in national tax   regimes would distort international transactions in the absence   of offsetting measures. But where such exceptions to the free   movement of goods and funds arise, these should be under the   rules and supervision of appropriate international   institutions.</p>
+<p>After the war we managed to lay the   foundations of an international system of this kind with the   pivotal institutions of the International Monetary Fund, the   International Bank for Reconstruction and Development, and the   General Agreement on Tariffs and Trade, a system which for a   quarter of a century resulted in a most remarkable expansion of   international trade. In my opinion there was one important   original flaw in this system, namely the insistence on the   International Monetary Fund&#8217;s very sticky adjustable peg   mechanism for the correction of inappropriate exchange rates. But   even this flaw has now gone as the International Monetary Fund   seeks to find the most appropriate rules for running a system of   international flexible exchange rates.</p>
+<p>And yet we seem now to be faced with the   possibility of a gigantic tragedy, with this initial success   being fated unnecessarily to end in calamity. Why is this so? In   my view the answer is obvious; it is simply because so many of   the national governments of the developed industrialised   countries have failed to find appropriate national institutional   ways of combining full employment with price stability.</p>
+<p>If they could do so, not only would the   domestic tragic waste and social discontent of heavy unemployment   in such countries be removed, but the international scene would   be transformed. The case for the use by developed countries of   massive import restrictions rather than of gradual and moderate   changes in exchange rates to look after their balances of   payments would, I suspect, evaporate. It is the spectacle of   imports competing with the products of domestic industries in   which there is already serious unemployment which is the greatest   threat to the freedom of imports into the developed countries.   With full employment and price stability at home the balance of   payments could with much more confidence be left to the mechanism   of flexible foreign exchange rates. The developed countries would   then have less difficulty in giving financial aid to the third   world; and, what in my opinion is even more important, they could   much more readily accept the inflow from the third world of their   labour-intensive products.</p>
+<p>In this lecture I have marked an occasion   which is concerned with international economics with a lecture on   internal balance. But I suggest that in present conditions this   is not anomalous. I do not, I think, exaggerate wildly when I   conclude by saying that one &#8211; though, of course, only one &#8211; of   the really important factors on which the health of the world now   depends is the recasting of wage-fixing arrangements in a limited   number of developed countries.</p>
+<p>   <footer class="copyright">
+   <small class="lectures">
+        From <i><a href="/nobel_organizations/nobelfoundation/publications/lectures/index.html">Nobel Lectures</a>, Economics 1969-1980</i>, Editor Assar Lindbeck, World Scientific Publishing Co., Singapore, 1992
+</i></p>
+   </small>
+</footer> <footer class="copyright">
+   <small class="global">
+      <span class="copy">Copyright &copy; The Nobel Foundation 1977</span>
+   </small>
+</footer> </p>
+
+		<footer class="border-top pagecite" itemscope itemtype="http://schema.org/citation">
+	<p>
+		To cite this section 		<br>
+		MLA style: James E. Meade &#8211; Prize Lecture. NobelPrize.org. Nobel Media AB 2019. Tue. 9 Jul 2019. &lt;https://www.nobelprize.org/prizes/economic-sciences/1977/meade/lecture/&gt;	</p>
+</footer>
+
+		
+<div class="back-to-top">
+	<a href="#top" class="back-top-link">
+		Back to top	</a>
+	<svg width="18px" height="15px" viewBox="0 0 20 17" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" role="image" aria-labelledby="back-to-top-title  back-to-top-desc">
+    <title id="back-to-top-title">Back To Top</title>
+    <desc id="back-to-top-desc">Takes users back to the top of the page</desc>
+    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g transform="translate(-474.000000, -9998.000000)" fill="#2E2A25">
+            <g transform="translate(474.000000, 9998.000000)">
+                <g transform="translate(10.000000, 10.000000) rotate(45.000000) translate(-10.000000, -10.000000) translate(3.000000, 3.000000)">
+                    <rect x="0" y="0" width="2" height="14"></rect>
+                    <rect x="0" y="0" width="14" height="2"></rect>
+                </g>
+                <rect x="9" y="3" width="2" height="14"></rect>
+            </g>
+        </g>
+    </g>
+</svg>
+</div>
+
+	</article>
+
+</section>
+
+
+
+
+
+<section class="explore-laureates page-section">
+
+	<header class="section-header border-top">
+
+		<h3>
+			Explore prizes and laureates		</h3>
+
+					<div class="info">
+					Look for popular awards and laureates in different fields, and discover the history of the Nobel Prize.			</div>
+		
+	</header>
+
+	<form class="exploreform" id="5d24176547fe8" method='GET' action=''>
+
+		<div class="dropdown">
+			<label for="mobile-dropdown" class="screen-reader-text">
+				Select the category or categories you would like to filter by			</label>
+
+			<select id="mobile-dropdown" name="filtermobile">
+										<option value="physics"
+														>
+							Physics						</option>
+
+										<option value="chemistry"
+														>
+							Chemistry						</option>
+
+										<option value="medicine"
+														>
+							Medicine						</option>
+
+										<option value="literature"
+														>
+							Literature						</option>
+
+										<option value="peace"
+														>
+							Peace						</option>
+
+										<option value="economic-sciences"
+							 selected='selected'							>
+							Economic Sciences						</option>
+
+							</select>
+
+		</div>
+
+		<div class="selector">
+			<label class="screen-reader-text">Select the category or categories you would like to filter by</label>
+
+			
+				<div class="labelbutton" tabindex="0">
+					<label for="physics">
+						<input id="physics"
+							name="filter"
+							type="radio"
+														value="physics" hidden>
+						<span>
+							Physics						</span>
+					</label>
+				</div>
+
+			
+				<div class="labelbutton" tabindex="0">
+					<label for="chemistry">
+						<input id="chemistry"
+							name="filter"
+							type="radio"
+														value="chemistry" hidden>
+						<span>
+							Chemistry						</span>
+					</label>
+				</div>
+
+			
+				<div class="labelbutton" tabindex="0">
+					<label for="medicine">
+						<input id="medicine"
+							name="filter"
+							type="radio"
+														value="medicine" hidden>
+						<span>
+							Medicine						</span>
+					</label>
+				</div>
+
+			
+				<div class="labelbutton" tabindex="0">
+					<label for="literature">
+						<input id="literature"
+							name="filter"
+							type="radio"
+														value="literature" hidden>
+						<span>
+							Literature						</span>
+					</label>
+				</div>
+
+			
+				<div class="labelbutton" tabindex="0">
+					<label for="peace">
+						<input id="peace"
+							name="filter"
+							type="radio"
+														value="peace" hidden>
+						<span>
+							Peace						</span>
+					</label>
+				</div>
+
+			
+				<div class="labelbutton" tabindex="0">
+					<label for="economic-sciences">
+						<input id="economic-sciences"
+							name="filter"
+							type="radio"
+							 checked='checked'							value="economic-sciences" hidden>
+						<span>
+							Economic Sciences						</span>
+					</label>
+				</div>
+
+					</div>
+
+		<div class="incrementor">
+
+			<label for="increment-down" class="screen-reader-text">
+				Decrease the year by one			</label>
+
+			<button id="increment-down" class="increment-down" type="button">
+				-			</button>
+
+			<label for="increment-input" class="screen-reader-text">
+				Choose a year you would like to search in			</label>
+
+			<input id="increment-input"
+				name="prize_year"
+				type="text"
+				maxlength="4"
+				class="increment-input"
+				placeholder="2018"
+				value="1977">
+
+			<label for="increment-up" class="screen-reader-text">
+				Increase the year by one			</label>
+
+			<button id="increment-up" class="increment-up" type="button">
+				+			</button>
+
+		</div>
+
+		<div class="submit">
+			<button type="submit">
+				Explore			</button>
+		</div>
+	</form>
+
+</section>
+
+
+<div class="long-scroll-preloader prize-explorer-preloader" style="text-align: center; display: none" data-target="5d24176547fe8">
+	<img style="display: inline-block"
+		src="https://www.nobelprize.org/wp-content/themes/nobelprize/assets/images/spinner.gif">
+</div>
+
+<div class="prize-explorer-content container search-results" data-target="5d24176547fe8">
+
+</div>
+
+		</div>
+
+		
+<div class="long-scroll-preloader " style="text-align: center; display: none" data-target="5d2417654907b">
+	<img style="display: inline-block"
+		src="https://www.nobelprize.org/wp-content/themes/nobelprize/assets/images/spinner.gif">
+</div>
+
+	</div>
+
+
+
+	</main>
+	<footer class="site-footer" role="contentinfo">
+
+		<div class="container">
+
+			<section class="footer-information">
+
+				<h4 class="heading">
+					<a href="/the-nobel-prize-organisation/">About the Nobel Prize organisation</a>				</h4>
+
+				<div class="footer-sections border-top">
+							<div class="footer-section">
+							<h5>
+					<a href="/the-nobel-prize-organisation/the-nobel-foundation/">The Nobel Foundation</a>				</h5>
+			
+			<p>Tasked with a mission to manage Alfred Nobel's fortune and has ultimate responsibility for fulfilling the intentions of Nobel's will.</p>
+		</div>
+				<div class="footer-section">
+							<h5>
+					<a href="/the-nobel-prize-organisation/prize-awarding-institutions/">The prize-awarding institutions</a>				</h5>
+			
+			<p>For more than a century, these academic institutions have worked independently to select Nobel Laureates in each prize category.</p>
+		</div>
+				<div class="footer-section">
+							<h5>
+					<a href="/the-nobel-prize-organisation/outreach-activities/">Nobel Prize outreach activities</a>				</h5>
+			
+			<p>Several outreach organisations and activities have been developed to inspire generations and disseminate knowledge about the Nobel Prize.</p>
+		</div>
+						</div>
+
+			</section>
+
+			<section class="footer-nav border-top">
+
+				<nav class="footer-menu" role="navigation" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
+					<ul id="menu-footer_col_1" class="footer-column-items" role="menu"><li id="menu-item-28266" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-28266" role="menuitem"><a href="https://www.nobelprize.org/press">Press</a></li>
+<li id="menu-item-42845" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-42845" role="menuitem"><a href="https://www.nobelprize.org/contact">Contact</a></li>
+<li id="menu-item-28265" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-28265" role="menuitem"><a href="https://www.nobelprize.org/frequently-asked-questions/">FAQ</a></li>
+</ul>
+				</nav>
+
+				<nav class="footer-menu" role="navigation" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
+					<ul id="menu-footer_col_2" class="footer-column-items" role="menu"><li id="menu-item-28268" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-28268" role="menuitem"><a href="/about/privacy-policy/">Privacy policy</a></li>
+<li id="menu-item-28269" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-28269" role="menuitem"><a href="/about/technical-support/">Technical support</a></li>
+<li id="menu-item-42844" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-42844" role="menuitem"><a href="/about/terms-of-use/">Terms of use</a></li>
+</ul>
+				</nav>
+
+				<nav class="footer-menu" role="navigation" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
+					<ul id="menu-footer_col_3" class="footer-column-items" role="menu"><li id="menu-item-28272" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-28272" role="menuitem"><a href="/about/developer-zone/">For developers</a></li>
+<li id="menu-item-42843" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-42843" role="menuitem"><a href="/mediaplayer/">Media player</a></li>
+</ul>
+				</nav>
+
+				<nav class="footer-menu footer-social" role="navigation" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
+					<h6>
+						Join us					</h6>
+
+					<ul id="menu-footer_social" class="socialmenu"><li id="menu-item-28273" class="facebook menu-item menu-item-type-custom menu-item-object-custom menu-item-28273" role="menuitem"><a href="https://www.facebook.com/nobelprize/">			<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="16px" height="16px" viewBox="0 0 32 32" version="1.1">
+	<g id="facebook" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+		<g transform="translate(-16.000000, -707.000000)" fill="#4266B2">
+			<path d="M46.2339056,707 L17.7660944,707 C16.790606,707 16,707.790603 16,708.766088 L16,737.233792 C16,738.209157 16.790606,739 17.7660944,739 L33.0922688,739 L33.0922688,726.607891 L28.921984,726.607891 L28.921984,721.778426 L33.0922688,721.778426 L33.0922688,718.216876 C33.0922688,714.083775 35.6165969,711.833182 39.3036936,711.833182 C41.0699079,711.833182 42.5878139,711.964589 43.0301168,712.023339 L43.0301168,716.34276 L40.4729368,716.343959 C38.4677662,716.343959 38.0794173,717.296783 38.0794173,718.695026 L38.0794173,721.778426 L42.8617803,721.778426 L42.2391511,726.607891 L38.0794173,726.607891 L38.0794173,739 L46.2339056,739 C47.2092741,739 48,738.209157 48,737.233792 L48,708.766088 C48,707.790603 47.2092741,707 46.2339056,707" id="Fill-1"></path>
+		</g>
+	</g>
+</svg>
+			<span class="screen-reader-text">Facebook</span>
+			</a></li>
+<li id="menu-item-28274" class="twitter menu-item menu-item-type-custom menu-item-object-custom menu-item-28274" role="menuitem"><a href="https://twitter.com/NobelPrize">			<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="32px" height="32px" viewBox="0 0 32 32" version="1.1" aria-labelledby="twitter-social-icon-title twitter-social-icon-desc">
+	<title id="twitter-social-icon-title">Twitter Icon</title>
+    <desc id="twitter-social-icon-desc">Follow The Nobel Prize on Twitter</desc>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="1280/join-us-on-social-media/twitter" transform="translate(0.000000, -48.000000)">
+            <g id="Group-7" transform="translate(0.000000, 48.000000)">
+                <rect id="Rectangle-8-Copy-3" fill="#1DA1F2" x="0" y="0" width="32" height="32" rx="2"></rect>
+                <path d="M12.28988,24.127112 C19.83732,24.127112 23.96468,17.874232 23.96468,12.452232 C23.96468,12.274552 23.96108,12.097672 23.953,11.921752 C24.75412,11.342632 25.45052,10.619992 25.99996,9.797192 C25.26476,10.123752 24.47348,10.343912 23.64356,10.443192 C24.49068,9.935272 25.14116,9.131432 25.44788,8.173352 C24.65484,8.643352 23.77708,8.985272 22.84244,9.169272 C22.09364,8.371752 21.02724,7.872872 19.84724,7.872872 C17.581,7.872872 15.74332,9.710552 15.74332,11.975912 C15.74332,12.297992 15.7794,12.611032 15.8498,12.911512 C12.43964,12.740072 9.41556,11.107192 7.39204,8.624392 C7.03932,9.230632 6.83628,9.935272 6.83628,10.686792 C6.83628,12.110392 7.56076,13.367112 8.66228,14.102312 C7.98924,14.081592 7.35684,13.896632 6.8038,13.588952 C6.80292,13.606072 6.80292,13.623272 6.80292,13.641272 C6.80292,15.628792 8.21748,17.287832 10.09492,17.664072 C9.75028,17.757832 9.38764,17.808472 9.01324,17.808472 C8.74884,17.808472 8.49172,17.782232 8.24188,17.734392 C8.7642,19.364632 10.27892,20.550952 12.07516,20.584392 C10.67044,21.685032 8.90132,22.340872 6.97884,22.340872 C6.64772,22.340872 6.32116,22.321912 5.99996,22.283992 C7.81604,23.447832 9.9722,24.127112 12.28988,24.127112" id="Fill-2" fill="#FFFFFF"></path>
+            </g>
+        </g>
+    </g>
+</svg>			<span class="screen-reader-text">Twitter</span>
+			</a></li>
+<li id="menu-item-43144" class="instagram menu-item menu-item-type-custom menu-item-object-custom menu-item-43144" role="menuitem"><a href="https://www.instagram.com/nobelprize_org/?hl=en">			<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="32px" height="32px" viewBox="0 0 32 32" version="1.1" aria-labelledby="instagram-social-icon-title instagram-social-icon-desc">
+    <title id="instagram-social-icon-title">Instagram Icon</title>
+    <desc id="instagram-social-icon-desc">Follow The Nobel Prize on Instagram</desc>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="1280/join-us-on-social-media/instagram" transform="translate(0.000000, -48.000000)">
+            <g id="Group-8" transform="translate(0.000000, 48.000000)">
+                <rect id="Rectangle-8-Copy" fill="#E6007E" x="0" y="0" width="32" height="32" rx="2"></rect>
+                <g id="Group" transform="translate(5.000000, 5.000000)" fill="#FFFFFF">
+                    <g id="Group-3">
+                        <path d="M10.9965298,0.00694047619 C8.01002976,0.00694047619 7.6355496,0.0195992063 6.46269643,0.0731150794 C5.2922004,0.1265 4.49286706,0.31240873 3.7933631,0.584222222 C3.07024405,0.865246032 2.45699405,1.24125397 1.84566468,1.85258333 C1.23433532,2.46395635 0.858327381,3.07720635 0.577303571,3.8003254 C0.305446429,4.49978571 0.119581349,5.2991627 0.0661527778,6.46961508 C0.0126369048,7.6425119 -2.18253968e-05,8.01699206 -2.18253968e-05,11.0034921 C-2.18253968e-05,13.9899484 0.0126369048,14.3644286 0.0661527778,15.5373254 C0.119581349,16.7077778 0.305446429,17.5071548 0.577303571,18.2066151 C0.858327381,18.9297341 1.23433532,19.5429841 1.84566468,20.1543571 C2.45699405,20.7656865 3.07024405,21.1416944 3.7933631,21.4227183 C4.49286706,21.6945317 5.2922004,21.8804405 6.46269643,21.9338254 C7.6355496,21.9873413 8.01002976,22 10.9965298,22 C13.9830298,22 14.3575099,21.9873413 15.5303631,21.9338254 C16.7008591,21.8804405 17.5001925,21.6945317 18.1996964,21.4227183 C18.9228155,21.1416944 19.5360655,20.7656865 20.1473948,20.1543571 C20.7587242,19.5429841 21.1347321,18.9297341 21.415756,18.2066151 C21.6876131,17.5071548 21.8734782,16.7077778 21.9269067,15.5373254 C21.9804226,14.3644286 21.9930813,13.9899484 21.9930813,11.0034921 C21.9930813,8.01699206 21.9804226,7.6425119 21.9269067,6.46961508 C21.8734782,5.2991627 21.6876131,4.49978571 21.415756,3.8003254 C21.1347321,3.07720635 20.7587242,2.46395635 20.1473948,1.85258333 C19.5360655,1.24125397 18.9228155,0.865246032 18.1996964,0.584222222 C17.5001925,0.31240873 16.7008591,0.1265 15.5303631,0.0731150794 C14.3575099,0.0195992063 13.9830298,0.00694047619 10.9965298,0.00694047619 M10.9965298,1.98829365 C13.932744,1.98829365 14.2805099,1.9995119 15.4400496,2.05241667 C16.5122004,2.10130556 17.094502,2.28044841 17.4819901,2.43104365 C17.9952361,2.63052778 18.3615536,2.86881746 18.746379,3.25364286 C19.1311607,3.6384246 19.369494,4.00474206 19.5689782,4.51803175 C19.7195298,4.90551984 19.8986726,5.48777778 19.9476052,6.55992857 C20.0005099,7.71946825 20.0116845,8.06727778 20.0116845,11.0034921 C20.0116845,13.9396627 20.0005099,14.2874722 19.9476052,15.4470119 C19.8986726,16.5191627 19.7195298,17.1014206 19.5689782,17.4889087 C19.369494,18.0021984 19.1311607,18.3685159 18.746379,18.7532976 C18.3615536,19.138123 17.9952361,19.3764127 17.4819901,19.5758968 C17.094502,19.7264921 16.5122004,19.9056349 15.4400496,19.9545238 C14.2806845,20.0074286 13.9329187,20.0186468 10.9965298,20.0186468 C8.06014087,20.0186468 7.712375,20.0074286 6.55300992,19.9545238 C5.48085913,19.9056349 4.89855754,19.7264921 4.51106944,19.5758968 C3.99782341,19.3764127 3.63150595,19.138123 3.24668056,18.7532976 C2.86189881,18.3685159 2.62356548,18.0021984 2.42408135,17.4889087 C2.27352976,17.1014206 2.0943869,16.5191627 2.04545437,15.4470119 C1.9925496,14.2874722 1.981375,13.9396627 1.981375,11.0034921 C1.981375,8.06727778 1.9925496,7.71946825 2.04545437,6.55992857 C2.0943869,5.48777778 2.27352976,4.90551984 2.42408135,4.51803175 C2.62356548,4.00474206 2.86189881,3.6384246 3.24668056,3.25364286 C3.63150595,2.86881746 3.99782341,2.63052778 4.51106944,2.43104365 C4.89855754,2.28044841 5.48085913,2.10130556 6.55296627,2.05241667 C7.7125496,1.9995119 8.06031548,1.98829365 10.9965298,1.98829365" id="Fill-1"></path>
+                    </g>
+                    <path d="M11.1468849,14.812373 C9.12249206,14.812373 7.48135317,13.1712778 7.48135317,11.1468849 C7.48135317,9.12244841 9.12249206,7.48135317 11.1468849,7.48135317 C13.1712778,7.48135317 14.812373,9.12244841 14.812373,11.1468849 C14.812373,13.1712778 13.1712778,14.812373 11.1468849,14.812373 M11.1468849,5.5 C8.02821032,5.5 5.5,8.02816667 5.5,11.1468849 C5.5,14.2655595 8.02821032,16.7937262 11.1468849,16.7937262 C14.2655595,16.7937262 16.7937698,14.2655595 16.7937698,11.1468849 C16.7937698,8.02816667 14.2655595,5.5 11.1468849,5.5" id="Fill-4"></path>
+                    <path d="M18.1860905,5.17020516 C18.1860905,5.89899881 17.595277,6.48976865 16.866527,6.48976865 C16.1377333,6.48976865 15.5469198,5.89899881 15.5469198,5.17020516 C15.5469198,4.44141151 16.1377333,3.85064167 16.866527,3.85064167 C17.595277,3.85064167 18.1860905,4.44141151 18.1860905,5.17020516" id="Fill-6"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>			<span class="screen-reader-text">Instagram</span>
+			</a></li>
+<li id="menu-item-43145" class="youtube menu-item menu-item-type-custom menu-item-object-custom menu-item-43145" role="menuitem"><a href="https://www.youtube.com/thenobelprize">			<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="32px" height="32px" viewBox="0 0 32 32" version="1.1" role="img" aria-labelledby="youtube-social-icon-title youtube-social-icon-desc">
+    <title id="youtube-social-icon-title">Youtube Icon</title>
+    <desc id="youtube-social-icon-desc">Follow The Nobel Prize on Youtube</desc>
+    <defs>
+        <polygon id="path-1" points="3.75e-05 0 22 0 22 15.499975 3.75e-05 15.499975"></polygon>
+    </defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="1280/join-us-on-social-media/youtube" transform="translate(0.000000, -48.000000)">
+            <g id="Group-9" transform="translate(0.000000, 48.000000)">
+                <rect id="Rectangle-8-Copy-2" fill="#ED3124" x="0" y="0" width="32" height="32" rx="2"></rect>
+                <g id="Page-1" transform="translate(5.000000, 8.000000)">
+                    <g id="Group-3">
+                        <mask id="mask-2" fill="white">
+                            <use xlink:href="#path-1"></use>
+                        </mask>
+                        <g id="Clip-2"></g>
+                        <path d="M21.5402875,2.42035 C21.2872875,1.4676 20.5417875,0.71735 19.5951625,0.462725 C17.8796625,-2.5e-05 11.0000375,-2.5e-05 11.0000375,-2.5e-05 C11.0000375,-2.5e-05 4.1204125,-2.5e-05 2.4047875,0.462725 C1.4581625,0.71735 0.7126625,1.4676 0.4596625,2.42035 C3.75e-05,4.1471 3.75e-05,7.749975 3.75e-05,7.749975 C3.75e-05,7.749975 3.75e-05,11.352725 0.4596625,13.0796 C0.7126625,14.03235 1.4581625,14.7826 2.4047875,15.03735 C4.1204125,15.499975 11.0000375,15.499975 11.0000375,15.499975 C11.0000375,15.499975 17.8796625,15.499975 19.5951625,15.03735 C20.5417875,14.7826 21.2872875,14.03235 21.5402875,13.0796 C22.0000375,11.352725 22.0000375,7.749975 22.0000375,7.749975 C22.0000375,7.749975 22.0000375,4.1471 21.5402875,2.42035" id="Fill-1" fill="#FFFFFF" mask="url(#mask-2)"></path>
+                    </g>
+                    <polygon id="Fill-4" fill="#ED3124" points="8.75 11.0211125 8.75 4.4788625 14.5 7.7501125"></polygon>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>			<span class="screen-reader-text">Youtube</span>
+			</a></li>
+</ul>
+				</nav>
+
+			</section>
+
+			<section class="colophon border-top">
+				<div class="footer-logo" itemscope itemtype="http://schema.org/Organization">
+					<h1 class="site-logo" itemprop="logo">
+						<a itemprop="url" href="https://www.nobelprize.org">
+							The Nobel Prize						</a>
+					</h1>
+				</div>
+				<div class="copyright">
+					Copyright &copy; Nobel Media AB 2019				</div>
+			</section>
+
+		</div>
+
+	</footer>
+
+			<script>
+		( function ( body ) {
+			'use strict';
+			body.className = body.className.replace( /\btribe-no-js\b/, 'tribe-js' );
+		} )( document.body );
+		</script>
+		<script> /* <![CDATA[ */var tribe_l10n_datatables = {"aria":{"sort_ascending":": activate to sort column ascending","sort_descending":": activate to sort column descending"},"length_menu":"Show _MENU_ entries","empty_table":"No data available in table","info":"Showing _START_ to _END_ of _TOTAL_ entries","info_empty":"Showing 0 to 0 of 0 entries","info_filtered":"(filtered from _MAX_ total entries)","zero_records":"No matching records found","search":"Search:","all_selected_text":"All items on this page were selected. ","select_all_link":"Select all pages","clear_selection":"Clear Selection.","pagination":{"all":"All","next":"Next","previous":"Previous"},"select":{"rows":{"0":"","_":": Selected %d rows","1":": Selected 1 row"}},"datepicker":{"dayNames":["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],"dayNamesShort":["Sun","Mon","Tue","Wed","Thu","Fri","Sat"],"dayNamesMin":["S","M","T","W","T","F","S"],"monthNames":["January","February","March","April","May","June","July","August","September","October","November","December"],"monthNamesShort":["January","February","March","April","May","June","July","August","September","October","November","December"],"monthNamesMin":["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"nextText":"Next","prevText":"Prev","currentText":"Today","closeText":"Done","today":"Today","clear":"Clear"}};var tribe_system_info = {"sysinfo_optin_nonce":"e35c7d0c3c","clipboard_btn_text":"Copy to clipboard","clipboard_copied_text":"System info copied","clipboard_fail_text":"Press \"Cmd + C\" to copy"};/* ]]> */ </script><script type='text/javascript' src='https://www.nobelprize.org/wp-content/plugins/nobelprize/assets/js/admin/lib/jquery.pjax/jquery.pjax.js?ver=0.2.0-d0d47fef313b30ef6653c5641f053a64f2499790'></script>
+<script type='text/javascript' src='https://www.nobelprize.org/wp-content/plugins/nobelprize/assets/js/admin/lib/jquery.waypoints/jquery.waypoints.js?ver=0.2.0-d0d47fef313b30ef6653c5641f053a64f2499790'></script>
+<script type='text/javascript' src='https://www.nobelprize.org/wp-content/plugins/nobelprize/assets/js/admin/lib/jquery.waypoints/inview.js?ver=0.2.0-d0d47fef313b30ef6653c5641f053a64f2499790'></script>
+<script type='text/javascript' src='https://www.nobelprize.org/wp-content/plugins/nobelprize/dist/js/long-scroll.min.js?ver=0.2.0-d0d47fef313b30ef6653c5641f053a64f2499790'></script>
+<script type='text/javascript' src='https://www.nobelprize.org/wp-content/themes/nobelprize/assets/js/frontend/lib/clamp/clamp.min.js?ver=0.2.4'></script>
+<script type='text/javascript' src='https://www.nobelprize.org/wp-content/plugins/nobelprize/assets/js/admin/lib/flickity/flickity.pkgd.js?ver=0.2.0-d0d47fef313b30ef6653c5641f053a64f2499790'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var nobelJsText = {"more":"More","close":"Close"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://www.nobelprize.org/wp-content/themes/nobelprize/dist/js/frontend.0.2.4.min.js?ver=0.2.4'></script>
+<script type='text/javascript' src='https://www.nobelprize.org/wp-content/themes/nobelprize/assets/js/frontend/lib/bgset/ls.bgset.min.js?ver=0.2.4'></script>
+<script type='text/javascript' src='https://www.nobelprize.org/wp-content/themes/nobelprize/assets/js/frontend/lib/lazysizes/lazysizes.min.js?ver=0.2.4'></script>
+<script type='text/javascript' src='https://www.nobelprize.org/wp-content/themes/nobelprize/assets/js/frontend/lib/objectfit/ls.object-fit.min.js?ver=0.2.4'></script>
+<script type='text/javascript' src='https://www.nobelprize.org/wp-includes/js/wp-embed.min.js?ver=4.9.9'></script>
+
+	<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"06ce85f426","applicationID":"179859553","transactionName":"ZFxWYRFYVkIFUxANWF0WdVYXUFdfS1wFEUVWWEBQTlpXXxBVChAaR0BEUA==","queueTime":0,"applicationTime":1565,"atts":"SBtVF1lCRUw=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>

@@ -1,0 +1,980 @@
+	<!DOCTYPE html>
+
+	<html lang="en-US" prefix="og: http://ogp.me/ns#" class="no-js">
+
+	<head>
+
+		<meta charset="UTF-8"><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports:{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o||n)},o,o.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({1:[function(e,n,t){function r(){}function o(e,n,t){return function(){return i(e,[c.now()].concat(u(arguments)),n?null:this,t),n?void 0:this}}var i=e("handle"),a=e(3),u=e(4),f=e("ee").get("tracer"),c=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,n){s[n]=o(d+n,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,o="function"==typeof n;return i(l+"tracer",[c.now(),e,t],r),function(){if(f.emit((o?"":"no-")+"fn-start",[c.now(),r,o],t),o)try{return n.apply(this,arguments)}catch(e){throw f.emit("fn-err",[arguments,this,e],t),e}finally{f.emit("fn-end",[c.now()],t)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=o(l+n)}),newrelic.noticeError=function(e,n){"string"==typeof e&&(e=new Error(e)),i("err",[e,c.now(),!1,n])}},{}],2:[function(e,n,t){function r(e,n){if(!o)return!1;if(e!==o)return!1;if(!n)return!0;if(!i)return!1;for(var t=i.split("."),r=n.split("."),a=0;a<r.length;a++)if(r[a]!==t[a])return!1;return!0}var o=null,i=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var u=navigator.userAgent,f=u.match(a);f&&u.indexOf("Chrome")===-1&&u.indexOf("Chromium")===-1&&(o="Safari",i=f[1])}n.exports={agent:o,version:i,match:r}},{}],3:[function(e,n,t){function r(e,n){var t=[],r="",i=0;for(r in e)o.call(e,r)&&(t[i]=n(r,e[r]),i+=1);return t}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],4:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,o=t-n||0,i=Array(o<0?0:o);++r<o;)i[r]=e[n+r];return i}n.exports=r},{}],5:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function o(e){function n(e){return e&&e instanceof r?e:e?f(e,u,i):i()}function t(t,r,o,i){if(!d.aborted||i){e&&e(t,r,o);for(var a=n(o),u=v(t),f=u.length,c=0;c<f;c++)u[c].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(e,n){h[e]=v(e).concat(n)}function m(e,n){var t=h[e];if(t)for(var r=0;r<t.length;r++)t[r]===n&&t.splice(r,1)}function v(e){return h[e]||[]}function g(e){return p[e]=p[e]||o(t)}function w(e,n){c(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var h={},y={},b={on:l,addEventListener:l,removeEventListener:m,emit:t,get:g,listeners:v,context:n,buffer:w,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",f=e("gos"),c=e(3),s={},p={},d=n.exports=o();d.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(o.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){o.buffer([e],r),o.emit(e,n,t)}var o=e("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!E++){var e=x.info=NREUM.info,n=l.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();c(y,function(n,t){e[n]||(e[n]=t)}),f("mark",["onload",a()+x.offset],null,"api");var t=l.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function o(){"complete"===l.readyState&&i()}function i(){f("mark",["domContent",a()+x.offset],null,"api")}function a(){return O.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-x.offset}var u=(new Date).getTime(),f=e("handle"),c=e(3),s=e("ee"),p=e(2),d=window,l=d.document,m="addEventListener",v="attachEvent",g=d.XMLHttpRequest,w=g&&g.prototype;NREUM.o={ST:setTimeout,SI:d.setImmediate,CT:clearTimeout,XHR:g,REQ:d.Request,EV:d.Event,PR:d.Promise,MO:d.MutationObserver};var h=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1123.min.js"},b=g&&w&&w[m]&&!/CriOS/.test(navigator.userAgent),x=n.exports={offset:u,now:a,origin:h,features:{},xhrWrappable:b,userAgent:p};e(1),l[m]?(l[m]("DOMContentLoaded",i,!1),d[m]("load",r,!1)):(l[v]("onreadystatechange",o),d[v]("onload",r)),f("mark",["firstbyte",u],null,"api");var E=0,O=e(5)},{}]},{},["loader"]);</script>
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<link rel="profile" href="http://gmpg.org/xfn/11">
+
+		<script>(function(html){html.className = html.className.replace(/\bno-js\b/,'js')})(document.documentElement);</script>
+<title>John R. Hicks - Prize Lecture: The Mainspring of Economic Growth - NobelPrize.org</title>
+
+<!-- This site is optimized with the Yoast SEO Premium plugin v7.9.1 - https://yoast.com/wordpress/plugins/seo/ -->
+<meta property="og:locale" content="en_US" />
+<meta property="og:type" content="object" />
+<meta property="og:site_name" content="NobelPrize.org" />
+<meta name="twitter:card" content="summary_large_image" />
+<!-- / Yoast SEO Premium plugin. -->
+
+<link rel='dns-prefetch' href='//www.nobelprize.org' />
+<link rel='stylesheet' id='nobel-css'  href='https://www.nobelprize.org/wp-content/themes/nobelprize/dist/css/style.0.2.4.min.css?ver=0.2.4' type='text/css' media='all' />
+<script type='text/javascript' src='https://www.nobelprize.org/wp-includes/js/jquery/jquery.js?ver=1.12.4'></script>
+<script type='text/javascript' src='https://www.nobelprize.org/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.4.1'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var fallback = {"path":"https:\/\/www.nobelprize.org\/wp-content\/themes\/nobelprize\/assets\/js\/frontend\/lib\/respimg\/ls.respimg.min.js"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://www.nobelprize.org/wp-content/themes/nobelprize/assets/js/frontend/lib/loadjs.js?ver=0.2.4'></script>
+<meta name="tec-api-version" content="v1"><meta name="tec-api-origin" content="https://www.nobelprize.org"><link rel="https://theeventscalendar.com/" href="https://www.nobelprize.org/wp-json/tribe/events/v1/" /><link type="text/plain" rel="author" href="https://www.nobelprize.org/wp-content/themes/nobelprize/humans.txt" />		<script>
+		window.VIDEOJS_NO_BASE_THEME = true;
+		window.VIDEOJS_NO_DYNAMIC_STYLE = true;
+		</script>
+				<!-- Google Tag Manager -->
+		<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+		new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+		j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+		'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+		})(window,document,'script','dataLayer','GTM-WDHZ8W5');</script>
+		<!-- End Google Tag Manager -->
+		
+		<!-- //start Title specific social meta tags -->
+		<meta name="twitter:title" content="The Sveriges Riksbank Prize in Economic Sciences in Memory of Alfred Nobel 1972"><!-- Twitter -->
+		<meta itemprop="name" content="The Sveriges Riksbank Prize in Economic Sciences in Memory of Alfred Nobel 1972" /><!-- Google+ -->
+		<meta property="og:title" content="The Sveriges Riksbank Prize in Economic Sciences in Memory of Alfred Nobel 1972" /><!-- OG -->
+		<!-- //end Title specific social meta tags -->
+
+		
+		<!-- //start Description specific social meta tags -->
+		<meta name="twitter:description" content="The Sveriges Riksbank Prize in Economic Sciences in Memory of Alfred Nobel 1972 was awarded jointly to John R. Hicks and Kenneth J. Arrow &quot;for their pioneering contributions to general economic equilibrium theory and welfare theory&quot;."><!-- Twitter -->
+		<meta itemprop="description" content="The Sveriges Riksbank Prize in Economic Sciences in Memory of Alfred Nobel 1972 was awarded jointly to John R. Hicks and Kenneth J. Arrow &quot;for their pioneering contributions to general economic equilibrium theory and welfare theory&quot;." /><!-- Google+ -->
+		<meta property="og:description" content="The Sveriges Riksbank Prize in Economic Sciences in Memory of Alfred Nobel 1972 was awarded jointly to John R. Hicks and Kenneth J. Arrow &quot;for their pioneering contributions to general economic equilibrium theory and welfare theory&quot;." /><!-- OG -->
+		<!-- //end Description specific social meta tags -->
+
+		
+		<!-- //start Image specific social meta tags -->
+		<meta name="twitter:card" content="summary_large_image" />
+		<meta name="twitter:image" content="https://www.nobelprize.org/images/hicks-13236-landscape-medium.jpg" /><!-- Twitter -->
+		<meta itemprop="image" content="https://www.nobelprize.org/images/hicks-13236-landscape-medium.jpg" /><!-- Google+ -->
+
+					<meta property="og:image" content="https://www.nobelprize.org/images/hicks-13236-landscape-medium.jpg" /><!-- OG -->
+				<!-- //end Image specific social meta tags -->
+
+				<meta property="og:url" content="https://www.nobelprize.org/prizes/economic-sciences/1972/hicks/lecture/" /><!-- OG -->
+		<link rel="icon" href="https://www.nobelprize.org/uploads/2018/08/Nobel-favicon-50x50.png" sizes="32x32" />
+<link rel="icon" href="https://www.nobelprize.org/uploads/2018/08/Nobel-favicon-232x232.png" sizes="192x192" />
+<link rel="apple-touch-icon-precomposed" href="https://www.nobelprize.org/uploads/2018/08/Nobel-favicon-188x188.png" />
+<meta name="msapplication-TileImage" content="https://www.nobelprize.org/uploads/2018/08/Nobel-favicon.png" />
+
+	</head>
+
+	<body class="tribe-no-js laureate-content-type laureate-content-type-lecture">
+
+				<!-- Google Tag Manager (noscript) -->
+		<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WDHZ8W5"
+		height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+		<!-- End Google Tag Manager (noscript) -->
+		
+		<!--[if lte IE 9]>
+			<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+		<![endif]-->
+
+		<a class="skip-link screen-reader-text" href="#content">
+			Skip to content		</a>
+
+		<header class="site-header" role="banner" itemscope="itemscope" itemtype="http://schema.org/WPHeader">
+
+			<div class="site-banner" itemscope itemtype="http://schema.org/Organization">
+
+				<div class="mobile-search">
+
+					<a href="#" id="search-mobile-trigger-js">
+						<svg width="20px" height="20px" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" role="img" aria-labelledby="search-mobile-title search-mobile-description">
+	<title id="search-mobile-title">Close the search form</title>
+	<desc id="search-mobile-description">A button that allows you to close the search form if needed</desc>
+	<g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+		<g transform="translate(-1132.000000, -18.000000)">
+			<g id="mobile-search-icon" transform="translate(1132.000000, 18.000000)">
+				<rect fill="#2A2A2A" transform="translate(16.000000, 16.000000) rotate(-45.000000) translate(-16.000000, -16.000000) " x="15" y="12" width="2" height="8"></rect>
+				<circle stroke="#2A2A2A" stroke-width="2" cx="8" cy="8" r="7"></circle>
+			</g>
+		</g>
+	</g>
+</svg>
+					</a>
+
+					<!-- Note: Exists only to close the mobile navigation when JS is disabled -->
+					<noscript>
+						<a id="mobile-close-js" class="toggle-close" href="#">
+							<span>Close Mobile Menu</span>
+						</a>
+					</noscript>
+
+				</div>
+
+				<div class="site-banner-logo" itemscope itemtype="http://schema.org/Organization">
+					<h1 class="site-logo" itemprop="logo">
+						<a itemprop="url" href="https://www.nobelprize.org" name="top">
+							<svg width="109px" height="86px" viewBox="0 0 109 86" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" role="img" aria-labelledby="logo-title logo-description">
+							    <title id="logo-title">The Nobel Prize</title>
+							    <desc id="logo-description">The Nobel Prize Logo</desc>
+							    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+							        <g transform="translate(-586.000000, -21.000000)" fill="#BB8A35">
+							            <g id="The_Nobel_Prize_logotype" transform="translate(586.000000, 21.000000)">
+							                <path d="M16.6528099,62.0089676 L8.30051408,62.0089676 L8.30051408,85.946038 L11.4498099,85.946038 L11.4498099,74.5243901 L16.6528099,74.5243901 C20.8286549,74.5243901 23.7381197,72.0285732 23.7381197,68.2669817 C23.7381197,64.5053901 20.8286549,62.0089676 16.6528099,62.0089676 Z M16.6528099,71.6524746 L11.4498099,71.6524746 L11.4498099,64.8814887 L16.6528099,64.8814887 C19.0141761,64.8814887 20.5549085,66.0788268 20.5549085,68.2669817 C20.5549085,70.4551366 19.0141761,71.6524746 16.6528099,71.6524746 Z M42.3589366,85.946038 L46.1586831,85.946038 L37.4302887,74.4904746 C41.1270775,74.1482915 43.6253169,71.7548268 43.6253169,68.2669817 C43.6253169,64.5053901 40.7158521,62.0089676 36.540007,62.0089676 L28.1883169,62.0089676 L28.1883169,85.946038 L31.3376127,85.946038 L31.3376127,74.5243901 L33.7674155,74.5243901 L42.3589366,85.946038 Z M31.3376127,64.8814887 L36.540007,64.8814887 C38.9019789,64.8814887 40.4421056,66.0788268 40.4421056,68.2669817 C40.4421056,70.4551366 38.9019789,71.6524746 36.540007,71.6524746 L31.3376127,71.6524746 L31.3376127,64.8814887 Z M50.539838,85.946038 L53.6891338,85.946038 L53.6891338,62.0089676 L50.539838,62.0089676 L50.539838,85.946038 Z M58.6177817,85.946038 L76.930331,85.946038 L76.930331,83.0735169 L62.5883169,83.0735169 L76.5542324,64.3339958 L76.5542324,62.0089676 L59.9532042,62.0089676 L59.9532042,64.8814887 L72.4807394,64.8814887 L58.6177817,83.4496155 L58.6177817,85.946038 Z M85.0082746,83.0735169 L85.0082746,74.5243901 L95.1066127,74.5243901 L95.1066127,71.6524746 L85.0082746,71.6524746 L85.0082746,64.8814887 L95.8594155,64.8814887 L95.8594155,62.0089676 L81.8595845,62.0089676 L81.8595845,85.946038 L96.0302042,85.946038 L96.0302042,83.0735169 L85.0082746,83.0735169 Z" id="Prize"></path>
+							                <path d="M16.4987366,31.0045141 L16.4987366,49.059669 L2.46438451,31.0045141 L6.05633803e-05,31.0045141 L6.05633803e-05,54.9415845 L3.08091972,54.9415845 L3.08091972,36.4073732 L17.3884127,54.9415845 L19.5795958,54.9415845 L19.5795958,31.0045141 L16.4987366,31.0045141 Z M36.5567225,55.4545563 C43.4367225,55.4545563 49.0848634,49.8809085 49.0848634,42.9730493 C49.0848634,36.0651901 43.4367225,30.4915423 36.5567225,30.4915423 C29.6767225,30.4915423 24.0291873,36.0651901 24.0291873,42.9730493 C24.0291873,49.8809085 29.6767225,55.4545563 36.5567225,55.4545563 Z M36.5567225,52.445162 C31.4566803,52.445162 27.2463141,48.2051197 27.2463141,42.9730493 C27.2463141,37.7409789 31.4566803,33.5009366 36.5567225,33.5009366 C41.6573704,33.5009366 45.867131,37.7409789 45.867131,42.9730493 C45.867131,48.2051197 41.6573704,52.445162 36.5567225,52.445162 Z M65.069962,41.8447535 C67.0891451,40.8872465 68.2870887,39.0745845 68.2870887,36.7495563 C68.2870887,33.192669 65.5490183,31.0045141 61.1333423,31.0045141 L53.5344549,31.0045141 L53.5344549,54.9415845 L61.8861451,54.9415845 C66.3363423,54.9415845 69.3826803,52.0351479 69.3826803,47.7951056 C69.3826803,44.9219789 67.7056803,42.8016549 65.069962,41.8447535 Z M61.0649056,33.8085986 C63.3923563,33.8085986 65.1383986,34.8684577 65.1383986,37.0911338 C65.1383986,39.3138099 63.2900042,40.6819366 61.0649056,40.6819366 L56.6837507,40.6819366 L56.6837507,33.8085986 L61.0649056,33.8085986 Z M61.7153563,52.1381056 L56.6837507,52.1381056 L56.6837507,43.4860211 L61.7153563,43.4860211 C64.1457648,43.4860211 66.2333845,45.1272887 66.2333845,47.8290211 C66.2333845,50.5301479 64.1457648,52.1381056 61.7153563,52.1381056 Z M77.4945394,52.0690634 L77.4945394,43.5199366 L87.5922718,43.5199366 L87.5922718,40.6474155 L77.4945394,40.6474155 L77.4945394,33.8770352 L88.3456803,33.8770352 L88.3456803,31.0045141 L74.3458493,31.0045141 L74.3458493,54.9415845 L88.516469,54.9415845 L88.516469,52.0690634 L77.4945394,52.0690634 Z M97.4846944,52.0690634 L97.4846944,31.0045141 L94.3353986,31.0045141 L94.3353986,54.9415845 L108.335835,54.9415845 L108.335835,52.0690634 L97.4846944,52.0690634 Z" id="Nobel"></path>
+							                <path d="M66.8837141,0.000121126761 L66.8837141,23.9371915 L81.0549394,23.9371915 L81.0549394,21.0646704 L70.0330099,21.0646704 L70.0330099,12.5161493 L80.1307423,12.5161493 L80.1307423,9.64302254 L70.0330099,9.64302254 L70.0330099,2.87264225 L80.8841507,2.87264225 L80.8841507,0.000121126761 L66.8837141,0.000121126761 Z M58.2582775,0.000121126761 L58.2582775,9.64302254 L45.0457704,9.64302254 L45.0457704,0.000121126761 L41.8964746,0.000121126761 L41.8964746,23.9371915 L45.0457704,23.9371915 L45.0457704,12.5161493 L58.2582775,12.5161493 L58.2582775,23.9371915 L61.4075732,23.9371915 L61.4075732,0.000121126761 L58.2582775,0.000121126761 Z M21.2219535,0.000121126761 L21.2219535,2.87264225 L27.9311648,2.87264225 L27.9311648,23.9371915 L31.0804606,23.9371915 L31.0804606,2.87264225 L37.7890662,2.87264225 L37.7890662,0.000121126761 L21.2219535,0.000121126761 Z" id="The"></path>
+							            </g>
+							        </g>
+							    </g>
+							</svg>
+						</a>
+					</h1>
+				</div>
+
+				<div class="mobile-nav">
+
+					<a id="mobile-nav-js" href="#main-navigation-js" class="toggle">
+						<span>
+							Toggle Mobile Menu						</span>
+					</a>
+
+				</div>
+
+			</div>
+
+			<nav id="main-navigation-js" class="site-main-navigation container" role="navigation" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement"
+			aria-label="Main menu" aria-expanded="false">
+
+				<ul id="menu-header_top" class="main-menu" role="menu"><li id="menu-item-28259" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-28259" role="menuitem"><a href="/prizes/">Nobel Prizes &amp; Laureates</a>
+<ul class="sub-menu" role="menu" aria-hidden="true">
+	<li id="menu-item-48853" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-48853" role="menuitem"><a href="/prizes/physics/">Physics Prize</a></li>
+	<li id="menu-item-48854" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-48854" role="menuitem"><a href="/prizes/chemistry/">Chemistry Prize</a></li>
+	<li id="menu-item-48855" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-48855" role="menuitem"><a href="/prizes/medicine/">Medicine Prize</a></li>
+	<li id="menu-item-48856" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-48856" role="menuitem"><a href="/prizes/literature/">Literature Prize</a></li>
+	<li id="menu-item-48857" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-48857" role="menuitem"><a href="/prizes/peace/">Peace Prize</a></li>
+	<li id="menu-item-48858" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-48858" role="menuitem"><a href="/prizes/economics/">Prize in Economic Sciences</a></li>
+	<li id="menu-item-54140" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-54140" role="menuitem"><a href="https://www.nobelprize.org/prizes/facts/nobel-prize-facts/">Quick facts</a></li>
+</ul>
+</li>
+<li id="menu-item-28260" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-28260" role="menuitem"><a href="/nomination/">Nomination</a>
+<ul class="sub-menu" role="menu" aria-hidden="true">
+	<li id="menu-item-43405" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-43405" role="menuitem"><a href="https://www.nobelprize.org/nomination/nomination-and-selection-of-physics-laureates/">Physics Prize</a></li>
+	<li id="menu-item-43408" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-43408" role="menuitem"><a href="https://www.nobelprize.org/nomination/nomination-and-selection-of-chemistry-laureates/">Chemistry Prize</a></li>
+	<li id="menu-item-43407" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-43407" role="menuitem"><a href="https://www.nobelprize.org/nomination/nomination-and-selection-of-medicine-laureates/">Medicine Prize</a></li>
+	<li id="menu-item-43409" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-43409" role="menuitem"><a href="https://www.nobelprize.org/nomination/nomination-and-selection-of-literature-laureates/">Literature Prize</a></li>
+	<li id="menu-item-43406" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-43406" role="menuitem"><a href="https://www.nobelprize.org/nomination/nomination-and-selection-of-peace-prize-laureates/">Peace Prize</a></li>
+	<li id="menu-item-43410" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-43410" role="menuitem"><a href="https://www.nobelprize.org/nomination/nomination-and-selection-of-laureates-in-economic-sciences/">Prize in Economic Sciences</a></li>
+	<li id="menu-item-49690" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-49690" role="menuitem"><a href="https://www.nobelprize.org/nomination/redirector/?redir=archive/">Nomination Archive</a></li>
+</ul>
+</li>
+<li id="menu-item-28261" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-28261" role="menuitem"><a href="/alfred-nobel/">Alfred Nobel</a>
+<ul class="sub-menu" role="menu" aria-hidden="true">
+	<li id="menu-item-43411" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-43411" role="menuitem"><a href="https://www.nobelprize.org/alfred-nobel/biographical-information/">Alfred Nobel&rsquo;s life</a></li>
+	<li id="menu-item-43412" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-43412" role="menuitem"><a href="https://www.nobelprize.org/alfred-nobel/alfred-nobels-will/">Alfred Nobel&rsquo;s will</a></li>
+</ul>
+</li>
+<li id="menu-item-28262" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-28262" role="menuitem"><a href="/news-and-insights/">News &amp; insights</a></li>
+<li id="menu-item-28263" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-28263" role="menuitem"><a href="/events/">Events</a>
+<ul class="sub-menu" role="menu" aria-hidden="true">
+	<li id="menu-item-43676" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-43676" role="menuitem"><a href="https://www.nobelprize.org/public-events/">Public events</a>
+	<ul class="sub-menu" role="menu" aria-hidden="true">
+		<li id="menu-item-50085" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-50085" role="menuitem"><a href="https://www.nobelprize.org/nobel-week-dialogue/">Nobel Week Dialogue</a></li>
+		<li id="menu-item-50086" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-50086" role="menuitem"><a href="https://www.nobelprize.org/nobel-prize-dialogue/">Nobel Prize Dialogue</a></li>
+		<li id="menu-item-50087" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-50087" role="menuitem"><a href="https://www.nobelprize.org/nobel-prize-series/">Nobel Prize Series</a></li>
+		<li id="menu-item-50088" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-50088" role="menuitem"><a href="https://www.nobelprize.org/nobel-prize-inspiration-initiative/">Nobel Prize Inspiration Initiative</a></li>
+	</ul>
+</li>
+	<li id="menu-item-43675" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-43675" role="menuitem"><a href="https://www.nobelprize.org/nobel-prize-award-ceremonies/">Nobel Prize award ceremonies</a></li>
+</ul>
+</li>
+<li id="menu-item-28264" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-28264" role="menuitem"><a href="/education-network/">Education network</a>
+<ul class="sub-menu" role="menu" aria-hidden="true">
+	<li id="menu-item-39722" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-39722" role="menuitem"><a href="https://www.nobelprize.org/education-network-nobel-prize-lessons/">Nobel Prize Lessons</a></li>
+	<li id="menu-item-39718" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-39718" role="menuitem"><a href="https://www.nobelprize.org/education-network-nobel-prize-teacher-summit/">Nobel Prize Teacher Summit</a></li>
+</ul>
+</li>
+		<li role="menuitem" class="searchform">
+			<a href="javascript:void(0);" id="search-trigger-js">
+				
+<svg width="20px" height="20px" viewbox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" role="img" aria-labelledby="desktop-search-title desktop-search-description">
+	<title id="desktop-search-title">Close the search form</title>
+	<desc id="desktop-search-description">A button that allows you to close the search form if needed</desc>
+	<g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+		<g transform="translate(-1132.000000, -18.000000)">
+			<g transform="translate(1132.000000, 18.000000)">
+				<rect fill="#2A2A2A" transform="translate(16.000000, 16.000000) rotate(-45.000000) translate(-16.000000, -16.000000) " x="15" y="12" width="2" height="8"></rect>
+				<circle stroke="#2A2A2A" stroke-width="2" cx="8" cy="8" r="7"></circle>
+			</g>
+		</g>
+	</g>
+</svg>
+			</a>
+		</li>
+		</ul>
+
+			</nav>
+
+				<div class="header-search-form" aria-hidden="true">
+					<div class="container">
+						
+<form class="searchform -header" method="GET"
+	action="/search/"
+	>
+
+	<label for="search-form-input-header" class="screen-reader-text">
+		Header Search	</label>
+
+	<input type="text" class="input" name="s" id="search-form-input-header" placeholder="Enter your search here"
+	value=""
+	>
+
+	<button type="submit">
+		<svg width="20px" height="20px" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" role="img" aria-labelledby="submit-search-title-header submit-search-description-header">
+			<title id="submit-search-title-header">Submit a search term</title>
+			<desc id="submit-search-description-header">Allows users to submit a search term</desc>
+			<g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+				<g transform="translate(-1132.000000, -18.000000)">
+					<g transform="translate(1132.000000, 18.000000)">
+						<rect fill="#2A2A2A" transform="translate(16.000000, 16.000000) rotate(-45.000000) translate(-16.000000, -16.000000) "
+						x="15" y="12" width="2" height="8"></rect>
+						<circle stroke="#2A2A2A" stroke-width="2" cx="8" cy="8" r="7"></circle>
+					</g>
+				</g>
+			</g>
+		</svg>
+	</button>
+
+	</form>
+					</div>
+				</div>
+			</div>
+
+		</header>
+
+
+			
+				<div class="sticky-navigation">
+
+				
+<section class="sub-navigation" aria-haspopup="true">
+
+<div class="container">
+
+	<button id="dropdown-js" class="button">
+		<span>
+			John R. Hicks		</span>
+
+		<span>
+			<span id="dropdown-js-more">More</span>
+			<svg aria-hidden="true" focusable="false" role="img" xmlns="http://www.w3.org/2000/svg" width="16" height="28" viewBox="0 0 16 28">
+				<path d="M16 11c0 .266-.109.516-.297.703l-7 7C8.516 18.89 8.265 19 8 19s-.516-.109-.703-.297l-7-7C.11 11.516 0 11.265 0 11c0-.547.453-1 1-1h14c.547 0 1 .453 1 1z"/>
+			</svg>
+		</span>
+	</button>
+
+	<section id="dropdown-menu-js" class="sub-navigation-dropdown" aria-hidden="true">
+		<nav class="sub-navigation-wrapper">
+							
+				
+					<ul role="menu" class="sub-navigation-menu">
+						
+								<li role="menuitem">
+
+									<a href="https://www.nobelprize.org/prizes/economic-sciences/1972/hicks/facts/"
+										title="John R. Hicks - Facts">
+										Facts									</a>
+								</li>
+
+						
+								<li role="menuitem">
+
+									<a href="https://www.nobelprize.org/prizes/economic-sciences/1972/hicks/biographical/"
+										title="John R. Hicks - Biographical">
+										Biographical									</a>
+								</li>
+
+						
+					</ul>
+
+			
+					<ul role="menu" class="sub-navigation-menu">
+						
+								<li role="menuitem">
+
+									<a href="https://www.nobelprize.org/prizes/economic-sciences/1972/hicks/lecture/"
+										title="John R. Hicks - Prize Lecture">
+										Prize Lecture									</a>
+								</li>
+
+						
+								<li role="menuitem">
+
+									<a href="https://www.nobelprize.org/prizes/economic-sciences/1972/hicks/speech/"
+										title="John R. Hicks - Banquet speech">
+										Banquet speech									</a>
+								</li>
+
+						
+					</ul>
+
+			
+					<ul role="menu" class="sub-navigation-menu">
+						
+								<li role="menuitem">
+
+									<a href="https://www.nobelprize.org/prizes/economic-sciences/1972/hicks/other-resources/"
+										title="John R. Hicks - Other resources">
+										Other resources									</a>
+								</li>
+
+						
+					</ul>
+
+					</nav>
+	</section>
+
+</div>
+
+</section>
+
+
+				</div>
+
+				
+
+		<main id="content" role="main" class="nobel-content">
+
+
+	<noscript id="noscript-list">
+
+	<h3>
+		Enhanced Page Navigation	</h3>
+
+	<ol>
+					<li>
+				<a href="https://www.nobelprize.org/prizes/economic-sciences/1972/hicks/lecture/"
+					title="John R. Hicks - Prize Lecture: The Mainspring of Economic Growth"
+					data-related="0"
+					>
+					John R. Hicks - Prize Lecture: The Mainspring of Economic Growth				</a>
+			</li>
+					<li>
+				<a href="https://www.nobelprize.org/prizes/economic-sciences/1972/hicks/facts/"
+					title="John R. Hicks - Facts"
+					data-related="0"
+					>
+					John R. Hicks - Facts				</a>
+			</li>
+					<li>
+				<a href="https://www.nobelprize.org/prizes/economic-sciences/1972/hicks/biographical/"
+					title="John R. Hicks - Biographical"
+					data-related="1"
+					>
+					John R. Hicks - Biographical				</a>
+			</li>
+			</ol>
+</noscript>
+
+	<div id="pjax-well" class="container page-content-area">
+
+		<div class="pjax-container" >
+
+			<section class="page-section biographical">
+
+	
+<aside class="page-aside border-top">
+
+	<header class="header">
+		<h5 class="heading">
+			<a href="https://www.nobelprize.org/prizes/economic-sciences/1972/summary/">
+				The Sveriges Riksbank Prize in Economic Sciences in Memory of Alfred Nobel 1972			</a>
+		</h5>
+	</header>
+
+	<ul class="list-laureates">
+									<li class="list-laureate" itemscope itemtype="http://schema.org/Person">
+					<a href="https://www.nobelprize.org/prizes/economic-sciences/1972/hicks/facts/" class=""
+						itemprop="url"  title="John R. Hicks">
+						<span itemprop="name">
+							John R. Hicks						</span>
+					</a>
+				</li>
+							<li class="list-laureate" itemscope itemtype="http://schema.org/Person">
+					<a href="https://www.nobelprize.org/prizes/economic-sciences/1972/arrow/facts/" class=""
+						itemprop="url"  title="Kenneth J. Arrow">
+						<span itemprop="name">
+							Kenneth J. Arrow						</span>
+					</a>
+				</li>
+						</ul>
+
+	<footer class="footer">
+		
+<div class="share-this">
+	<h6 class="heading">
+		Share this	</h6>
+	<ul class="socialicons">
+		<li class="socialicon" data-social="facebook">
+			<a data-target="https://www.nobelprize.org/prizes/economic-sciences/1972/hicks/lecture/"
+				href="https://www.facebook.com/sharer.php?u=https%3A%2F%2Fwww.nobelprize.org%2Fprizes%2Feconomic-sciences%2F1972%2Fhicks%2Flecture%2F&#038;t=John+R.+Hicks+%E2%80%93+Prize+Lecture" target="_blank">
+
+				<svg width="32px" height="32px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" role="image" aria-labelledby="aside-facebook-title  aside-facebook-desc">
+					<title id="aside-facebook-title">Share on Facebook: John R. Hicks &#8211; Prize Lecture</title>
+					<desc id="aside-facebook-desc">Share this content on Facebook</desc>
+					<g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+						<g transform="translate(0.000000, -28.000000)">
+							<g transform="translate(0.000000, 28.000000)">
+								<circle stroke="#DBD9D6" stroke-width="1" cx="16" cy="16" r="15.5"></circle>
+								<path d="M22.2273337,9 L9.7726663,9 C9.34589013,9 9,9.34588883 9,9.77266341 L9,22.2272841 C9,22.6540063 9.34589013,23 9.7726663,23 L16.4778676,23 L16.4778676,17.5784522 L14.653368,17.5784522 L14.653368,15.4655614 L16.4778676,15.4655614 L16.4778676,13.9073831 C16.4778676,12.0991514 17.5822611,11.1145169 19.195366,11.1145169 C19.9680847,11.1145169 20.6321686,11.1720077 20.8256761,11.1977107 L20.8256761,13.0874576 L19.7069099,13.0879822 C18.8296477,13.0879822 18.6597451,13.5048427 18.6597451,14.1165739 L18.6597451,15.4655614 L20.7520289,15.4655614 L20.4796286,17.5784522 L18.6597451,17.5784522 L18.6597451,23 L22.2273337,23 C22.6540574,23 23,22.6540063 23,22.2272841 L23,9.77266341 C23,9.34588883 22.6540574,9 22.2273337,9"
+									fill="#4266B2" fill-rule="evenodd"></path>
+							</g>
+						</g>
+					</g>
+				</svg>
+
+				<span class="screen-reader-text">
+					Facebook				</span>
+
+			</a>
+		</li>
+		<li class="socialicon" data-social="twitter">
+			<a data-target="https://www.nobelprize.org/prizes/economic-sciences/1972/hicks/lecture/"
+				href="https://twitter.com/intent/tweet?text=John+R.+Hicks+%E2%80%93+Prize+Lecture&#038;url=https%3A%2F%2Fwww.nobelprize.org%2Fprizes%2Feconomic-sciences%2F1972%2Fhicks%2Flecture%2F" target="_blank">
+
+				<svg width="32px" height="32px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" role="image" aria-labelledby="aside-twitter-title  aside-twitter-desc">
+					<title id="aside-twitter-title">Tweet: John R. Hicks &#8211; Prize Lecture</title>
+					<desc id="aside-twitter-desc">Share this content on Twitter</desc>
+					<g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+						<g transform="translate(-40.000000, -28.000000)">
+							<g transform="translate(40.000000, 28.000000)">
+								<circle stroke="#DBD9D6" stroke-width="1" cx="16" cy="16" r="15.5"></circle>
+								<path d="M16.451625,13.4399657 L16.5181573,13.9860583 L15.9858984,13.9177967 C13.9899274,13.6447504 12.2600859,12.7573499 10.7963739,11.2555951 L10.0645179,10.5047177 L9.86492076,11.0508104 C9.46572656,12.2795188 9.73185602,13.5764888 10.5302444,14.4638894 C10.995971,14.9417204 10.8629062,15.009982 10.0645179,14.7369357 C9.79838839,14.6686741 9.59879129,14.6004125 9.53225893,14.6004125 C9.46572656,14.6686741 9.73185602,15.7608594 9.93145312,16.1021673 C10.1975826,16.7165215 10.7963739,17.2626142 11.3951652,17.6039221 L11.9274241,17.8769684 L11.3951652,17.8769684 C10.7963739,17.8769684 10.7963739,17.8769684 10.7963739,18.1500147 C11.0625033,18.9008921 11.8608917,19.6517695 12.7923449,20.061339 L13.4576685,20.3343853 L12.8588772,20.6756932 C11.9939565,21.2217858 10.995971,21.4948322 9.93145312,21.4948322 C9.46572656,21.4948322 9,21.5630937 9,21.5630937 C9,21.6313553 10.3306473,22.3139711 11.1290357,22.5870174 C13.4576685,23.3378948 16.1854955,23.0648485 18.2479988,21.7678785 C19.7117109,20.8804779 21.1754229,19.0374153 21.8407466,17.2626142 C22.2399408,16.306952 22.5726026,14.6686741 22.5726026,13.7812736 C22.5726026,13.2351809 22.639135,13.1669194 23.1713939,12.5525651 C23.5040558,12.2112572 23.8367176,11.7334262 23.9697823,11.6651646 C24.0363147,11.4603798 24.0363147,11.4603798 23.5040558,11.6651646 C22.5726026,12.0064725 22.4395379,11.9382109 22.9052645,11.4603798 C23.2379263,11.1190719 23.6371205,10.4364561 23.6371205,10.2316714 C23.6371205,10.1634098 23.5040558,10.2316714 23.3044587,10.3681946 C23.1048616,10.4364561 22.7056674,10.6412409 22.3730055,10.777764 L21.7742142,10.9825488 L21.37502,10.5729793 C21.1088906,10.3681946 20.643164,10.0951482 20.4435669,10.0951482 C19.8447756,9.95862508 19.0463872,9.95862508 18.5141283,10.1634098 C17.183481,10.5729793 16.3185602,11.9382109 16.451625,13.4399657 Z"
+									fill="#1DA1F2" fill-rule="nonzero"></path>
+							</g>
+						</g>
+					</g>
+				</svg>
+
+				<span class="screen-reader-text">
+					Twitter				</span>
+
+			</a>
+		</li>
+		<li class="socialicon" data-social="email">
+			<a data-target="https://www.nobelprize.org/prizes/economic-sciences/1972/hicks/lecture/"
+				href="mailto:?subject=From+NobelPrize.org%3A+John+R.+Hicks+%E2%80%93+Prize+Lecture&#038;body=https%3A%2F%2Fwww.nobelprize.org%2Fprizes%2Feconomic-sciences%2F1972%2Fhicks%2Flecture%2F" target="_blank">
+
+				<svg width="32px" height="32px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" role="image" aria-labelledby="aside-email-title  aside-email-desc">
+					<title id="aside-email-title">Share via Email: John R. Hicks &#8211; Prize Lecture</title>
+					<desc id="aside-email-desc">Share this content via Email</desc>
+					<g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+						<g transform="translate(-80.000000, -28.000000)">
+							<g transform="translate(80.000000, 28.000000)">
+								<circle stroke="#DBD9D6" stroke-width="1" cx="16" cy="16" r="15.5"></circle>
+								<polygon fill="#DBD9D6" fill-rule="nonzero" points="22.1500528 11 9.85087585 11 16 17"></polygon>
+								<polygon fill="#DBD9D6" fill-rule="nonzero" points="16 19 8 11 8 21 24 21 24 11"></polygon>
+							</g>
+						</g>
+					</g>
+				</svg>
+
+				<span class="screen-reader-text">
+					Email this page				</span>
+
+			</a>
+		</li>
+
+	</ul>
+</div>
+	</footer>
+
+	
+
+</aside>
+
+	<article class="  page-content border-top entry-content">
+
+					<header class="section-header">
+				<h1>
+					John R. Hicks				</h1>
+									<h2>
+						Prize Lecture					</h2>
+							</header>
+		
+		
+<p class="smalltext">Lecture to the memory of Alfred Nobel, April   27, 1973</p>
+<h2>The Mainspring of Economic Growth</h2>
+<p>In my <i>Theory of Wages</i>, first   published in 1932, there is a chapter (VI) entitled &#8220;Distribution   and Economic Progress&#8221;. It was the first to be written of the   theoretical chapters in that book; so it is in a sense the first   of my contributions to economic theory. I do not think much of it   now; I think that I have learned a good deal since I wrote it. It   has nevertheless had a considerable progeny. Work that is based   upon it, or on other constructions of the same character,   continues to appear; so it is far from being dead. Yet I myself   have moved away. It may be useful to take this opportunity of   explaining how this has happened. It is not inappropriate to do   so, since in doing so I shall describe what seems to me to be an   important part of the work I have done, in all the time from 1932   to the present.<a href="#not1"><sup>1</sup></a></p>
+<p>It was characteristic of that approach,   from which I began, that it treated the Social Product as being   made by two Factors of Production, Labour and Capital; the   services of Labour and the services of Capital contributing to   the Product in much the same way. An increase in the amount of   either Factor that was applied would increase the Product,   <i>other things being equal</i>. With given amounts of Factors   applied, there would be just so much Product; so (again other   things being equal) there would be a Production Function (as it   later came to be called) representing Quantity of Product as a   Function of Quantities of Factors applied. The return, per unit,   to each Factor was equal to its Marginal Product, which   diminished as the amount applied of that Factor increased, the   amount of the other remaining constant. It followed at once that   an increase in the quantity applied of one Factor (that of the   other remaining unchanged) would increase the absolute share of   the Product going to the other Factor; but since the absolute   share of the increasing Factor might be either increased or   diminished (according as its Marginal Productivity curve was   elastic or inelastic) the distribution of the Product between the   Factors (relative shares) might be shifted either way. Which way   it went would depend upon the &#8220;shape&#8221; of the Production Function,   a &#8220;shape&#8221; which could be represented, as I showed, by what I   called the &#8220;elasticity of substitution&#8221;.</p>
+<p>It was not supposed that the Production   Function would remain unchanged over time; it would be shifted by   the discovery of new techniques of producing &#8211; that is to say, by   <i>invention</i>. Inventions, so Wicksell appeared to have shown   (and I followed him), would not be adopted unless they raised the   Social Product; but the shifts in the Production Function, due to   invention, might be &#8220;neutral&#8221;, as far as distribution between the   Factors was concerned, or might be biased either way. It seemed   to me that rises in wages (rises, that is, in the share of the   Product going to Labour per unit of Labour) would encourage the   adoption of inventions which economised in Labour and so were   biased against Labour; but whether such &#8220;induced inventions&#8221; were   to be regarded as shifts in the Production Function, or as   substitutions within an unchanged Production Function, was left   rather obscure.</p>
+<p>The theory, which I have been outlining,   has been decidedly influential; but almost every element in it   has been a target for criticism. Some of the criticism (such as   those directed against the Marginal Productivity theory as such)   can, I still believe, be rebutted, or partially rebutted;<a href="#not2"><sup>2</sup></a> but there is one that remains which I   now feel to be decisive.</p>
+<p>In the Production Function, &#8220;Product&#8221;,   &#8220;Labour&#8221; and &#8220;Capital&#8221; are quantities; but it is necessary, if   they are to be quantified, that there should be some means of   reducing their obvious heterogeneity to some kind of uniformity.   For none of the three is the reduction a simple matter; it cannot   be solved, even in the case of Labour, by counting heads or by   counting manhours. The crucial problem, however, is that of   capital.<a href="#not3"><sup>3</sup></a> Capital, here, must mean   physical capital goods; it is an aggregate of physical goods   which we have to represent by a single quantity. As is now well   known (but was not so well known in 1932) there are just two   cases in which this can be done without error &#8211; without any   error, that is, for it is not denied that if either case is   approached, without being actually reached, the error may be   tolerable. One is the obvious case in which all components change   proportionately; the other &#8211; which I myself may claim to have   clarified in 1939 &#8211; is that in which the price-ratios between the   goods, or their marginal rates of substitution, remain   constant.<a href="#not4"><sup>4</sup></a> In the former case the   complex is representable by a number of physical &#8220;bundles&#8221;; in   the latter there is aggregation in value terms.</p>
+<p>It is clearly impossible, in the case of   the capital stock, to claim that the first of these conditions,   in practical application, can be even approximately satisfied.   For it is normal experience, in a progressive economy, that its   capital, at the end of a period, contains different kinds of   goods from those contained at the beginning. New items are   introduced, and old items discarded. Only in a theoretical   construct &#8211; a steady state &#8211; can proportions remain unchanged   over time; and we can hardly make much use of that property, even   for the comparison of steady states, since proportions in one   steady state will usually be different from those in another.   There is little hope for a way out in that direction.</p>
+<p>The other, at first sight, looks more   appealing. Here however there is a more subtle objection,   associated in particular with the work of Joan Robinson.<a href="#not5"><sup>5</sup></a></p>
+<p>If capital increases relatively to labour,   other things being equal (so the Production Function theory   appears to tell us) the marginal product of capital must fall, so   the rate of return on capital must fall. But a fall in the rate   of return on capital carries with it a fall in the rate of (real)   interest, as a result of which the capitalised values of   different goods (goods of different durability, for instance)   must change disproportionately. So the marginal rates of   substitution between them cannot be kept constant. The   constant-price condition cannot be maintained; it involves a   contradiction.</p>
+<p>This does not mean that it is wrong for   statisticians to value capital goods at constant prices &#8211; their   prices, or costs of production, at some base date. Any practical   measure of National, or Social Capital must I think be of this   character. But a technological relation between Capital and   Product, with Capital thus arbitrarily valued, carries no   conviction; there is no reason why it should exist.<a href="#not6"><sup>6</sup></a></p>
+<hr width="25%">
+<p>All I have said so far is by way of   preface. I have, on the whole, left it to others (since my early   days) to live in the world of production functions and   elasticities of substitution, between Factors globally defined.   What I mainly want to talk about is a side of my work which has   gradually developed over the years, and which, I now feel, is   more promising.</p>
+<p>It also goes back to that same <i>Theory of   Wages</i>. I have so far been discussing Chapter VI; but there   are other chapters (IX-X) where will be found the beginnings of   quite a different theory. These are curious chapters; their   reception, when the book appeared, was much less favourable than   that then accorded to Chapter VI. This was partly because the   tradition in which I was working in IX-X &#8211; the tradition of   Böhm-Bawerk and Wicksell &#8211; was much less familiar to English   readers than that of Pigou, on whom I was drawing in VI; but   mostly because of a head-on collision between what I was saying   and the &#8220;New Economics&#8221; which even then, three years before the   <i>General Theory</i>, was already beginning to be the Economics   of Keynes.</p>
+<p>When I wrote the <i>Theory of Wages</i>, I   was completely innocent of these ideas; I had scarcely a notion   of what was going on at Cambridge, or for that matter in Sweden.   But hardly had my book left my hands when I began to move in that   direction myself. I stumbled upon something which, if not quite   the same as Keynes&#8217;s Liquidity Preference, has a close relation   to it. And even before the <i>General Theory</i> appeared in   1936, I had begun to draw some of the consequences.<a href="#not7"><sup>7</sup></a></p>
+<p>There is much of my work which follows from   that; I have no time to describe it here. I must keep firmly to   the story of those chapters in the <i>Wages</i> book, and what   follows from them. The first result of the new point of view,   when I reached it in 1933-35, was to make me deeply ashamed of   what in those chapters I had written. I realised (too late) how   inappropriate it was. It had nothing to do with the state of the   world at the time when I was writing. I had diagnosed a disease,   but it was not the right disease. The unemployment of 1932 was of   quite a different character from what I had supposed.</p>
+<p>It is nevertheless not useless to analyse a   disease, even if it is not the disease which at the moment is   important. The time may come when one&#8217;s work is more to the   point. In my case, I think, it has come.</p>
+<p>The principal ground on which my chapters   were attacked, in the thirties, concerned my initial assumption &#8211;   that Trade Unions, or Government wage-fixers, can raise   <i>real</i> wages. This, by Keynes and his followers, was in   those days most resolutely denied. Trade Unions, they said, are   concerned with money wages, not real wages. It is true that a   rise in the money wages of a particular group will raise their   real wages relatively to those of others; but a general rise in   money wages, in a closed system, will simply result in a rise in   prices in the same proportion, thus leaving real wages where they   were. This of course implies that there is an elastic money   supply. If the money supply is not increased proportionately, the   rate of interest will rise; as a result of the rise in interest   there will be a fall in the demand for labour. The cause of the   unemployment is then identified as the inelasticity of the money   supply.</p>
+<p>It is fairly obvious, in these days, that   this Keynesian argument is not so strong as it at first appeared.   Directed, as it was of course at first intended to be directed,   against the use of wage-cuts as a means of stimulating employment   in depression, it retains its force. But it is much less strong   on the other tack.</p>
+<p>Though Trade Unions operate on money wages,   it is surely in real wages that they are really interested. If a   rise in money wages just leads to a rise in prices, they feel   themselves cheated; so they return to demand another round of   rises in money wages. Thus we get the cost-inflation, with which   (during the last twenty and especially ten years) we have become   so familiar. It could not occur without an elastic money supply;   so why not put constraints on the money supply, and so check, or   at least impede, the inflation? There are bound to be monetarists   who will argue that way, and governments, in desperation, are   bound to give some attention to them. Is the resulting   unemployment then due to the monetary constraint, or to the   wage-push which led to the monetary constraint being imposed? One   can look at the matter either way, but it can well be argued that   the latter way is the more fundamental.</p>
+<p>So my 1932 analysis has come, at last, to   some sort of contemporary relevance; but there is another kind of   relevance, of which I had no suspicion when I wrote, but which   has been there all the time. This is not a matter of analysing a   disease; it is concerned with the normal growth, the healthy   growth, of an economy. In healthy growth real wages should be   rising. What are the consequences of that rise in real wages? My   1932 analysis was concerned with rises in wages off the normal   path; but the rises that are on the normal path should have   similar effects, though they will not include the causation of   unemployment. Rather similar methods should be usable for their   analysis; it should deepen our understanding of the growth   process in general. This is the aspect in which I have lately   been mainly interested. I will try to sketch some of the results   I seem to have been reaching. This will be the subject of the   rest of this lecture.</p>
+<hr width="25%">
+<p>I have talked all this time about those   chapters IX-X of the <i>Wages</i> book, without specifying what   they contain. Much of what they contain is detail, now   irrelevant. There is just one thing that matters.</p>
+<p>A rise in <i>real</i> wages, however   caused, tends in itself to diminish the real rate of profit. This   has two effects which work, in a sense, in opposite directions.   One is to encourage the substitution of what are usually more   capital-intensive methods; the other, because of the transfer of   income from profits to wages, is to diminish saving. Far more is   now known about both of these effects than I knew in 1932; but   the distinction still holds. I will try to re-state it in a more   modern form.</p>
+<p>The first thing on which to insist is that   it is quite unnecessary, because we use terms like   &#8220;capital-intensive&#8221; and &#8220;rate of profit&#8221;, to trouble ourselves   about the valuation of the capital stock as a whole (as we   appeared to have to do on the <i>production function</i> method).   What matters is not the average rate of profit on the whole   capital stock (which cannot be determined without such   valuation); what matters is the rate of profit on new investment.   When the new investment is undertaken, that profit is no more   than an expected profit, and what is realised may not be the same   as what is expected. It seems reasonable, however, if we are   concerned with healthy growth, to suppose that there is some   broad concordance between what is expected and what is realised.   Most ventures come out more or less right. No more than that is   required.</p>
+<p>It cannot be profitable (in this sense) to   make machines unless the use of the machines is also profitable;   so, to assess the profitability of investment, we should look   right forward to the production of final product. In any   production plan, so considered, labour is input and final product   is output; so a rise in wages, in terms of final product, must   diminish the rate of profit on the plan, in terms of final   product. To this rule there is I believe no exception. It holds   for any plan that could be viable at the rate of wages in   question.<a href="#not8"><sup>8</sup></a> So for any plan (with   inputs and outputs expressed in quantity terms) there is a   particular relation between (real) wage-rate and (real)   profit-rate, which can be drawn out as a downward-sloping curve &#8211;   what I now like to call the &#8220;efficiency curve&#8221; of the plan.</p>
+<p>Next (though only provisionally) let us   make the conventional assumption that &#8220;technology&#8221; is given; that   there are just so many production plans, in the above sense, from   which choice can be made. Each such plan will have an efficiency   curve. Make the &#8220;capitalist&#8221; assumption (I am not here concerned   with the question of its justification) that the plan which is   actually chosen for new investment is that which gives the   highest return at the current rate of wages. It could be that the   choice was unaffected by the level of wages; but it makes more   sense to suppose that as wages change, different plans (or   techniques) will come to be the most profitable. There will then   be substitution along a &#8220;spectrum of techniques&#8221; as wages   rise.</p>
+<p>It is not the case (as used to be supposed)   that there is any single physical index by which we can   distinguish those techniques which lie &#8220;further down&#8221; the   spectrum from those which lie &#8220;higher up&#8221;. There is no such index   which can be employed without exception. I could already show (in   1939) that the &#8220;Period of Production&#8221; that was used for this   purpose by Böhm-Bawerk and Hayek will not in general serve.9   But what is in substance the same argument can be used against   any physical index, such as capital-labour ratio (when capital,   by some device, is physically defined).<a href="#not10"><sup>10</sup></a> Yet we should not allow these   refinements to obscure the fact that techniques which lie further   down the spectrum (so that they require for their profitable   adoption a low rate of profit, or interest) will <i>usually</i>   be such as to involve higher preparatory costs, such as   construction costs, as a means of economising in running costs of   production. We do not <i>usually</i> go astray if we think of   such techniques as being in that simple sense more   capital-intensive.</p>
+<p>I shall later return to this substitution   effect; for the moment I turn to the other, which is more   troublesome. In <i>Theory of Wages</i> (as was natural at the   date when it was written) I took the traditional view that more   saving meant more capital accumulation, and that capital   accumulation was favourable to rising wages. But in Keynes&#8217;s   system of thought, which was so soon to be sprung upon me, the   effect of saving seemed to go the other way round.</p>
+<p>The trouble was not (as might easily be   supposed) that Keynes&#8217;s theory was monetary, while my &#8220;classical&#8221;   theory was non-monetary. One can construct a &#8220;barter&#8221; system, in   which money plays no essential part, but which can still behave   in the manner that Keynes identified. (It is not, incidentally,   such an unrealistic construction; the world, in 1970-1, produced   quite a good imitation of a Keynesian slump <i>in real   terms</i>.) It has taken some time for this to be clarified &#8211;   since Keynes himself, by unfortunate definitions which made   saying and investment always equal, obscured the significance of   a part of what he was saying.</p>
+<p>If we make the distinction (which already   in 1936 was familiar in Sweden) between desired and realised   saving and investment, the issue becomes much clearer. In the   desired sense there can be an excess of saving over investment,   even in a barter economy; it will take the form of an undesired   accumulation, an accumulation of surplus stocks. If there is an   excess of investment over saving, in the desired sense, stocks   will fall below normal, below what is desired; or surplus orders   will pile up, orders which cannot be satisfied without abnormal   delay. Such an excess, either way, may be regarded as a sign of   disequilibrium &#8211; a disequilibrium which is perfectly possible,   even in a barter economy.<a href="#not11"><sup>11</sup></a></p>
+<p>Saving-investment equilibrium, so defined,   does not imply the Full Employment of Labour; for that also to be   attained, further conditions are necessary. One of the conditions   is that relative prices should be right. It is unnecessary, here,   to discuss the vexed question whether it will always be possible,   in a barter system with sufficiently flexible prices, to maintain   both full employment and saving-investment equilibrium   automatically. (I am myself convinced that it is not necessarily   possible, but that is by the way.) What is important, for my   present purpose, is that saving-investment equilibrium and full   employment are different. One can suppose that there is   saving-investment equilibrium, maintained continuously; and yet   there can be unemployment, if the ratio of prices to wages is   inappropriate. That is what I ought to have said in <i>Theory of   Wages</i>. So interpreted, the Keynesian view and the &#8220;classical&#8221;   view fit together.</p>
+<p>It has taken a long time to clear this up.   In the central part of my <i>Contribution to the Theory of the   Trade Cycle</i> (1950) I used what I have later called a   <i>fixprice</i> model.<a href="#NOT12"><sup>12</sup></a> I   introduced an equilibrium path &#8211; a saving-investment equilibrium   path &#8211; and a full employment path which lay above it. I was   interested only in departures from equilibrium; so the only   function attributed to the full employment path was to act as a   Ceiling, which imposed a constraint upon the disequlibria which   could occur. I did not ask why the equilibrium path should lie   below the Ceiling. Indeed, I said much too little about each. I   just drew them as straight lines &#8211; which is a simple way of   saying nothing about them!</p>
+<p>The natural way of finding out more about   them is to consider the possibility of maintaining <i>both</i>   saving-investment equilibrium <i>and</i> full employment. Suppose   that both conditions have to be fulfilled; what will be the   consequences? Real wages, it is clear by now, will have to be   flexible; can they be kept flexing always upwards? If they can,   it may be that the simultaneous satisfaction of both conditions   can be maintained without friction (this does not mean that it   must be attained); if they cannot, if there must be fluctuations   in real wages when both conditions are satisfied, there will   surely be greater difficulties. To learn more about the   <i>double-equilibrium path</i> (as we may call it) seems thus to   be the next thing required.</p>
+<p>It has been widely appreciated that it is   the next thing required. Many (though by no means all) of the   &#8220;growth models&#8221; that have been developed on all hands during the   last twenty years can be considered as answers, or attempted   answers, to the question just put. Some of them, especially those   labelled &#8220;neo-classical&#8221;, use the production function scheme I   began by describing. I am myself untempted by that procedure,   essentially for the reason given. It may nevertheless be agreed   that the problem is a &#8220;classical&#8221; problem; since we are putting   disequilibrium behind us, what we have learned from Keynes is for   the moment irrelevant. It is to the classics that we must go for   help. We shall find it, in my view, not in the &#8220;neo-classics&#8221; but   in the British Classical Economists, especially in John Stuart   Mill.</p>
+<p>When Mill &#8220;abandoned the Wage Fund&#8221; he must   have forgotten what he had said about it. (It is not surprising,   in view of all the other things he had been doing, if by 1868 his   recollection of his earlier work had become a little rusty.) In   terms of the double equilibrium path, what is said in his   <i>Principles</i> is substantially right. The wage-bill (the   <i>real</i> wage-bill) is just the difference between final   product and what is <i>taken out</i> of that product for other   purposes. What is taken out will include not only &#8220;consumption   out of profits&#8221; but also the consumption of public bodies (as   Adam Smith, when he was on this track, had been well aware). So   long as the increment in this Take-out does not exceed the   increment in final product, the real wage-bill must increase when   final production increases. It must do so, along the double   equilibrium path.<a href="#NOT13"><sup>13</sup></a></p>
+<hr width="25%">
+<p>We can at last begin to see how the   substitution effect and the saving effect fit together. It is   essential to hold fast to the behaviour of <i>final output</i>.   This is the chain of causation: from investment to final output,   from final output to wages, from wages to the rate of profit on   new investment, and thence back on investment itself. There is   much to be said on each of these steps. I cannot go into detail,   but must confine myself to giving a general impression.<a href="#NOT14"><sup>14</sup></a></p>
+<p>Let us start from the making of an   invention, which we had better think of as a major invention, so   that the technique of production which it makes possible is much   more profitable than any used before.<a href="#NOT15"><sup>15</sup></a> It needs to be embodied in new   equipment in order that it should be used; so without new   investment it cannot be applied. But even if the invention had   not been made there would have been some new investment; so the   immediate result of the invention is that the technique which is   embodied in new investment is changed. The rest of the economy   proceeds more or less as before, using old techniques; they are   now obsolescent, but they cannot be changed overnight.</p>
+<p>The <i>new</i> processes will not produce   final product at once; there must be a delay before the new   equipment comes into production. During that delay, all final   product comes from old processes; so (in double equilibrium) the   old processes must continue in full production if final product   is not to fall. Except by a fall in final product, no additional   resources can be transferred to new investment; so it is just the   resources which would have been employed in new investment, if   the invention had not occurred, which can be transferred to the   making of the new &#8220;machines&#8221;.</p>
+<p>It is by no means certain that final   product will be increased even when the new equipment comes into   production. For it may well be that the increased profitability   of the new machines is simply a matter of reduction in running   cost. They have no larger capacity than the machines they   replace; it simply costs less to run them. There is then no rise   in final output when the new machines come into production. What   does happen is that resources are released; but if double   equilibrium is to be maintained, they must still be employed.   They may be employed in squeezing additional output out of old   processes; or they may be employed in making new machines. In the   former case, there will at that stage be a rise in final output;   and even in the latter case, though there is again no increase in   output while the extra machines are being made, there will <i>in   the end</i> be an increase in final output. So it is true (as   Wicksell supposed) that a profitable invention will always lead   to an increase in final output; but it is perfectly possible that   the increase may be long deferred.</p>
+<p>Unless the rise in final output is absorbed   by an increase in Take-out, or has to be spread over too large an   increase in the supply of labour, rising final output (when it   comes) will mean a rising rate of real wages. (This is where   substitution will come in.) But suppose for the moment that there   is no substitution and no further invention. Investment continues   on the same pattern as was established after the first invention   occurred. Gradually, as old machines are replaced, the part of   the capital stock which has become obsolescent will diminish;   more and more will be of a &#8220;modern&#8221; type. During all that time   final product will be expanding, and wages rising. As wages rise,   the rate of profit will decline, from the exceptional level   reached just after the original invention, towards something more   &#8220;normal&#8221;. It will decline, though not before the modernisation   has been completed, to the level which is appropriate to a steady   state under the new technique; for the level of wages which is   established in that steady state is the highest that can be   achieved (except by diminishing Take-out) so long as there is no   substitution and no new invention.</p>
+<p>We need not rely, to establish this   conclusion, on the &#8220;classical&#8221; view that a declining rate of   profit will diminish the incentive to save.<a href="#not16"><sup>16</sup></a> Whatever be the nature of saving   propensities, an approximation to a steady state is likely to   occur, <i>if there is no further technical change</i>. It will be   a different steady state, with a different distribution of   income, according as saving propensities take one form or   another. But it will always be a steady state; and in that state   wages will always be higher and profit lower than they were on   the way to it.</p>
+<p>Now we can bring in substitution. If there   is substitution along a spectrum of techniques &#8211; new techniques   which would previously not have been profitable becoming   profitable because of the rise in wages &#8211; the fall in profits   will be slowed up. The effect of the substitution (in most cases   at least) will be in the direction of adopting more   capital-intensive techniques. These will probably, at their   adoption, slow up the rise in final product; and that probably   means that they will slow up the rise in the rate of real wages.   (Since they are directed towards economising in labour, it is not   surprising that they should slow up the rise in wages.) But &#8211; and   this is vital &#8211; the result of the substitution will be to set the   economy &#8220;aiming&#8221; at a steady state with a higher final product   per unit of labour, and therefore (with any reasonable behaviour   of take-out) a higher level of wages. There are several ways of   establishing this essential proposition;<a href="#not17"><sup>17</sup></a> the simplest, perhaps, is just to   observe that in the steady state, when the system is fully   adjusted to the new technique, every worker will have more   &#8220;capital&#8221; to help him when the method of production is more   capital-intensive.</p>
+<hr width="25%">
+<p>What I have just been giving is no more   than an exercise; it does no more than distinguish one causal   sequence which in actual experience will be crossed and mixed up   with many others. It does nevertheless appear that this sequence   may be rather fundamental. The mainspring of economic progress,   it suggests, is invention; invention that works through the rate   of profit. Each invention gives an <i>Impulse</i>, as we may call   it; but the Impulse of any single invention is not inexhaustible.   The exhaustion is marked by falling profit; but the cause of the   exhaustion (on the Full Employment, or double equilibrium path)   is scarcity of labour.</p>
+<p>In saying this we are keeping, in   substance, quite close to Mill. In Mill the &#8220;declining rate of   profit&#8221; is due to scarcity of land; but there is no reason in   principle why the operative scarcity should not be any natural   scarcity. Mill&#8217;s view that the operative scarcity was land   scarcity can only be regarded as empirical; it looked like being   right at the time when he was writing, but over the whole time   since then it does not look like being right. The ultimate   scarcity must be that of labour <i>or</i> of land (or both);   formally, it must be scarcity of some non-augmentable factor of   production. There are of course many other scarcities which will   arise in the working &#8211; out of the Impulse; but scarcities that   can be overcome by investment will not reduce the rate of profit   on new investment in general. They will shift the point in the   productive process where the investment is to be made, but that   is all. It is only the irremovable scarcities which will   ultimately compress the rate of profit.</p>
+<p>Once we recognise that substitution, on the   spectrum of techniques, is just one way of overcoming the   scarcities that arise out of the Impulse, many things fit into   place. If there is no technical change, following on the original   invention, other than that which is directly implied by the   invention, the Impulse which it gives will soon be exhausted.   Scarce factors will then get the full gain which accrues to them   from the original invention, but no more. But if there is   substitution, directed towards economising in those same scarce   factors, the ultimate gain to them will be greater, and may well   be far greater. There may still be a question of how the gain is   distributed between them. Taken together, however, they must gain   in the end from the deferment of exhaustion.</p>
+<p>It is of little importance, from this point   of view, whether the substitutions are supposed to take place   along an unchanged &#8220;technology frontier&#8221;, or whether they   themselves partake of the nature of invention. The &#8220;technology   frontier&#8221;, useful as it has been in the formation of the theory,   and still (perhaps) indispensable in the first stages of   presentation, is in the end a piece of scaffolding, that we can   take down. The puzzles about &#8220;induced invention&#8221; then give no   trouble. We have just to define them as technical changes, the   possibility of which is newly discovered in the working &#8211; out of   the Impulse, and which are such that it would not be profitable   to make them until the scarcities by which they are &#8220;induced&#8221;   have developed. They thus appear as secondary inventions,   &#8220;children&#8221; of the original invention, its &#8220;economic children&#8221;;   for we may surely allow it to have other &#8220;children&#8221; &#8211; technical   children, &#8220;learning by doing&#8221; in a most extended sense &#8211; as well.   The economies of scale, on which one school of economists lays   such great stress, may well be introduced in much the same place.   The great inventions will give great and long-lasting Impulses,   because they have many &#8220;children&#8221;, of all these kinds.</p>
+<p>It will clearly be difficult, in relation   to contemporary experience, to draw a firm line between the   primary invention and its &#8220;children&#8221;, when the latter are so   broadly defined. Where the distinction is drawn is bound to be a   matter of judgement, or of taste. In relation to earlier ages,   where claimants to primary status are less thick upon the ground,   the distinction may be easier.<a href="#not18"><sup>18</sup></a>   One can certainly detect, in the nineteenth century, one major   invention that gives a recognisable, and separable, Impulse &#8211; the   railway. The Railway Age was an Impulse, the working &#8211; out of   which is clearly visible, since there seem to have been at least   a couple of decades in which no Impulse of comparable magnitude   followed. Many economists (including sometimes Keynes) thought   the Depression of the nineteen-thirties to be a Pause of similar   character. That could be, but it does not have to be, since the   Disequilibrium of the thirties can well be explained in other   ways. It is impossible to tell its story without laying great   stress upon the monetary aspect, which I have been disregarding;   it may well be that it is right to tell the whole of its story in   those terms. Yet there may be something more. It would be a great   help if we knew, better than we do, if there was something more;   for it would help us to understand the innovative process, as it   works in this century, and so to know, better than we do, how far   we can count upon steadiness in the flow of innovation. The study   of past Impulses, with the aid of a better classification, might   well throw much light upon this vitally important matter.</p>
+<p>I return, in conclusion, to the <i>Theory   of Wages</i> problem &#8211; the consequence of maintaining a level of   real wages which is higher than that which is appropriate for   double equilibrium. After what has been said, we need not   conceive of this problem in a static manner. The equilibrium   wage-level may be allowed to be rising, but the actual wage-level   is kept, all the time, somewhat above it. That this is a   realistic problem cannot nowadays be denied; for the means that   are available for the enforcement of such a wage-level are far   more extensive than they were in the past. Granted this kind of a   wage policy, what happens?</p>
+<p>There seem to be two main cases. It is   possible, in the first place, that the higher wage might be   matched by a lower take-out. A lower take-out would raise the   (real) wage-level that was consistent with double equilibrium; so   the lower take-out should permit of the higher wage being   attained without unemployment. So far, so good; it should however   be noticed that if the course of the wage-level is established   arbitrarily, fluctuations in take-out will probably be necessary   in order to keep that arbitrary wage-level consistent with double   equilibrium. The matter cannot be settled in this way once and   for all.</p>
+<p>Secondly, suppose that the higher   wage-level is not matched by lower takeout. I do not think it can   be doubted that this also is a practical problem. For when we   remember how much of the consumable product of modern economies   is &#8220;taken out&#8221; for social purposes, the demand for which comes   from much the same source as the demand for higher wages, we must   surely recognise that the alleviation which can come from lower   take-out is likely to be limited. Say then that all that can be   done in this direction has been done. Say also that   saving-investment equilibrium is to be preserved. (It will not be   easy to preserve it, but most of what is to be said under that   head is well known; I need not enlarge upon it here.) What, under   these conditions, will be the course of the economy?</p>
+<p>The higher wage, as we have seen, will   affect the techniques that are chosen for new investment; we may   take it that they will, on the whole, be more capital-intensive   than they would otherwise have been, at corresponding dates. Such   techniques will in the end raise final output, <i>per unit of   labour employed</i>, more than it would have been raised by less   capital-intensive investment. But, all along, the volume of   investment (in saving-investment equilibrium) will be lower than   it would have been otherwise. Thus, although the economy is   &#8220;aiming&#8221; at a steady state in which final consumable output, per   unit of labour employed, is higher, employment along the path to   that state (and &#8211; in principle &#8211; even in that final state) will   be lower than it would have been. This, I now believe, is what I   was trying to say in <i>Theory of Wages</i>; as will be seen, it   is subject to many qualifications of which, when I wrote, I had   no idea. But in substance the main point stands.</p>
+<p>That it is possible for a &#8220;developing&#8221;   country, by choice of techniques that are too capital-intensive,   to expand employment in its &#8220;modern&#8221; sector less rapidly than it   might have done, is nowadays familiar. What I am saying is little   more than an application of that same principle.</p>
+<p></p>
+<hr>   </p>
+<p class="smalltext"><a name="not1" id="not1" href="/nobel_prizes/economic-sciences/laureates/1972/"></a>1. As seems   suitable in this place, I shall confine this account to the   evolution of my own ideas, without much attention to what I have   learned from others. How much I have learned from others &#8211;   especially, perhaps, from Roy Harrod, Joan Robinson and Nicholas   Kaldor &#8211; will nevertheless, I hope, be apparent.</p>
+<p class="smalltext"><a name="not2" id="not2" href="/nobel_prizes/economic-sciences/laureates/1972/"></a>2. As I have   explained in the <i>Commentary</i> attached to the second (1962)   edition of <i>Theory of Wages</i>, especially pp. 333-41.</p>
+<p class="smalltext"><a name="not3" id="not3" href="/nobel_prizes/economic-sciences/laureates/1972/"></a>3. Crucial in   the sense that it has been the major theme of controversy among   economists. I accept that the aggregation problems, on the side   of Product, are hardly less pressing.</p>
+<p class="smalltext"><a name="not4" id="not4" href="/nobel_prizes/economic-sciences/laureates/1972/"></a>4. <i>Value and   Capital</i> (1939), p. 33 and passim.</p>
+<p class="smalltext"><a name="not5" id="not5" href="/nobel_prizes/economic-sciences/laureates/1972/"></a>5. <i>The   Production Function and the Theory of Capital</i> (Review of   Economic Studies 1954); and later writings.</p>
+<p class="smalltext"><a name="not6" id="not6" href="/nobel_prizes/economic-sciences/laureates/1972/"></a>6. I have   stated my present views on the Production Function at greater   length in <i>Capital and Growth</i> (1965) pp. 293-305; and in   <i>Capital and Time</i> (1973) pp. 177- 84.</p>
+<p class="smalltext"><a name="not7" id="not7" href="/nobel_prizes/economic-sciences/laureates/1972/"></a>7. <i>A   Suggestion for Simplifying the Theory of Money</i>   (<i>Economica</i> 1935, reprinted in my <i>Critical Essays in   Monetary Theory</i>, 1967). I have told the story of my   &#8220;conversion&#8221; in <i>Recollections and Documents</i> (Economica,   February 1973).</p>
+<p class="smalltext"><a name="not8" id="not8" href="/nobel_prizes/economic-sciences/laureates/1972/"></a>8. <i>Capital   and Time</i> (1973) ch. 2.</p>
+<p class="smalltext"><a name="not9" id="not9" href="/nobel_prizes/economic-sciences/laureates/1972/"></a>9. <i>Value and   Capital</i> ch. 17.</p>
+<p class="smalltext"><a name="not10" id="not10" href="/nobel_prizes/economic-sciences/laureates/1972/"></a>10. This is   the principal point which the &#8220;re-switching&#8221; controversy is   about. For further detail, see <i>Capital and Time</i>, ch.   4.</p>
+<p class="smalltext"><a name="not11" id="not11" href="/nobel_prizes/economic-sciences/laureates/1972/"></a>11. The   disequilibrium which in a closed economy is revealed by physical   stocks is in an open economy mainly revealed by foreign exchange   &#8211; the balance of payments. For foreign exchange, in a modern   national economy, is the easiest stock to run down, or pile   up.</p>
+<p class="smalltext"><a name="not12" id="not12" href="/nobel_prizes/economic-sciences/laureates/1972/"></a>12. See   especially Chapter 8 of the book. Also <i>Capital and Growth</i>   (1965) chapters 7-l 1.</p>
+<p class="smalltext"><a name="not13" id="not13" href="/nobel_prizes/economic-sciences/laureates/1972/"></a>13. On Mill,   see <i>Capital and Time</i>, pp. 58-62.</p>
+<p class="smalltext"><a name="not14" id="not14" href="/nobel_prizes/economic-sciences/laureates/1972/"></a>14. There is   a much fuller discussion in <i>Capital and Time</i>, chs   9-10.</p>
+<p class="smalltext"><a name="not15" id="not15" href="/nobel_prizes/economic-sciences/laureates/1972/"></a>15. In the   case of an open economy, the opening of a new market for an   export, or potential export, will have a similar effect.</p>
+<p class="smalltext"><a name="not16" id="not16" href="/nobel_prizes/economic-sciences/laureates/1972/"></a>16. Nor even   upon the sophisticated re-statement of the &#8220;classical&#8221; view that   is due to Cassel (<i>Nature and Necessity of Interest</i>).</p>
+<p class="smalltext"><a name="not17" id="not17" href="/nobel_prizes/economic-sciences/laureates/1972/"></a>17. My own   preferred way is that which is set out in <i>Capital and Time</i>   ch. 10.</p>
+<p class="smalltext"><a name="not18" id="not18" href="/nobel_prizes/economic-sciences/laureates/1972/"></a>18. These   ideas were not fully formed when I wrote <i>A Theory of Economic   History</i> (1969), but I was working towards them.</p>
+<p>   <footer class="copyright">
+   <small class="lectures">
+        From <i><a href="/nobel_organizations/nobelfoundation/publications/lectures/index.html">Nobel Lectures</a>, Economics 1969-1980</i>, Editor Assar Lindbeck, World Scientific Publishing Co., Singapore, 1992
+</i></p>
+   </small>
+</footer> <footer class="copyright">
+   <small class="global">
+      <span class="copy">Copyright &copy; The Nobel Foundation 1972</span>
+   </small>
+</footer> </p>
+
+		<footer class="border-top pagecite" itemscope itemtype="http://schema.org/citation">
+	<p>
+		To cite this section 		<br>
+		MLA style: John R. Hicks &#8211; Prize Lecture. NobelPrize.org. Nobel Media AB 2019. Mon. 8 Jul 2019. &lt;https://www.nobelprize.org/prizes/economic-sciences/1972/hicks/lecture/&gt;	</p>
+</footer>
+
+		
+<div class="back-to-top">
+	<a href="#top" class="back-top-link">
+		Back to top	</a>
+	<svg width="18px" height="15px" viewBox="0 0 20 17" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" role="image" aria-labelledby="back-to-top-title  back-to-top-desc">
+    <title id="back-to-top-title">Back To Top</title>
+    <desc id="back-to-top-desc">Takes users back to the top of the page</desc>
+    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g transform="translate(-474.000000, -9998.000000)" fill="#2E2A25">
+            <g transform="translate(474.000000, 9998.000000)">
+                <g transform="translate(10.000000, 10.000000) rotate(45.000000) translate(-10.000000, -10.000000) translate(3.000000, 3.000000)">
+                    <rect x="0" y="0" width="2" height="14"></rect>
+                    <rect x="0" y="0" width="14" height="2"></rect>
+                </g>
+                <rect x="9" y="3" width="2" height="14"></rect>
+            </g>
+        </g>
+    </g>
+</svg>
+</div>
+
+	</article>
+
+</section>
+
+
+
+
+
+<section class="explore-laureates page-section">
+
+	<header class="section-header border-top">
+
+		<h3>
+			Explore prizes and laureates		</h3>
+
+					<div class="info">
+					Look for popular awards and laureates in different fields, and discover the history of the Nobel Prize.			</div>
+		
+	</header>
+
+	<form class="exploreform" id="5d23bfed3616e" method='GET' action=''>
+
+		<div class="dropdown">
+			<label for="mobile-dropdown" class="screen-reader-text">
+				Select the category or categories you would like to filter by			</label>
+
+			<select id="mobile-dropdown" name="filtermobile">
+										<option value="physics"
+														>
+							Physics						</option>
+
+										<option value="chemistry"
+														>
+							Chemistry						</option>
+
+										<option value="medicine"
+														>
+							Medicine						</option>
+
+										<option value="literature"
+														>
+							Literature						</option>
+
+										<option value="peace"
+														>
+							Peace						</option>
+
+										<option value="economic-sciences"
+							 selected='selected'							>
+							Economic Sciences						</option>
+
+							</select>
+
+		</div>
+
+		<div class="selector">
+			<label class="screen-reader-text">Select the category or categories you would like to filter by</label>
+
+			
+				<div class="labelbutton" tabindex="0">
+					<label for="physics">
+						<input id="physics"
+							name="filter"
+							type="radio"
+														value="physics" hidden>
+						<span>
+							Physics						</span>
+					</label>
+				</div>
+
+			
+				<div class="labelbutton" tabindex="0">
+					<label for="chemistry">
+						<input id="chemistry"
+							name="filter"
+							type="radio"
+														value="chemistry" hidden>
+						<span>
+							Chemistry						</span>
+					</label>
+				</div>
+
+			
+				<div class="labelbutton" tabindex="0">
+					<label for="medicine">
+						<input id="medicine"
+							name="filter"
+							type="radio"
+														value="medicine" hidden>
+						<span>
+							Medicine						</span>
+					</label>
+				</div>
+
+			
+				<div class="labelbutton" tabindex="0">
+					<label for="literature">
+						<input id="literature"
+							name="filter"
+							type="radio"
+														value="literature" hidden>
+						<span>
+							Literature						</span>
+					</label>
+				</div>
+
+			
+				<div class="labelbutton" tabindex="0">
+					<label for="peace">
+						<input id="peace"
+							name="filter"
+							type="radio"
+														value="peace" hidden>
+						<span>
+							Peace						</span>
+					</label>
+				</div>
+
+			
+				<div class="labelbutton" tabindex="0">
+					<label for="economic-sciences">
+						<input id="economic-sciences"
+							name="filter"
+							type="radio"
+							 checked='checked'							value="economic-sciences" hidden>
+						<span>
+							Economic Sciences						</span>
+					</label>
+				</div>
+
+					</div>
+
+		<div class="incrementor">
+
+			<label for="increment-down" class="screen-reader-text">
+				Decrease the year by one			</label>
+
+			<button id="increment-down" class="increment-down" type="button">
+				-			</button>
+
+			<label for="increment-input" class="screen-reader-text">
+				Choose a year you would like to search in			</label>
+
+			<input id="increment-input"
+				name="prize_year"
+				type="text"
+				maxlength="4"
+				class="increment-input"
+				placeholder="2018"
+				value="1972">
+
+			<label for="increment-up" class="screen-reader-text">
+				Increase the year by one			</label>
+
+			<button id="increment-up" class="increment-up" type="button">
+				+			</button>
+
+		</div>
+
+		<div class="submit">
+			<button type="submit">
+				Explore			</button>
+		</div>
+	</form>
+
+</section>
+
+
+<div class="long-scroll-preloader prize-explorer-preloader" style="text-align: center; display: none" data-target="5d23bfed3616e">
+	<img style="display: inline-block"
+		src="https://www.nobelprize.org/wp-content/themes/nobelprize/assets/images/spinner.gif">
+</div>
+
+<div class="prize-explorer-content container search-results" data-target="5d23bfed3616e">
+
+</div>
+
+		</div>
+
+		
+<div class="long-scroll-preloader " style="text-align: center; display: none" data-target="5d23bfed3713f">
+	<img style="display: inline-block"
+		src="https://www.nobelprize.org/wp-content/themes/nobelprize/assets/images/spinner.gif">
+</div>
+
+	</div>
+
+
+
+	</main>
+	<footer class="site-footer" role="contentinfo">
+
+		<div class="container">
+
+			<section class="footer-information">
+
+				<h4 class="heading">
+					<a href="/the-nobel-prize-organisation/">About the Nobel Prize organisation</a>				</h4>
+
+				<div class="footer-sections border-top">
+							<div class="footer-section">
+							<h5>
+					<a href="/the-nobel-prize-organisation/the-nobel-foundation/">The Nobel Foundation</a>				</h5>
+			
+			<p>Tasked with a mission to manage Alfred Nobel's fortune and has ultimate responsibility for fulfilling the intentions of Nobel's will.</p>
+		</div>
+				<div class="footer-section">
+							<h5>
+					<a href="/the-nobel-prize-organisation/prize-awarding-institutions/">The prize-awarding institutions</a>				</h5>
+			
+			<p>For more than a century, these academic institutions have worked independently to select Nobel Laureates in each prize category.</p>
+		</div>
+				<div class="footer-section">
+							<h5>
+					<a href="/the-nobel-prize-organisation/outreach-activities/">Nobel Prize outreach activities</a>				</h5>
+			
+			<p>Several outreach organisations and activities have been developed to inspire generations and disseminate knowledge about the Nobel Prize.</p>
+		</div>
+						</div>
+
+			</section>
+
+			<section class="footer-nav border-top">
+
+				<nav class="footer-menu" role="navigation" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
+					<ul id="menu-footer_col_1" class="footer-column-items" role="menu"><li id="menu-item-28266" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-28266" role="menuitem"><a href="https://www.nobelprize.org/press">Press</a></li>
+<li id="menu-item-42845" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-42845" role="menuitem"><a href="https://www.nobelprize.org/contact">Contact</a></li>
+<li id="menu-item-28265" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-28265" role="menuitem"><a href="https://www.nobelprize.org/frequently-asked-questions/">FAQ</a></li>
+</ul>
+				</nav>
+
+				<nav class="footer-menu" role="navigation" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
+					<ul id="menu-footer_col_2" class="footer-column-items" role="menu"><li id="menu-item-28268" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-28268" role="menuitem"><a href="/about/privacy-policy/">Privacy policy</a></li>
+<li id="menu-item-28269" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-28269" role="menuitem"><a href="/about/technical-support/">Technical support</a></li>
+<li id="menu-item-42844" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-42844" role="menuitem"><a href="/about/terms-of-use/">Terms of use</a></li>
+</ul>
+				</nav>
+
+				<nav class="footer-menu" role="navigation" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
+					<ul id="menu-footer_col_3" class="footer-column-items" role="menu"><li id="menu-item-28272" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-28272" role="menuitem"><a href="/about/developer-zone/">For developers</a></li>
+<li id="menu-item-42843" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-42843" role="menuitem"><a href="/mediaplayer/">Media player</a></li>
+</ul>
+				</nav>
+
+				<nav class="footer-menu footer-social" role="navigation" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
+					<h6>
+						Join us					</h6>
+
+					<ul id="menu-footer_social" class="socialmenu"><li id="menu-item-28273" class="facebook menu-item menu-item-type-custom menu-item-object-custom menu-item-28273" role="menuitem"><a href="https://www.facebook.com/nobelprize/">			<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="16px" height="16px" viewBox="0 0 32 32" version="1.1">
+	<g id="facebook" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+		<g transform="translate(-16.000000, -707.000000)" fill="#4266B2">
+			<path d="M46.2339056,707 L17.7660944,707 C16.790606,707 16,707.790603 16,708.766088 L16,737.233792 C16,738.209157 16.790606,739 17.7660944,739 L33.0922688,739 L33.0922688,726.607891 L28.921984,726.607891 L28.921984,721.778426 L33.0922688,721.778426 L33.0922688,718.216876 C33.0922688,714.083775 35.6165969,711.833182 39.3036936,711.833182 C41.0699079,711.833182 42.5878139,711.964589 43.0301168,712.023339 L43.0301168,716.34276 L40.4729368,716.343959 C38.4677662,716.343959 38.0794173,717.296783 38.0794173,718.695026 L38.0794173,721.778426 L42.8617803,721.778426 L42.2391511,726.607891 L38.0794173,726.607891 L38.0794173,739 L46.2339056,739 C47.2092741,739 48,738.209157 48,737.233792 L48,708.766088 C48,707.790603 47.2092741,707 46.2339056,707" id="Fill-1"></path>
+		</g>
+	</g>
+</svg>
+			<span class="screen-reader-text">Facebook</span>
+			</a></li>
+<li id="menu-item-28274" class="twitter menu-item menu-item-type-custom menu-item-object-custom menu-item-28274" role="menuitem"><a href="https://twitter.com/NobelPrize">			<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="32px" height="32px" viewBox="0 0 32 32" version="1.1" aria-labelledby="twitter-social-icon-title twitter-social-icon-desc">
+	<title id="twitter-social-icon-title">Twitter Icon</title>
+    <desc id="twitter-social-icon-desc">Follow The Nobel Prize on Twitter</desc>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="1280/join-us-on-social-media/twitter" transform="translate(0.000000, -48.000000)">
+            <g id="Group-7" transform="translate(0.000000, 48.000000)">
+                <rect id="Rectangle-8-Copy-3" fill="#1DA1F2" x="0" y="0" width="32" height="32" rx="2"></rect>
+                <path d="M12.28988,24.127112 C19.83732,24.127112 23.96468,17.874232 23.96468,12.452232 C23.96468,12.274552 23.96108,12.097672 23.953,11.921752 C24.75412,11.342632 25.45052,10.619992 25.99996,9.797192 C25.26476,10.123752 24.47348,10.343912 23.64356,10.443192 C24.49068,9.935272 25.14116,9.131432 25.44788,8.173352 C24.65484,8.643352 23.77708,8.985272 22.84244,9.169272 C22.09364,8.371752 21.02724,7.872872 19.84724,7.872872 C17.581,7.872872 15.74332,9.710552 15.74332,11.975912 C15.74332,12.297992 15.7794,12.611032 15.8498,12.911512 C12.43964,12.740072 9.41556,11.107192 7.39204,8.624392 C7.03932,9.230632 6.83628,9.935272 6.83628,10.686792 C6.83628,12.110392 7.56076,13.367112 8.66228,14.102312 C7.98924,14.081592 7.35684,13.896632 6.8038,13.588952 C6.80292,13.606072 6.80292,13.623272 6.80292,13.641272 C6.80292,15.628792 8.21748,17.287832 10.09492,17.664072 C9.75028,17.757832 9.38764,17.808472 9.01324,17.808472 C8.74884,17.808472 8.49172,17.782232 8.24188,17.734392 C8.7642,19.364632 10.27892,20.550952 12.07516,20.584392 C10.67044,21.685032 8.90132,22.340872 6.97884,22.340872 C6.64772,22.340872 6.32116,22.321912 5.99996,22.283992 C7.81604,23.447832 9.9722,24.127112 12.28988,24.127112" id="Fill-2" fill="#FFFFFF"></path>
+            </g>
+        </g>
+    </g>
+</svg>			<span class="screen-reader-text">Twitter</span>
+			</a></li>
+<li id="menu-item-43144" class="instagram menu-item menu-item-type-custom menu-item-object-custom menu-item-43144" role="menuitem"><a href="https://www.instagram.com/nobelprize_org/?hl=en">			<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="32px" height="32px" viewBox="0 0 32 32" version="1.1" aria-labelledby="instagram-social-icon-title instagram-social-icon-desc">
+    <title id="instagram-social-icon-title">Instagram Icon</title>
+    <desc id="instagram-social-icon-desc">Follow The Nobel Prize on Instagram</desc>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="1280/join-us-on-social-media/instagram" transform="translate(0.000000, -48.000000)">
+            <g id="Group-8" transform="translate(0.000000, 48.000000)">
+                <rect id="Rectangle-8-Copy" fill="#E6007E" x="0" y="0" width="32" height="32" rx="2"></rect>
+                <g id="Group" transform="translate(5.000000, 5.000000)" fill="#FFFFFF">
+                    <g id="Group-3">
+                        <path d="M10.9965298,0.00694047619 C8.01002976,0.00694047619 7.6355496,0.0195992063 6.46269643,0.0731150794 C5.2922004,0.1265 4.49286706,0.31240873 3.7933631,0.584222222 C3.07024405,0.865246032 2.45699405,1.24125397 1.84566468,1.85258333 C1.23433532,2.46395635 0.858327381,3.07720635 0.577303571,3.8003254 C0.305446429,4.49978571 0.119581349,5.2991627 0.0661527778,6.46961508 C0.0126369048,7.6425119 -2.18253968e-05,8.01699206 -2.18253968e-05,11.0034921 C-2.18253968e-05,13.9899484 0.0126369048,14.3644286 0.0661527778,15.5373254 C0.119581349,16.7077778 0.305446429,17.5071548 0.577303571,18.2066151 C0.858327381,18.9297341 1.23433532,19.5429841 1.84566468,20.1543571 C2.45699405,20.7656865 3.07024405,21.1416944 3.7933631,21.4227183 C4.49286706,21.6945317 5.2922004,21.8804405 6.46269643,21.9338254 C7.6355496,21.9873413 8.01002976,22 10.9965298,22 C13.9830298,22 14.3575099,21.9873413 15.5303631,21.9338254 C16.7008591,21.8804405 17.5001925,21.6945317 18.1996964,21.4227183 C18.9228155,21.1416944 19.5360655,20.7656865 20.1473948,20.1543571 C20.7587242,19.5429841 21.1347321,18.9297341 21.415756,18.2066151 C21.6876131,17.5071548 21.8734782,16.7077778 21.9269067,15.5373254 C21.9804226,14.3644286 21.9930813,13.9899484 21.9930813,11.0034921 C21.9930813,8.01699206 21.9804226,7.6425119 21.9269067,6.46961508 C21.8734782,5.2991627 21.6876131,4.49978571 21.415756,3.8003254 C21.1347321,3.07720635 20.7587242,2.46395635 20.1473948,1.85258333 C19.5360655,1.24125397 18.9228155,0.865246032 18.1996964,0.584222222 C17.5001925,0.31240873 16.7008591,0.1265 15.5303631,0.0731150794 C14.3575099,0.0195992063 13.9830298,0.00694047619 10.9965298,0.00694047619 M10.9965298,1.98829365 C13.932744,1.98829365 14.2805099,1.9995119 15.4400496,2.05241667 C16.5122004,2.10130556 17.094502,2.28044841 17.4819901,2.43104365 C17.9952361,2.63052778 18.3615536,2.86881746 18.746379,3.25364286 C19.1311607,3.6384246 19.369494,4.00474206 19.5689782,4.51803175 C19.7195298,4.90551984 19.8986726,5.48777778 19.9476052,6.55992857 C20.0005099,7.71946825 20.0116845,8.06727778 20.0116845,11.0034921 C20.0116845,13.9396627 20.0005099,14.2874722 19.9476052,15.4470119 C19.8986726,16.5191627 19.7195298,17.1014206 19.5689782,17.4889087 C19.369494,18.0021984 19.1311607,18.3685159 18.746379,18.7532976 C18.3615536,19.138123 17.9952361,19.3764127 17.4819901,19.5758968 C17.094502,19.7264921 16.5122004,19.9056349 15.4400496,19.9545238 C14.2806845,20.0074286 13.9329187,20.0186468 10.9965298,20.0186468 C8.06014087,20.0186468 7.712375,20.0074286 6.55300992,19.9545238 C5.48085913,19.9056349 4.89855754,19.7264921 4.51106944,19.5758968 C3.99782341,19.3764127 3.63150595,19.138123 3.24668056,18.7532976 C2.86189881,18.3685159 2.62356548,18.0021984 2.42408135,17.4889087 C2.27352976,17.1014206 2.0943869,16.5191627 2.04545437,15.4470119 C1.9925496,14.2874722 1.981375,13.9396627 1.981375,11.0034921 C1.981375,8.06727778 1.9925496,7.71946825 2.04545437,6.55992857 C2.0943869,5.48777778 2.27352976,4.90551984 2.42408135,4.51803175 C2.62356548,4.00474206 2.86189881,3.6384246 3.24668056,3.25364286 C3.63150595,2.86881746 3.99782341,2.63052778 4.51106944,2.43104365 C4.89855754,2.28044841 5.48085913,2.10130556 6.55296627,2.05241667 C7.7125496,1.9995119 8.06031548,1.98829365 10.9965298,1.98829365" id="Fill-1"></path>
+                    </g>
+                    <path d="M11.1468849,14.812373 C9.12249206,14.812373 7.48135317,13.1712778 7.48135317,11.1468849 C7.48135317,9.12244841 9.12249206,7.48135317 11.1468849,7.48135317 C13.1712778,7.48135317 14.812373,9.12244841 14.812373,11.1468849 C14.812373,13.1712778 13.1712778,14.812373 11.1468849,14.812373 M11.1468849,5.5 C8.02821032,5.5 5.5,8.02816667 5.5,11.1468849 C5.5,14.2655595 8.02821032,16.7937262 11.1468849,16.7937262 C14.2655595,16.7937262 16.7937698,14.2655595 16.7937698,11.1468849 C16.7937698,8.02816667 14.2655595,5.5 11.1468849,5.5" id="Fill-4"></path>
+                    <path d="M18.1860905,5.17020516 C18.1860905,5.89899881 17.595277,6.48976865 16.866527,6.48976865 C16.1377333,6.48976865 15.5469198,5.89899881 15.5469198,5.17020516 C15.5469198,4.44141151 16.1377333,3.85064167 16.866527,3.85064167 C17.595277,3.85064167 18.1860905,4.44141151 18.1860905,5.17020516" id="Fill-6"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>			<span class="screen-reader-text">Instagram</span>
+			</a></li>
+<li id="menu-item-43145" class="youtube menu-item menu-item-type-custom menu-item-object-custom menu-item-43145" role="menuitem"><a href="https://www.youtube.com/thenobelprize">			<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="32px" height="32px" viewBox="0 0 32 32" version="1.1" role="img" aria-labelledby="youtube-social-icon-title youtube-social-icon-desc">
+    <title id="youtube-social-icon-title">Youtube Icon</title>
+    <desc id="youtube-social-icon-desc">Follow The Nobel Prize on Youtube</desc>
+    <defs>
+        <polygon id="path-1" points="3.75e-05 0 22 0 22 15.499975 3.75e-05 15.499975"></polygon>
+    </defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="1280/join-us-on-social-media/youtube" transform="translate(0.000000, -48.000000)">
+            <g id="Group-9" transform="translate(0.000000, 48.000000)">
+                <rect id="Rectangle-8-Copy-2" fill="#ED3124" x="0" y="0" width="32" height="32" rx="2"></rect>
+                <g id="Page-1" transform="translate(5.000000, 8.000000)">
+                    <g id="Group-3">
+                        <mask id="mask-2" fill="white">
+                            <use xlink:href="#path-1"></use>
+                        </mask>
+                        <g id="Clip-2"></g>
+                        <path d="M21.5402875,2.42035 C21.2872875,1.4676 20.5417875,0.71735 19.5951625,0.462725 C17.8796625,-2.5e-05 11.0000375,-2.5e-05 11.0000375,-2.5e-05 C11.0000375,-2.5e-05 4.1204125,-2.5e-05 2.4047875,0.462725 C1.4581625,0.71735 0.7126625,1.4676 0.4596625,2.42035 C3.75e-05,4.1471 3.75e-05,7.749975 3.75e-05,7.749975 C3.75e-05,7.749975 3.75e-05,11.352725 0.4596625,13.0796 C0.7126625,14.03235 1.4581625,14.7826 2.4047875,15.03735 C4.1204125,15.499975 11.0000375,15.499975 11.0000375,15.499975 C11.0000375,15.499975 17.8796625,15.499975 19.5951625,15.03735 C20.5417875,14.7826 21.2872875,14.03235 21.5402875,13.0796 C22.0000375,11.352725 22.0000375,7.749975 22.0000375,7.749975 C22.0000375,7.749975 22.0000375,4.1471 21.5402875,2.42035" id="Fill-1" fill="#FFFFFF" mask="url(#mask-2)"></path>
+                    </g>
+                    <polygon id="Fill-4" fill="#ED3124" points="8.75 11.0211125 8.75 4.4788625 14.5 7.7501125"></polygon>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>			<span class="screen-reader-text">Youtube</span>
+			</a></li>
+</ul>
+				</nav>
+
+			</section>
+
+			<section class="colophon border-top">
+				<div class="footer-logo" itemscope itemtype="http://schema.org/Organization">
+					<h1 class="site-logo" itemprop="logo">
+						<a itemprop="url" href="https://www.nobelprize.org">
+							The Nobel Prize						</a>
+					</h1>
+				</div>
+				<div class="copyright">
+					Copyright &copy; Nobel Media AB 2019				</div>
+			</section>
+
+		</div>
+
+	</footer>
+
+			<script>
+		( function ( body ) {
+			'use strict';
+			body.className = body.className.replace( /\btribe-no-js\b/, 'tribe-js' );
+		} )( document.body );
+		</script>
+		<script> /* <![CDATA[ */var tribe_l10n_datatables = {"aria":{"sort_ascending":": activate to sort column ascending","sort_descending":": activate to sort column descending"},"length_menu":"Show _MENU_ entries","empty_table":"No data available in table","info":"Showing _START_ to _END_ of _TOTAL_ entries","info_empty":"Showing 0 to 0 of 0 entries","info_filtered":"(filtered from _MAX_ total entries)","zero_records":"No matching records found","search":"Search:","all_selected_text":"All items on this page were selected. ","select_all_link":"Select all pages","clear_selection":"Clear Selection.","pagination":{"all":"All","next":"Next","previous":"Previous"},"select":{"rows":{"0":"","_":": Selected %d rows","1":": Selected 1 row"}},"datepicker":{"dayNames":["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],"dayNamesShort":["Sun","Mon","Tue","Wed","Thu","Fri","Sat"],"dayNamesMin":["S","M","T","W","T","F","S"],"monthNames":["January","February","March","April","May","June","July","August","September","October","November","December"],"monthNamesShort":["January","February","March","April","May","June","July","August","September","October","November","December"],"monthNamesMin":["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"nextText":"Next","prevText":"Prev","currentText":"Today","closeText":"Done","today":"Today","clear":"Clear"}};var tribe_system_info = {"sysinfo_optin_nonce":"cf1728e394","clipboard_btn_text":"Copy to clipboard","clipboard_copied_text":"System info copied","clipboard_fail_text":"Press \"Cmd + C\" to copy"};/* ]]> */ </script><script type='text/javascript' src='https://www.nobelprize.org/wp-content/plugins/nobelprize/assets/js/admin/lib/jquery.pjax/jquery.pjax.js?ver=0.2.0-d0d47fef313b30ef6653c5641f053a64f2499790'></script>
+<script type='text/javascript' src='https://www.nobelprize.org/wp-content/plugins/nobelprize/assets/js/admin/lib/jquery.waypoints/jquery.waypoints.js?ver=0.2.0-d0d47fef313b30ef6653c5641f053a64f2499790'></script>
+<script type='text/javascript' src='https://www.nobelprize.org/wp-content/plugins/nobelprize/assets/js/admin/lib/jquery.waypoints/inview.js?ver=0.2.0-d0d47fef313b30ef6653c5641f053a64f2499790'></script>
+<script type='text/javascript' src='https://www.nobelprize.org/wp-content/plugins/nobelprize/dist/js/long-scroll.min.js?ver=0.2.0-d0d47fef313b30ef6653c5641f053a64f2499790'></script>
+<script type='text/javascript' src='https://www.nobelprize.org/wp-content/themes/nobelprize/assets/js/frontend/lib/clamp/clamp.min.js?ver=0.2.4'></script>
+<script type='text/javascript' src='https://www.nobelprize.org/wp-content/plugins/nobelprize/assets/js/admin/lib/flickity/flickity.pkgd.js?ver=0.2.0-d0d47fef313b30ef6653c5641f053a64f2499790'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var nobelJsText = {"more":"More","close":"Close"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://www.nobelprize.org/wp-content/themes/nobelprize/dist/js/frontend.0.2.4.min.js?ver=0.2.4'></script>
+<script type='text/javascript' src='https://www.nobelprize.org/wp-content/themes/nobelprize/assets/js/frontend/lib/bgset/ls.bgset.min.js?ver=0.2.4'></script>
+<script type='text/javascript' src='https://www.nobelprize.org/wp-content/themes/nobelprize/assets/js/frontend/lib/lazysizes/lazysizes.min.js?ver=0.2.4'></script>
+<script type='text/javascript' src='https://www.nobelprize.org/wp-content/themes/nobelprize/assets/js/frontend/lib/objectfit/ls.object-fit.min.js?ver=0.2.4'></script>
+<script type='text/javascript' src='https://www.nobelprize.org/wp-includes/js/wp-embed.min.js?ver=4.9.9'></script>
+
+	<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"06ce85f426","applicationID":"179859553","transactionName":"ZFxWYRFYVkIFUxANWF0WdVYXUFdfS1wFEUVWWEBQTlpXXxBVChAaR0BEUA==","queueTime":0,"applicationTime":1602,"atts":"SBtVF1lCRUw=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>
